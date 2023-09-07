@@ -1,0 +1,30 @@
+% \bib, bibdiv, biblist are defined by the amsrefs package.
+\begin{bibdiv}
+\begin{biblist}
+
+\bib{fst}{article}{
+      author={Fomin, Sergey},
+      author={Shapiro, Michael},
+      author={Thurston, Dylan},
+       title={Cluster algebras and triangulated surfaces. {P}art {I}: {C}luster complexes},
+     journal={Acta Mathematica, 201:83-146, 2008},
+         url={https://arxiv.org/abs/math/0608367v3},
+}
+
+\bib{iyama}{article}{
+      author={Iyama, Osamu},
+       title={Cluster tilting for higher {A}uslander algebras},
+     journal={Adv. Math. 226 (2011), no. 1, 1--61},
+         url={https://arxiv.org/abs/0809.4897v3},
+}
+
+\bib{ot}{article}{
+      author={Oppermann, Steffen},
+      author={Thomas, Hugh},
+       title={Higher dimensional cluster combinatorics and representation theory},
+     journal={Acta Mathematica, 201:83-146, 2008},
+         url={https://arxiv.org/abs/math/0608367v3},
+}
+
+\end{biblist}
+\end{bibdiv}
