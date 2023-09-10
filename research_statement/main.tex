@@ -7,7 +7,11 @@
 \usepackage[colorlinks=true,citecolor=Green]{hyperref}
 \usepackage{amsrefs}
 \usepackage{tikz}
-\usepackage[noabbrev]{cleveref} 
+\usetikzlibrary{arrows}
+\usepackage[noabbrev]{cleveref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mathtools}
 
 % Theorems
 \theoremstyle{plain}
@@ -17,6 +21,14 @@
 
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
+
+\let\hom\relax
+\let\mod\relax
+\DeclareMathOperator{\ext}{Ext}
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\hom}{Hom}
+\DeclareMathOperator{\mod}{mod}
+\DeclareMathOperator{\gldim}{gl.dim}
 
 \title{Research Statement}
 \author{Adam Klepáč}
@@ -36,7 +48,7 @@
   similar type of link for path algebras of quivers of type $D_n$ which, in the
   low-dimensional case, correspond to once punctured polygons; then, with a
   touch of expectation and naïvety, broadening it to include (special types of)
-  cluster algebras not necessarily representation-finite.
+  cluster algebras of finite mutation type.
  \end{abstract}
 
  \section{Introduction}
@@ -150,9 +162,455 @@
   triangulation}. In fact, \cref{def:marked-surface} excludes all cases where
   $(\mathbf{S},\mathbf{M})$ cannot be triangulated. The arcs of an ideal
   triangulation cut $\mathbf{S}$ into \emph{ideal triangles}. The three sides of
-  an ideal triangle need not be distinct, leading to self-folded triangle, and
+  an ideal triangle need not be distinct, leading to self-folded triangles, and
   two triangles can share more than one side.
  \end{definition}
+
+ The number of arcs in an ideal triangulation is an invariant of
+ $(\mathbf{S},\mathbf{M})$ and is called the \emph{rank} of
+ $(\mathbf{S},\mathbf{M})$ to emphasize the connection between these surfaces
+ and cluster algebras of the same rank, to be introduced in the next section.
+
+ The last concept we need to introduce is that of a \emph{flip} of an ideal
+ triangulation. These basically entail swapping one diagonal for another in some
+ quadrilateral of an ideal triangulation.
+
+ \begin{definition}[Flip]
+  A \emph{flip} in an ideal triangulation $T$ is a transformation which
+  exchanges one arc $\gamma \in T$ for a different arc $\gamma'$ which, together
+  with the rest of arcs in $T$, forms a new ideal triangulation $T'$.
+ \end{definition}
+
+ There is at most one way to flip and arc $\gamma$ in an ideal triangulation. If
+ $\gamma$ is the `folded' side of a self-folded triangle (the segment $i$ in
+ \cref{fig:self-folded-triangle}), then $\gamma$ cannot be flipped. In all other
+ cases, removing $\gamma$ create a tetragonal face on $\mathbf{S}$, and the
+ flipped arc $\gamma'$ is define to be its other diagonal.
+
+ Of special import to the theory of cluster algebras is the following result.
+
+ \begin{proposition}
+  Any two ideal triangulations are related by a series of flips.
+ \end{proposition}
+
+ \begin{figure}[ht]
+  \centering
+  \begin{subfigure}{.3\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node[fill,circle,inner sep=1pt] (a) at (18:1) {};
+    \node[fill,circle,inner sep=1pt] (b) at (90:1) {};
+    \node[fill,circle,inner sep=1pt] (c) at (162:1) {};
+    \node[fill,circle,inner sep=1pt] (d) at (234:1) {};
+    \node[fill,circle,inner sep=1pt] (e) at (306:1) {};
+
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- (d);
+    \draw (d) -- (e);
+    \draw (e) -- (a);
+
+    \draw (b) -- (e);
+    \draw[Red] (c) -- (e);
+   \end{tikzpicture}
+  \end{subfigure}
+  \begin{subfigure}{.3\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node[fill,circle,inner sep=1pt] (a) at (18:1) {};
+    \node[fill,circle,inner sep=1pt] (b) at (90:1) {};
+    \node[fill,circle,inner sep=1pt] (c) at (162:1) {};
+    \node[fill,circle,inner sep=1pt] (d) at (234:1) {};
+    \node[fill,circle,inner sep=1pt] (e) at (306:1) {};
+
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- (d);
+    \draw (d) -- (e);
+    \draw (e) -- (a);
+
+    \draw (b) -- (e);
+    \draw[Red] (d) -- (b);
+   \end{tikzpicture}
+  \end{subfigure}
+  \caption{Two ideal triangulations of a pentagon, related by a flip.}
+  \label{fig:flip-pentagon}
+ \end{figure}
+
+ \section{Cluster Algebras}
+ \label{sec:cluster-algebras}
+
+ Before we reach the definition of a cluster algebras, we must discuss quivers
+ and their mutations. This section is an altered version of \cite{ot}, Section
+ 4. The original text defines cluster algebras using signed adjacency matrices
+ instead. This approach lessens the notational burden but also introduces a
+ concept we do not use elsewhere. Naturally, quivers and adjacency matrices are
+ tightly related, with the former being completely determined by the latter
+ after a choice of orientation of a single arrow.
+
+ To each ideal triangulation $T$ of a bordered surface with marked points
+ $(\mathbf{S},\mathbf{M})$ we associate a quiver $Q \coloneqq Q(T)$ in the
+ following manner. For a fixed ideal triangulation, we label its $n$ arcs by
+ natural numbers from $1$ to $n$, keeping in mind that this labelling is
+ arbitrary. The set of vertices of $Q$ is then also $Q_0 \coloneqq
+ \{1,\ldots,n\}$. Next, for each triangle $\Delta$ in $T$ which is not
+ self-folded, we draw an arrow $i \to j$ if
+ \begin{itemize}
+  \item $i$ and $j$ are sides of $\Delta$ with $j$ following $i$ in clockwise
+   order;
+  \item $j$ is an arc `folded' by $l$, $i$ and $l$ are sides of $\Delta$ and $l$
+   follows $i$ in clockwise order;
+  \item $i$ is an arc `folded' by $l$, $l$ and $j$ are sides of $\Delta$ with
+   $j$ following $l$ in clockwise order.
+ \end{itemize}
+ Finally, we remove all $2$-cycles (meaning a configuration of arrows like this
+ \begin{tikzpicture}[baseline=-0.5ex]
+  \node[circle,fill,inner sep=1pt] (a) at (0,0) {};
+  \node[circle,fill,inner sep=1pt] (b) at (1,0) {};
+  \draw[->,bend left=40] (a) to (b);
+  \draw[<-,bend right=40] (a) to (b);
+ \end{tikzpicture}).
+
+ \begin{figure}[ht]
+  \centering
+  \begin{subfigure}{.4\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \clip (-2.1,-2.1) rectangle (2.1,2.1);
+    \node[circle,fill,inner sep=1pt] (a) at (0,-2) {};
+    \node[circle,fill,inner sep=1pt] (b) at (0,2) {};
+    \draw (0,0) circle (2);
+
+    \filldraw[Black,fill=LightGray] (1,0) circle (0.5);
+    \node[circle,fill,inner sep=1pt] (c) at (0.552, 0.222) {};
+
+    \node[circle,fill,inner sep=1pt] (d) at (-1,0) {};
+    \draw (b) to node[midway,xshift=-2mm] {$1$} (d);
+    \draw (b) to node[midway,xshift=2mm] {$3$} (c);
+    \draw (a) to node[pos=0.6,xshift=2mm] {$2$} (b);
+
+    \draw (b) .. controls ++(0,-3.5) and ++(-3.5,-3.5) .. (b);
+    \node at (-1,-0.75) {$6$};
+    
+    \draw (a) .. controls ++(0.1,2) .. (c);
+    \node at (0.2,-1) {$5$};
+    
+    \draw (b) .. controls ++(4,-2) and ++(-1,-3) .. (c);
+    \node at (1,-1.25) {$4$};
+   \end{tikzpicture}
+  \end{subfigure}
+  \begin{subfigure}{.4\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \clip (-0.1,-2.1) rectangle (4.1,2.1);
+    \node (a) at (0,1) {$1$};
+    \node (f) at (0,-1) {$6$};
+    \node (b) at (1,0) {$2$};
+    \node (c) at (2,1) {$3$};
+    \node (e) at (2,-1) {$5$};
+    \node (d) at (3,0) {$4$};
+    
+    \draw[->] (a) -- (b);
+    \draw[->] (f) -- (b);
+    \draw[->] (b) -- (c);
+    \draw[->] (c) -- (d);
+    \draw[->] (c) -- (e);
+    \draw[->] (e) -- (b);
+    \draw[->] (e) -- (d);
+   \end{tikzpicture}
+  \end{subfigure}
+  \caption{An ideal triangulation of a once-punctured annulus and its quiver.}
+  \label{fig:annulus-quiver}
+ \end{figure}
+
+ \begin{definition}[Quiver mutation]
+   For a quiver $Q$, we construct the quiver $\mu_k(Q)$, called its
+   \emph{mutation} at $k$-th vertex by
+   \begin{itemize}
+    \item reversing all arrows with $k$ as source or as target;
+    \item adding an arrow $j \to i$ for each path $i \to k \to j$;
+    \item deleting all $2$-cycles.
+   \end{itemize}
+ \end{definition}
+ The mutation at $k$-th vertex is an involution of $Q$, that is, $\mu_k^2(Q) =
+ Q$ for every vertex $k \in Q_0$. Now, we proceed to define initial seeds and
+ cluster algebras.
+
+ We fix a free abelian group $(\mathbb{P}, \cdot )$ on variables
+ $y_1,\ldots,y_n$ and define an operation $ \oplus $ on $\mathbb{P}$ by the
+ formula
+ \[
+  \prod_i y_i^{a_i} \oplus \prod_i y_i^{b_i} = \prod_i y_i^{\min(a_i,b_i)}.
+ \]
+ Let $\mathbb{Z}\mathbb{P}$ denote the group ring of $\mathbb{P}$ and
+ $\mathbb{Q}\mathbb{P}$ the field of fractions of $\mathbb{Z}\mathbb{P}$.
+ Finally, we let $\mathcal{F} \coloneqq \mathbb{Q}\mathbb{P}(x_1,\ldots,x_n)$ be
+ the field of rational functions in variables $x_1,\ldots,x_n$ with coefficients
+ in $\mathbb{Q}\mathbb{P}$.
+
+ \begin{definition}[Initial seed]
+  An \emph{initial seed} is a triple $(\mathbf{x},\mathbf{y},Q)$ consisting of
+  the following data:
+  \begin{enumerate}
+   \item an $n$-tuple $\mathbf{x} = (x_1,\ldots,x_n)$ of variables of
+    $\mathcal{F}$, the so-called \emph{initial cluster};
+   \item an $n$-tuple $\mathbf{y} = (y_1,\ldots,y_n)$ of generators of
+    $\mathbb{P}$, the so-called \emph{initial coefficients tuple};
+   \item a quiver $Q$ without loops and $2$-cycles.
+  \end{enumerate}
+ \end{definition}
+
+ \begin{definition}[Seed mutation]
+  A \emph{seed mutation} $\mu(k)$ \emph{in direction} $k$ is a transformation of
+  an initial seed $(\mathbf{x},\mathbf{y},Q)$ into a new seed
+  $(\mathbf{x'},\mathbf{y'},Q')$ defined as follows:
+  \begin{itemize}
+   \item $\mathbf{x'}$ is the $n$-tuple of variables constructed by replacing
+    the cluster variable $x_k$ in $\mathbf{x}$ by a new cluster variable $x_k'$
+    defined by the \emph{exchange relation}
+    \[
+     x_kx_k' = \frac{1}{y_k \oplus 1}\left( y_k \prod_{i \to k} x_i +
+     \prod_{i \leftarrow k} x_i \right);
+    \]
+   \item $\mathbf{y'} = (y_1',\ldots,y_n')$ is a new $n$-tuple of coefficients,
+    where
+    \[
+     y_i' \coloneqq \begin{cases}
+      y_k^{-1} & \text{ if } i = k;\\
+      y_i \prod_{k \to i} y_k(y_k \oplus 1)^{-1}\prod_{k \leftarrow i} (y_k
+      \oplus 1) & \text{ if } i \neq k.
+     \end{cases}
+    \]
+   \item $Q'$ is the mutation of $Q$ at the $k$-th vertex.
+  \end{itemize}
+ \end{definition}
+ Seed mutations are involutions, that is, $\mu_k^2(\mathbf{x},\mathbf{y},Q) =
+ (\mathbf{x},\mathbf{y},Q)$.
+
+ \begin{definition}[Cluster algebra]
+  Let $(\mathbf{x},\mathbf{y},Q)$ be an initial seed and $\mathcal{X}$ be the
+  set of all cluster variables generated by repeated mutation of
+  $(\mathbf{x},\mathbf{y},Q)$. The \emph{cluster algebra} $\mathcal{A} \coloneqq
+  \mathcal{A}(\mathbf{x},\mathbf{y},Q)$ is the $\mathbb{Z}\mathbb{P}$-subalgebra
+  of $\mathcal{F}$ generated by $\mathcal{X}$.
+
+  We say that a cluster algebra $\mathcal{A}(\mathbf{x},\mathbf{y},Q)$ is
+  \begin{itemize}
+   \item of \emph{finite type}, if the set $\mathcal{X}$ of cluster variables if
+    finite;
+   \item of \emph{finite mutation type}, if the number of quivers mutation
+    equivalent (those $Q$ can mutate into) to $Q$ is finite;
+   \item of \emph{acyclic type}, if $Q$ is mutation equivalent to a quiver
+    without oriented cycles;
+   \item of \emph{surface type}, if $Q$ is a quiver coming from a triangulation
+    of a bordered surface with marked points.
+  \end{itemize}
+ \end{definition}
+
+ We are particularly interested in quivers whose underlying graph is one of
+ (simp\-ly-laced) Dynkin diagrams of type $A_n (n \geq 1)$, $D_n (n \geq 4)$ or
+ $E_n (6 \leq n \leq 8)$ (see \cref{fig:dynkin-diagrams}). By~\cite{fst}, Theorem
+ 6.5, a cluster algebra $\mathcal{A}(\mathbf{x},\mathbf{y},Q)$ is of finite type
+ if and only if the underlying graph of $Q$ is a disjoint union of the
+ aforementioned Dynkin diagrams. In this particular case, it is also true (by
+ \cite{fst}, Lemma 6.4) that quivers given by two different orientations of a
+ Dynkin diagram are mutation equivalent, hence the structure of
+ $\mathcal{A}(\mathbf{x},\mathbf{y},Q)$ is independent of the choice of
+ orientation.
+
+ \begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{.6\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node at (0,0) {$A_n$};
+    \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (6,0) {};
+    \draw (d) -- (e);
+   \end{tikzpicture}
+   \vspace{1em}
+  \end{subfigure}
+  \begin{subfigure}[b]{.6\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node at (0,0) {$D_n$};
+    \node[circle,fill,inner sep=1pt] (a1) at (1,0.5) {};
+    \node[circle,fill,inner sep=1pt] (a2) at (1,-0.5) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    
+    \draw (a1) -- (b);
+    \draw (a2) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (6,0) {};
+    \draw (d) -- (e);
+    
+   \end{tikzpicture}
+   \vspace{1em}
+  \end{subfigure}
+  \begin{subfigure}[b]{.6\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node at (0,0) {$E_n$};
+    \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    \node[circle,fill,inner sep=1pt] (f) at (3,-0.5) {};
+    
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+    \draw (c) -- (f);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (6,0) {};
+    \draw (d) -- (e);
+   \end{tikzpicture}
+  \end{subfigure}
+  \caption{Simply-laced Dynkin diagrams of types $A_n,D_n$ and $E_n$.}
+  \label{fig:dynkin-diagrams}
+ \end{figure}
+
+ In seeking higher-dimensional geometric counterparts to cluster algebras of
+ finite type, it is of course beneficial to -- at least at first -- focus on
+ those that are also of surface type. Here, one has a starting idea as to what
+ the higher-dimensional object in question should be. The only such cluster
+ algebras are of type $A_n$ and $D_n$.  Quivers given by orientations of $E_n$
+ do not arise from any bordered surface with marked points.  
+
+ Moreover, based on the results in~\cite{bma}, for purposes of categorisation,
+ one need not consider the entire class of cluster algebras with a chosen Dynkin
+ quiver. The combinatorial properties of $\mathcal{A}(\mathbf{x},\mathbf{y},Q)$
+ are in fact governed entirely by so-called \emph{decorated representations} of
+ the path algebra of $Q$ (see~\cite{bma}, Section 2).
+
+ Hence, studying the higher Auslander algebras (to be introduced promptly) of
+ path algebras of Dynkin quivers appears to be a sensible endeavour in this
+ direction.
+
+ By a considerable extension, one might also consider studying
+ higher-dimensional variants of cluster algebras of `affine' type, whose quiver
+ is one of so-called \emph{affine} Dynkin diagrams. For these, however, Lemma
+ 6.4 from~\cite{fst} does not apply and thus the choice of orientation matters.
+ Furthermore, the path algebras of such diagrams are in general
+ representation-infinite leading to caveats in applying the higher Auslander
+ theory developed in~\cite{iyama}.
+
+ \begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{.6\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node at (0,0) {$\tilde{A}_n$};
+    \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (6,0) {};
+    \draw (d) -- (e);
+
+    \node[circle,fill,inner sep=1pt] (f) at (3.5,-1) {};
+    \draw (a) -- (f);
+    \draw (e) -- (f);
+   \end{tikzpicture}
+   \vspace{1em}
+  \end{subfigure}
+  \begin{subfigure}[b]{.6\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node at (0,0) {$\tilde{D}_n$};
+    \node[circle,fill,inner sep=1pt] (a1) at (1,0.5) {};
+    \node[circle,fill,inner sep=1pt] (a2) at (1,-0.5) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    
+    \draw (a1) -- (b);
+    \draw (a2) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e1) at (6,0.5) {};
+    \node[circle,fill,inner sep=1pt] (e2) at (6,-0.5) {};
+    \draw (d) -- (e1);
+    \draw (d) -- (e2);
+   \end{tikzpicture}
+   \vspace{1em}
+  \end{subfigure}
+  \caption{Affine Dynkin diagrams of types $\tilde{A}_n$ and $\tilde{D}_n$.}
+  \label{fig:affine-dynkin-diagrams}
+ \end{figure}
+
+ \section{Higher Auslander Theory}
+ \label{sec:higher-auslander-theory}
+
+ In this section, we summarize results from~\cite{iyama}, Section 1. We fix a
+ finite-dimensional algebra $\Lambda$ over a field $k$.
+
+ \begin{definition}[$d$-cluster tilting module]
+  A module $M \in \mod \Lambda$ is called \emph{$d$-cluster tilting} if
+  \[
+   \add M = \{X \in \mod \Lambda \mid \ext^{i}_{\Lambda}(X,M) = 0 \; \forall i
+   \in \{1,\ldots,d-1\}\}.
+  \]
+ \end{definition}
+ We note that a $1$-cluster tilting module is just an additive generator of the
+ category $\mod \Lambda$.
+ \begin{definition}[$d$-Auslander algebra]
+  \leavevmode
+  \begin{enumerate}
+   \item An algebra $\Lambda$ is called \emph{$d$-representation-finite} if
+    $\gldim\Lambda<\infty$ and $\Lambda$ has a $d$-cluster tilting module.
+   \item Let $\Lambda$ be a $d$-representation-finite algebra and $M$ its
+    $d$-cluster tilting module. We call $\mathrm{End}_{\Lambda}(M)$ the
+    \emph{$d$-Auslander algebra} of $\Lambda$. We denote it $\Lambda^{(d)}$.
+  \end{enumerate}
+ \end{definition}
+
+ By~\cite{iyama}, Theorem 1.6, if $\Lambda$ is $d$-representation-finite then
+ its $d$-cluster tilting module is unique up to multiplicity. A
+ $1$-representation-finite algebra is simply called representation-finite.
+
+ One of the main results in~\cite{iyama} concerns an iterative construction of
+ $d$-Auslander algebras of a representation-finite hereditary algebra $\Lambda$.
+ In this particular case, $\Lambda^{(d)}$ is a $(d+1)$-representation-finite
+ algebra and has a $(d+1)$-cluster tilting module for every $d \geq 1$.
+ See~\cite{iyama}, 1.13 - 1.16. Starting with $\Lambda$, we denote its
+ $1$-cluster tilting module by $\prescript{}{\Lambda}M$. Then, $\Lambda^{(1)}
+ \coloneqq \mathrm{End}_{\Lambda}(M)$ is a $2$-representation-finite algebra
+ with a $2$-cluster tilting module, which we denote
+ $\prescript{}{\Lambda^{(1)}}M$. And so forth.
 
  \bibliography{refs.bib}
 \end{document}

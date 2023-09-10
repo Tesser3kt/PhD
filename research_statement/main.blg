@@ -8,46 +8,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: refs.bib
 Warning--No year or other date information for fst
 Warning--No year or other date information for iyama
+Warning--No year or other date information for bma
 Warning--No year or other date information for ot
-You've used 3 entries,
+You've used 4 entries,
             1497 wiz_defined-function locations,
-            415 strings with 2931 characters,
-and the built_in function-call counts, 1857 in all, are:
-= -- 45
-> -- 141
+            419 strings with 3082 characters,
+and the built_in function-call counts, 2488 in all, are:
+= -- 62
+> -- 191
 < -- 3
-+ -- 15
-- -- 129
-* -- 150
-:= -- 309
++ -- 21
+- -- 174
+* -- 203
+:= -- 417
 add.period$ -- 0
-call.type$ -- 3
-change.case$ -- 15
+call.type$ -- 4
+change.case$ -- 21
 chr.to.int$ -- 9
-cite$ -- 6
-duplicate$ -- 159
-empty$ -- 82
-format.name$ -- 12
-if$ -- 214
+cite$ -- 8
+duplicate$ -- 212
+empty$ -- 109
+format.name$ -- 18
+if$ -- 286
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 75
-newline$ -- 30
-num.names$ -- 6
-pop$ -- 177
+missing$ -- 100
+newline$ -- 38
+num.names$ -- 8
+pop$ -- 240
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 17
 quote$ -- 0
-skip$ -- 31
+skip$ -- 39
 stack$ -- 0
-substring$ -- 18
-swap$ -- 96
-text.length$ -- 15
+substring$ -- 23
+swap$ -- 127
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
-warning$ -- 3
-while$ -- 21
+type$ -- 32
+warning$ -- 4
+while$ -- 28
 width$ -- 0
-write$ -- 56
-(There were 3 warnings)
+write$ -- 73
+(There were 4 warnings)

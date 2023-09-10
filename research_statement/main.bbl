@@ -18,6 +18,14 @@
          url={https://arxiv.org/abs/0809.4897v3},
 }
 
+\bib{bma}{article}{
+      author={Marsh, Bethany},
+      author={Reineke, Markus},
+      author={Zelevinsky, Andrei},
+       title={Generalized associahedra via quiver representations},
+         url={https://doi.org/10.48550/arXiv.math/0205152},
+}
+
 \bib{ot}{article}{
       author={Oppermann, Steffen},
       author={Thomas, Hugh},
