@@ -7,7 +7,7 @@
 \usepackage[colorlinks=true,citecolor=Green]{hyperref}
 \usepackage{amsrefs}
 \usepackage{tikz}
-\usetikzlibrary{arrows}
+\usetikzlibrary{arrows,math}
 \usepackage[noabbrev]{cleveref}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -594,7 +594,7 @@
     $\gldim\Lambda<\infty$ and $\Lambda$ has a $d$-cluster tilting module.
    \item Let $\Lambda$ be a $d$-representation-finite algebra and $M$ its
     $d$-cluster tilting module. We call $\mathrm{End}_{\Lambda}(M)$ the
-    \emph{$d$-Auslander algebra} of $\Lambda$. We denote it $\Lambda^{(d)}$.
+    \emph{$d$-Auslander algebra} of $\Lambda$.
   \end{enumerate}
  \end{definition}
 
@@ -604,13 +604,211 @@
 
  One of the main results in~\cite{iyama} concerns an iterative construction of
  $d$-Auslander algebras of a representation-finite hereditary algebra $\Lambda$.
- In this particular case, $\Lambda^{(d)}$ is a $(d+1)$-representation-finite
- algebra and has a $(d+1)$-cluster tilting module for every $d \geq 1$.
- See~\cite{iyama}, 1.13 - 1.16. Starting with $\Lambda$, we denote its
- $1$-cluster tilting module by $\prescript{}{\Lambda}M$. Then, $\Lambda^{(1)}
- \coloneqq \mathrm{End}_{\Lambda}(M)$ is a $2$-representation-finite algebra
- with a $2$-cluster tilting module, which we denote
- $\prescript{}{\Lambda^{(1)}}M$. And so forth.
+ In this particular case, it turns out that $\mathrm{End}_{\Lambda}(M)$, where
+ $M$ is a cluster tilting module in $\mod\Lambda$, is a
+ $2$-representation-finite algebra with its own $2$-cluster tilting module. This
+ allows us to construct a $d$-Auslander algebra of $\Lambda$ for any $d \geq 1$.
 
+ In~\cite{iyama}, Definition 6.11 and Theorem 6.12 describes the $d$-Auslander
+ algebras of representation-finite hereditary algebras by giving their
+ Auslander-Reiten quivers with relations. For example, let $\Lambda \coloneqq
+ kD_4$ where $k$ is a field. We denote the $d$-Auslander algebra of $D_4$ by
+ $D_4^{(d)}$ and $D_4^{(0)} \coloneqq \Lambda$. The quivers of $D_4^{(1)}$ and
+ $D_4^{(2)}$ are depicted in~\cref{fig:quivers-of-D}. We use the same labels for
+ vertices as Iyama in~\cite{iyama}. Iyama also introduces different `kinds' of
+ arrows in these quivers. We only distinguish them by style and colour to avoid
+ having to introduce auxiliary notation.
+ \begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node (10) at (1,0) {$10$};
+    \node (20) at (0,-1) {$20$};
+    \node (30) at (0,0) {$30$};
+    \node (40) at (0,1) {$40$};
+    
+    \node (11) at (3.5,0) {$11$};
+    \node (21) at (2.5,-1) {$21$};
+    \node (31) at (2.5,0) {$31$};
+    \node (41) at (2.5,1) {$41$};
+
+    \node (12) at (6,0) {$12$};
+    \node (22) at (5,-1) {$22$};
+    \node (32) at (5,0) {$32$};
+    \node (42) at (5,1) {$42$};
+
+    \foreach \d in {0,1,2} {
+     \foreach \x in {2,3,4} {
+      \draw[->] (\x\d) -- (1\d);
+     }
+    }
+
+    \foreach \d in {1,2} {
+     \foreach \x in {2,3,4} {
+      \tikzmath{\e = \d - 1;}
+      \draw[->,dashed,thick,ForestGreen] (1\e) -- (\x\d);
+     }
+    }
+   \end{tikzpicture}
+   \caption{The AR quiver of $D_4^{(1)}$.}
+  \end{subfigure}
+  \begin{subfigure}[b]{\textwidth}
+   \vspace*{1em}
+   \centering
+   \begin{tikzpicture}
+    \pgfdeclarelayer{background}
+    \pgfsetlayers{background,main}
+    \begin{pgfonlayer}{main}
+     \node (100) at (1,0) {$100$};
+     \node (200) at (0,-1) {$200$};
+     \node (300) at (0,0) {$300$};
+     \node (400) at (0,1) {$400$};
+
+     \node (110) at (3.5,0) {$110$};
+     \node (210) at (2.5,-1) {$210$};
+     \node (310) at (2.5,0) {$310$};
+     \node (410) at (2.5,1) {$410$};
+
+     \node (120) at (6,0) {$120$};
+     \node (220) at (5,-1) {$220$};
+     \node (320) at (5,0) {$320$};
+     \node (420) at (5,1) {$420$};
+
+     \node (101) at (2.25,-3) {$101$};
+     \node (201) at (1.25,-4) {$201$};
+     \node (301) at (1.25,-3) {$301$};
+     \node (401) at (1.25,-2) {$401$};
+
+     \node (111) at (4.75,-3) {$111$};
+     \node (211) at (3.75,-4) {$211$};
+     \node (311) at (3.75,-3) {$311$};
+     \node (411) at (3.75,-2) {$411$};
+
+     \node (102) at (3.5,-6) {$102$};
+     \node (202) at (2.5,-7) {$202$};
+     \node (302) at (2.5,-6) {$302$};
+     \node (402) at (2.5,-5) {$402$};
+    \end{pgfonlayer}
+    \begin{pgfonlayer}{background}
+     \foreach \d in {0,1,2} {
+      \foreach \x in {2,3,4} {
+       \draw[->] (\x\d0) -- (1\d0);
+      }
+     }
+     \foreach \d in {0,1} {
+      \foreach \x in {2,3,4} {
+       \draw[->] (\x\d1) -- (1\d1);
+      }
+     }
+     \foreach \x in {2,3,4} {
+      \draw[->] (\x02) -- (102);
+     }
+
+     \foreach \d in {1,2} {
+      \foreach \x in {2,3,4} {
+       \tikzmath{\e = \d - 1;}
+       \draw[->,dashed,thick,ForestGreen] (1\e0) -- (\x\d0);
+      }
+     }
+     \foreach \x in {2,3,4} {
+      \draw[->,dashed,thick,ForestGreen] (101) -- (\x11);
+     }
+
+     \foreach \x in {1,2,3,4} {
+      \draw[thick,->,dotted,Blue] (\x10) -- (\x01);
+      \draw[thick,->,dotted,Blue] (\x20) -- (\x11);
+      \draw[thick,->,dotted,Blue] (\x11) -- (\x02);
+     }
+    \end{pgfonlayer}
+   \end{tikzpicture}
+   \caption{The AR quiver of $D_4^{(2)}$.}
+  \end{subfigure}
+  \caption{The Auslander-Reiten quivers of $D_4^{(1)}$ and $D_4^{(2)}$.}
+  \label{fig:quivers-of-D}
+ \end{figure}
+
+ As was mentioned, the graphs of Dynkin type $A_n$ and $D_n$ describe bordered
+ surfaces with marked points. In the case of $A_n$, it is an unpunctured polygon
+ with $n + 3$ vertices and in the case of $D_n$ it is a once-punctured polygon
+ with $n$ vertices. Both assertions are proven in~\cite{fst} but are also easily
+ verifiable for instance from~\cref{fig:triangulations-An-Dn}.
+
+\begin{figure}[ht]
+ \centering
+ \begin{subfigure}[b]{\textwidth}
+  \centering
+  \begin{subfigure}[c]{.3\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \foreach \angle/\name in {0/A,60/B,120/C,180/D,240/E,300/F} {
+     \node[circle,fill,inner sep=1pt] (\name) at (\angle:1) {};
+    }
+    \draw (0,0) circle (1);
+    \draw (C) to node[midway,xshift=-1mm] {$1$} (E);
+    \draw (E) to node[midway,xshift=-1mm,yshift=1mm] {$2$} (B);
+    \draw (B) to node[midway,xshift=1mm] {$3$} (F);
+   \end{tikzpicture}
+  \end{subfigure}
+  \begin{subfigure}[c]{.3\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node (1) at (0,0) {$1$};
+    \node (2) at (1,0) {$2$};
+    \node (3) at (2,0) {$3$};
+
+    \draw[->] (2) -- (1);
+    \draw[->] (2) -- (3);
+   \end{tikzpicture}
+  \end{subfigure}
+  \caption{Ideal triangulation of a hexagon and the corresponding orientation
+   of $A_3$.}
+ \end{subfigure}
+ \begin{subfigure}[b]{\textwidth}
+  \vspace{1em}
+  \centering
+  \begin{subfigure}[c]{.3\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \foreach \an/\n in {0/A,72/B,160/C,216/D,250/E} {
+     \node[circle,fill,inner sep=1pt] (\n) at (\an:1) {};
+    }
+    \node[circle,fill,inner sep=1pt] (P) at (36:0.6) {};
+    \draw (0,0) circle (1);
+    \draw (C) to node[pos=0.2,xshift=1mm,yshift=1mm] {$1$} (E);
+    \draw (A) to node[midway,xshift=-1mm,yshift=-1.2mm] {$5$} (P);
+    \draw (B) to node[midway,xshift=-1.5mm] {$4$} (P);
+    \draw (B) .. controls ++(-0.75,-0.5) and ++(-0.5,-0.5) .. (A);
+    \node at (-0.1,0.5) {$3$};
+    \draw (B) .. controls ++(-1,0.1) and ++(0,-0.1) .. (E);
+    \node at (-0.27,-0.5) {$2$};
+   \end{tikzpicture}
+  \end{subfigure}
+  \begin{subfigure}[c]{.3\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node (1) at (0,0) {$1$};
+    \node (2) at (1,0) {$2$};
+    \node (3) at (2,0) {$3$};
+    \node (4) at (3,0.5) {$4$};
+    \node (5) at (3,-0.5) {$5$};
+    
+    \draw[->] (2) -- (1);
+    \draw[->] (2) -- (3);
+    \draw[->] (3) -- (4);
+    \draw[->] (5) -- (3);
+   \end{tikzpicture}
+  \end{subfigure}
+  \caption{Ideal triangulation of a once-punctured pentagon and the
+  corresponding orientation of $D_5$.}
+ \end{subfigure}
+ \caption{Triangulations of an unpunctured polygon on $n+3$ vertices and a
+  once-punctured polygon on $n$ vertices defining orientations of $A_n$ and
+  $D_n$.}
+ \label{fig:triangulations-An-Dn}
+ \end{figure}
+
+ In the face of this correspondence, one might hope to find similar connection
+ between unpunctured, 
  \bibliography{refs.bib}
 \end{document}
