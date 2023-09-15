@@ -40,7 +40,7 @@
   Following the construction of $d$-representation-finite algebras
   in~\cite{iyama} and the description of the correspondence between certain
   types of cluster algebras and triangulations of bordered surfaces with marked
-  points in~\cite{fst}, links have appeared connecting $d$-representation finite
+  points in~\cite{fst}, links have appeared connecting $d$-representation-finite
   algebras to higher dimensional variants of said surface. One such link was
   discovered in~\cite{ot} between higher Auslander algebras of the path algebra
   of linearly oriented Dynkin quiver $A_n$ and cyclic polytopes. I wish to
@@ -61,15 +61,14 @@
  only scratched the surface of this topic, hence very few original results are
  present.
 
- % TODO links
- In Section 2, I give a summary of the theory of bordered surfaces with marked
- points. Section 3 is dedicated to (normalized skew-symmetrizable) cluster
- algebras and their connection to bordered surfaces with marked points is drawn.
- Sections 4 and 5 define $d$-representation-finite algebras and higher cluster
- categories, respectively. Section 6 summarizes relevant results
- from~\cite{ot}, regarding a higher-dimensional kind of connection described in
- Section 3. Finally, Section 7 is riddled with (splinters of) steps towards
- generalizations of the content of Section 6.
+ In~\cref{sec:bordered-surfaces-with-marked-points}, I give a summary of the
+ theory of bordered surfaces with marked points. \Cref{sec:cluster-algebras} is
+ dedicated to (normalized skew-symmetrizable) cluster algebras and their
+ connection to bordered surfaces with marked points is drawn.
+ \Cref{sec:higher-auslander-theory} defines $d$-representation-finite algebras.
+ Finally, \cref{sec:higher-auslander-algebras-of-kan-and-cyclic-polytopes}
+ summarizes relevant results from~\cite{ot}, regarding a higher-dimensional kind
+ of connection described in~\cref{sec:cluster-algebras}.
 
  \section{Bordered Surfaces with Marked Points}
  \label{sec:bordered-surfaces-with-marked-points}
@@ -94,7 +93,8 @@
    \end{itemize}
   \end{itemize}
   Here, the term $n$-gon denotes a disk with $n$ marked points on its boundary.
-  Moreover, sphere with three punctures is also often excluded.
+  Moreover, a sphere with three punctures is for technical difficulties also
+  often excluded.
  \end{definition}
 
  \begin{definition}[Arc]
@@ -167,9 +167,9 @@
  \end{definition}
 
  The number of arcs in an ideal triangulation is an invariant of
- $(\mathbf{S},\mathbf{M})$ and is called the \emph{rank} of
- $(\mathbf{S},\mathbf{M})$ to emphasize the connection between these surfaces
- and cluster algebras of the same rank, to be introduced in the next section.
+ $(\mathbf{S},\mathbf{M})$ -- a very important observation enabling the
+ connection between these surfaces and cluster algebras, to be introduced in the
+ next section.
 
  The last concept we need to introduce is that of a \emph{flip} of an ideal
  triangulation. These basically entail swapping one diagonal for another in some
@@ -185,7 +185,7 @@
  $\gamma$ is the `folded' side of a self-folded triangle (the segment $i$ in
  \cref{fig:self-folded-triangle}), then $\gamma$ cannot be flipped. In all other
  cases, removing $\gamma$ create a tetragonal face on $\mathbf{S}$, and the
- flipped arc $\gamma'$ is define to be its other diagonal.
+ flipped arc $\gamma'$ is defined to be its other diagonal.
 
  Of special import to the theory of cluster algebras is the following result.
 
@@ -324,7 +324,7 @@
  \end{figure}
 
  \begin{definition}[Quiver mutation]
-   For a quiver $Q$, we construct the quiver $\mu_k(Q)$, called its
+   Given a quiver $Q$, we construct a quiver $\mu_k(Q)$, called its
    \emph{mutation} at $k$-th vertex by
    \begin{itemize}
     \item reversing all arrows with $k$ as source or as target;
@@ -333,8 +333,8 @@
    \end{itemize}
  \end{definition}
  The mutation at $k$-th vertex is an involution of $Q$, that is, $\mu_k^2(Q) =
- Q$ for every vertex $k \in Q_0$. Now, we proceed to define initial seeds and
- cluster algebras.
+ Q$ for every vertex $k \in Q_0$. Now, we can proceed to define initial seeds
+ and cluster algebras.
 
  We fix a free abelian group $(\mathbb{P}, \cdot )$ on variables
  $y_1,\ldots,y_n$ and define an operation $ \oplus $ on $\mathbb{P}$ by the
@@ -361,7 +361,7 @@
  \end{definition}
 
  \begin{definition}[Seed mutation]
-  A \emph{seed mutation} $\mu(k)$ \emph{in direction} $k$ is a transformation of
+  A \emph{seed mutation} $\mu_k$ \emph{in direction} $k$ is a transformation of
   an initial seed $(\mathbf{x},\mathbf{y},Q)$ into a new seed
   $(\mathbf{x'},\mathbf{y'},Q')$ defined as follows:
   \begin{itemize}
@@ -406,6 +406,35 @@
     of a bordered surface with marked points.
   \end{itemize}
  \end{definition}
+
+ In~\cite{fst}, Fomin, Shapiro and Thurston showed that there exists a
+ correspondence between a cluster algebra $\mathcal{A} \coloneqq
+ \mathcal{A}(\mathbf{x},\mathbf{y},Q)$ and a bordered surface with marked points
+ $(\mathbf{S},\mathbf{M})$ of the following form.
+
+ \begin{theorem}
+  There are bijections
+  \begin{equation*}
+   \begin{array}{ccc}
+    \{\text{cluster variables of }\mathcal{A}\} &\longleftrightarrow &
+    \{\text{arcs of }(\mathbf{S},\mathbf{M})\}\\
+    x_i &\longmapsto & i\\
+                                       &&\\
+    \{\text{clusters of }\mathcal{A}\} &\longleftrightarrow & \{\text{ideal
+    triangulations of }(\mathbf{S},\mathbf{M})\}\\
+      \mathbf{x}_T = \{x_1,\ldots,x_n\} & \longmapsto & T = \{1,\ldots,n\}.
+   \end{array}
+  \end{equation*}
+  Moreover, if $k$ is not a `folded' arc in a self-folded triangle, then a flip
+  of $k$ corresponds to a mutation in direction $k$, that is, the cluster
+  \[
+   \mu_k(\mathbf{x}) = (\mathbf{x} \setminus \{x_k\}) \cup \{x'_k\}
+  \]
+  corresponds to the triangulation
+  \[
+   T' \coloneqq (T \setminus \{k\}) \cup \{k'\}.
+  \]
+ \end{theorem}
 
  We are particularly interested in quivers whose underlying graph is one of
  (simp\-ly-laced) Dynkin diagrams of type $A_n (n \geq 1)$, $D_n (n \geq 4)$ or
@@ -809,6 +838,18 @@
  \end{figure}
 
  In the face of this correspondence, one might hope to find similar connection
- between unpunctured, 
+ between ideal triangulations of unpunctured, resp. once-punctured,
+ higher-dimensional polytopes and the AR quivers of higher Auslander algebras of
+ the path algebra of $A_n$, resp. $D_n$. Indeed, in the case of $A_n$, such
+ connection \emph{was} discovered in~\cite{ot}.
+
+ Naturally, the word `triangulation' must not be interpreted literally in
+ higher-dimensional context. What we mean, is a division of a $d$-dimensional
+ polytope into $d$-simplices by 
+
+ \section{Higher Auslander Algebras of $kA_n$ And Cyclic Polytopes}
+ \label{sec:higher-auslander-algebras-of-kan-and-cyclic-polytopes}
+
+
  \bibliography{refs.bib}
 \end{document}
