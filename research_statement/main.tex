@@ -1,4 +1,4 @@
-\documentclass[a4paper,oneside,svgnames,draft]{amsart}
+\documentclass[a4paper,oneside,svgnames]{amsart}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -117,7 +117,7 @@
  series of `cuts'. Here, `triangles' are either disks with three marked points
  on their boundaries or, so-called \emph{self-folded} triangles, once-punctured
  monogons with an arc connecting the unique marked point to the unique puncture.
- See \cref{fig:self-folded-triangle}.
+ See \Cref{fig:self-folded-triangle}.
  \begin{figure}[ht]
   \centering
   \begin{tikzpicture}
@@ -159,7 +159,7 @@
  \begin{definition}[Ideal triangulation]
   \label{def:ideal-triangulation}
   A maximal collection of pairwise compatible arcs is called an \emph{ideal
-  triangulation}. In fact, \cref{def:marked-surface} excludes all cases where
+  triangulation}. In fact, \Cref{def:marked-surface} excludes all cases where
   $(\mathbf{S},\mathbf{M})$ cannot be triangulated. The arcs of an ideal
   triangulation cut $\mathbf{S}$ into \emph{ideal triangles}. The three sides of
   an ideal triangle need not be distinct, leading to self-folded triangles, and
@@ -177,15 +177,15 @@
 
  \begin{definition}[Flip]
   \label{def:flip}
-  A \emph{flip} in an ideal triangulation $T$ is a transformation which
+  A \emph{flip} in an ideal triangulation $T$ is a transformation that
   exchanges one arc $\gamma \in T$ for a different arc $\gamma'$ which, together
   with the rest of arcs in $T$, forms a new ideal triangulation $T'$.
  \end{definition}
 
  There is at most one way to flip and arc $\gamma$ in an ideal triangulation. If
  $\gamma$ is the `folded' side of a self-folded triangle (the segment $i$ in
- \cref{fig:self-folded-triangle}), then $\gamma$ cannot be flipped. In all other
- cases, removing $\gamma$ create a tetragonal face on $\mathbf{S}$, and the
+ \Cref{fig:self-folded-triangle}), then $\gamma$ cannot be flipped. In all other
+ cases, removing $\gamma$ creates a tetragonal face on $\mathbf{S}$, and the
  flipped arc $\gamma'$ is defined to be its other diagonal.
 
  Of special import to the theory of cluster algebras is the following result.
@@ -251,11 +251,10 @@
 
  To each ideal triangulation $T$ of a bordered surface with marked points
  $(\mathbf{S},\mathbf{M})$ we associate a quiver $Q \coloneqq Q(T)$ in the
- following manner. For a fixed ideal triangulation, we label its $n$ arcs by
- natural numbers from $1$ to $n$, keeping in mind that this labelling is
- arbitrary. The set of vertices of $Q$ is then also $Q_0 \coloneqq
- \{1,\ldots,n\}$. Next, for each triangle $\Delta$ in $T$ which is not
- self-folded, we draw an arrow $i \to j$ if
+ following manner. We label the $n$ arcs of $T$ by natural numbers from $1$ to
+ $n$, keeping in mind that this labelling is arbitrary. The set of vertices of
+ $Q$ is then also $Q_0 \coloneqq \{1,\ldots,n\}$. Next, for each triangle
+ $\Delta$ in $T$ which is not self-folded, we draw an arrow $i \to j$ if
  \begin{itemize}
   \item $i$ and $j$ are sides of $\Delta$ with $j$ following $i$ in clockwise
    order;
@@ -379,7 +378,7 @@
      y_i' \coloneqq \begin{cases}
       y_k^{-1} & \text{ if } i = k;\\
       y_i \prod_{k \to i} y_k(y_k \oplus 1)^{-1}\prod_{k \leftarrow i} (y_k
-      \oplus 1) & \text{ if } i \neq k.
+      \oplus 1) & \text{ if } i \neq k;
      \end{cases}
     \]
    \item $Q'$ is the mutation of $Q$ at the $k$-th vertex.
@@ -403,7 +402,7 @@
     equivalent (those $Q$ can mutate into) to $Q$ is finite;
    \item of \emph{acyclic type}, if $Q$ is mutation equivalent to a quiver
     without oriented cycles;
-   \item of \emph{surface type}, if $Q$ is a quiver coming from a triangulation
+   \item of \emph{surface type}, if $Q$ is a quiver arising from a triangulation
     of a bordered surface with marked points.
   \end{itemize}
  \end{definition}
@@ -439,7 +438,7 @@
 
  We are particularly interested in quivers whose underlying graph is one of
  (simp\-ly-laced) Dynkin diagrams of type $A_n (n \geq 1)$, $D_n (n \geq 4)$ or
- $E_n (6 \leq n \leq 8)$ (see \cref{fig:dynkin-diagrams}). By~\cite{fst}, Theorem
+ $E_n (6 \leq n \leq 8)$ (see \Cref{fig:dynkin-diagrams}). By~\cite{fst}, Theorem
  6.5, a cluster algebra $\mathcal{A}(\mathbf{x},\mathbf{y},Q)$ is of finite type
  if and only if the underlying graph of $Q$ is a disjoint union of the
  aforementioned Dynkin diagrams. In this particular case, it is also true (by
@@ -605,8 +604,8 @@
  \section{Higher Auslander Theory}
  \label{sec:higher-auslander-theory}
 
- In this section, we summarize results from~\cite{iyama}, Section 1. We fix a
- finite-dimensional algebra $\Lambda$ over a field $k$.
+ In this section, we summarize results chiefly from~\cite{iyama}, Section 1. We
+ fix a finite-dimensional algebra $\Lambda$ over a field $k$.
 
  \begin{definition}[$d$-cluster tilting module]
   A module $M \in \mod \Lambda$ is called \emph{$d$-cluster tilting} if
@@ -621,7 +620,7 @@
   \leavevmode
   \begin{enumerate}
    \item An algebra $\Lambda$ is called \emph{$d$-representation-finite} if
-    $\gldim\Lambda<\infty$ and $\Lambda$ has a $d$-cluster tilting module.
+    $\gldim\Lambda \leq d$ and $\Lambda$ has a $d$-cluster tilting module.
    \item Let $\Lambda$ be a $d$-representation-finite algebra and $M$ its
     $d$-cluster tilting module. We call $\mathrm{End}_{\Lambda}(M)$ the
     \emph{$d$-Auslander algebra} of $\Lambda$.
@@ -639,15 +638,16 @@
  $2$-representation-finite algebra with its own $2$-cluster tilting module. This
  allows us to construct a $d$-Auslander algebra of $\Lambda$ for any $d \geq 1$.
 
- In~\cite{iyama}, Definition 6.11 and Theorem 6.12 describes the $d$-Auslander
- algebras of representation-finite hereditary algebras by giving their
- Auslander-Reiten quivers with relations. For example, let $\Lambda \coloneqq
- kD_4$ where $k$ is a field. We denote the $d$-Auslander algebra of $D_4$ by
- $D_4^{(d)}$ and $D_4^{(0)} \coloneqq \Lambda$. The quivers of $D_4^{(1)}$ and
- $D_4^{(2)}$ are depicted in~\cref{fig:quivers-of-D}. We use the same labels for
- vertices as Iyama in~\cite{iyama}. Iyama also introduces different `kinds' of
- arrows in these quivers. We only distinguish them by style and colour to avoid
- having to introduce auxiliary notation.
+ In~\cite{iyama}, Definition 6.11 and Theorem 6.12, Iyama describes the
+ $d$-Auslander algebras of representation-finite hereditary algebras by giving
+ their Auslander-Reiten quivers with relations. For example, let $\Lambda
+ \coloneqq kD_4$ where $k$ is a field. We denote the $d$-Auslander algebra of
+ $D_4$ by $D_4^{(d)}$ and set $D_4^{(0)} \coloneqq \Lambda$. The quivers of
+ $D_4^{(1)}$ and $D_4^{(2)}$ are depicted in~\Cref{fig:quivers-of-D}. We employ
+ the labelling of vertices introduced in~\cite{iyama}. Iyama also introduces
+ different `kinds' of arrows in these quivers. We only distinguish them by style
+ and colour to avoid having to introduce auxiliary notation.
+
  \begin{figure}[ht]
   \centering
   \begin{subfigure}[b]{\textwidth}
@@ -758,11 +758,12 @@
   \label{fig:quivers-of-D}
  \end{figure}
 
- As was mentioned, the graphs of Dynkin type $A_n$ and $D_n$ describe bordered
- surfaces with marked points. In the case of $A_n$, it is an unpunctured polygon
- with $n + 3$ vertices and in the case of $D_n$ it is a once-punctured polygon
- with $n$ vertices. Both assertions are proven in~\cite{fst} but are also easily
- verifiable for instance from~\cref{fig:triangulations-An-Dn}.
+ As was mentioned, the graphs of Dynkin type $A_n$ and $D_n$ are linked to
+ triangulations of bordered surfaces with marked points. In the case of $A_n$,
+ the linked surface is an unpunctured polygon with $n + 3$ vertices and in the
+ case of $D_n$ it is a once-punctured polygon with $n$ vertices. Both assertions
+ are proven in~\cite{fst} but are also easily verifiable for instance
+ from~\Cref{fig:triangulations-An-Dn}.
 
 \begin{figure}[ht]
  \centering
@@ -848,9 +849,8 @@
  \label{sec:higher-auslander-algebras-of-kan-and-cyclic-polytopes}
 
  In this short, final, section we introduce triangulations of cyclic polytopes
- and draw connections between their internal $d$-simplices cut out by such
- triangulations and indecomposable objects of $d$-Auslander algebras of $kA_n$,
- denoted $A^{(d)}_n$.
+ and draw connections between their internal $d$-simplices and indecomposable
+ objects of $d$-Auslander algebras of $kA_n$, denoted $A^{(d)}_n$.
 
  \begin{definition}[Cyclic polytope]
   A \emph{moment curve} in $\mathbb{R}^{d}$ is the continuous map
@@ -864,7 +864,7 @@
  \end{definition}
  By a \emph{triangulation} of $C(m,d)$, we mean its subdivision into simplices
  of dimension $d$ which share all vertices with the polytope. Based on the
- results summarized in~\cref{sec:higher-auslander-theory}, the Auslander algebra
+ results summarized in~\Cref{sec:higher-auslander-theory}, the Auslander algebra
  $A^{(d)}_n$ has a (up to multiplicity) unique $(d+1)$-cluster tilting module
  $\prescript{}{A^{(d)}_n}M \in \mod A^{(d)}_n$. By Theorem 1.1 in~\cite{ot},
  there is a neat correspondence
@@ -897,7 +897,7 @@
  \emph{mutation}.
 
  In two dimensions, a \emph{bistellar flip} is simply an arc \emph{flip}, as
- defined in~\cref{def:flip}. In general, given $d+2$ points in $\mathbb{R}^{d}$,
+ defined in~\Cref{def:flip}. In general, given $d+2$ points in $\mathbb{R}^{d}$,
  such that no $d+1$ of them lie on a single hyperplane, there are exactly two
  triangulations of their convex hull. Hence, given a triangulation $T$ of
  $C(m,d)$, a \emph{bistellar flip} is a transformation of $T$ consisting of a
@@ -921,7 +921,7 @@
 
  Section 2 in~\cite{ot} is dedicated to the study of relevant combinatorial
  properties of $C(m,d)$. In particular, certain collections of $(d+1)$-subsets
- of $\{1,\ldots,m\}$, denoted $\mathbf{I}_m^{d}$, are introduced which enumerate
+ of $\{1,\ldots,m\}$, denoted $\mathbf{I}_m^{d}$, are introduced to enumerate
  the direct summands of $\prescript{}{A_n^{(d)}}M$, in turn also denoted
  $\prescript{}{A^{(d)}_n}M_{i_0,\ldots,i_d}$ for $(i_0,\ldots,i_d) \in
  \mathbf{I}_m^{d}$. We intend not to reproduce the constructions here as such a
