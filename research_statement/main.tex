@@ -55,20 +55,20 @@
  \label{sec:introduction}
 
  This text serves primarily as an overview of relevant concepts regarding
- cluster algebras, bordered surfaces with marked points, higher dimensional
- cluster categories and $d$-representation-finite algebras interwoven with ideas
- of possible generalizations and caveats tied to such endeavour. So far, I have
+ cluster algebras, bordered surfaces with marked points, higher Auslander
+ algebras and $d$-representation-finite algebras interwoven with ideas of
+ possible generalizations and caveats tied to such endeavour. So far, I have
  only scratched the surface of this topic, hence very few original results are
  present.
 
- In~\cref{sec:bordered-surfaces-with-marked-points}, I give a summary of the
+ In~\Cref{sec:bordered-surfaces-with-marked-points}, I give a summary of the
  theory of bordered surfaces with marked points. \Cref{sec:cluster-algebras} is
  dedicated to (normalized skew-symmetrizable) cluster algebras and their
  connection to bordered surfaces with marked points is drawn.
  \Cref{sec:higher-auslander-theory} defines $d$-representation-finite algebras.
- Finally, \cref{sec:higher-auslander-algebras-of-kan-and-cyclic-polytopes}
+ Finally, \Cref{sec:higher-auslander-algebras-of-kan-and-cyclic-polytopes}
  summarizes relevant results from~\cite{ot}, regarding a higher-dimensional kind
- of connection described in~\cref{sec:cluster-algebras}.
+ of connection described in~\Cref{sec:cluster-algebras}.
 
  \section{Bordered Surfaces with Marked Points}
  \label{sec:bordered-surfaces-with-marked-points}
@@ -176,6 +176,7 @@
  quadrilateral of an ideal triangulation.
 
  \begin{definition}[Flip]
+  \label{def:flip}
   A \emph{flip} in an ideal triangulation $T$ is a transformation which
   exchanges one arc $\gamma \in T$ for a different arc $\gamma'$ which, together
   with the rest of arcs in $T$, forms a new ideal triangulation $T'$.
@@ -843,13 +844,137 @@
  the path algebra of $A_n$, resp. $D_n$. Indeed, in the case of $A_n$, such
  connection \emph{was} discovered in~\cite{ot}.
 
- Naturally, the word `triangulation' must not be interpreted literally in
- higher-dimensional context. What we mean, is a division of a $d$-dimensional
- polytope into $d$-simplices by 
-
  \section{Higher Auslander Algebras of $kA_n$ And Cyclic Polytopes}
  \label{sec:higher-auslander-algebras-of-kan-and-cyclic-polytopes}
 
+ In this short, final, section we introduce triangulations of cyclic polytopes
+ and draw connections between their internal $d$-simplices cut out by such
+ triangulations and indecomposable objects of $d$-Auslander algebras of $kA_n$,
+ denoted $A^{(d)}_n$.
 
+ \begin{definition}[Cyclic polytope]
+  A \emph{moment curve} in $\mathbb{R}^{d}$ is the continuous map
+  \begin{align*}
+   p:\mathbb{R} & \to \mathbb{R}^{d},\\
+   t &\mapsto (t,t^2,\ldots,t^d).
+  \end{align*}
+  Fix $m \in \mathbb{N}$ distinct real numbers $t_1,\ldots,t_m \in \mathbb{R}$.
+  The convex hull of the set of points $\{p(t_1),\ldots,p(t_m)\}$ is called a
+  \emph{cyclic polytope}, denoted $C(m,d)$.
+ \end{definition}
+ By a \emph{triangulation} of $C(m,d)$, we mean its subdivision into simplices
+ of dimension $d$ which share all vertices with the polytope. Based on the
+ results summarized in~\cref{sec:higher-auslander-theory}, the Auslander algebra
+ $A^{(d)}_n$ has a (up to multiplicity) unique $(d+1)$-cluster tilting module
+ $\prescript{}{A^{(d)}_n}M \in \mod A^{(d)}_n$. By Theorem 1.1 in~\cite{ot},
+ there is a neat correspondence
+ \[
+  \left\{ \parbox{.25\textwidth}{
+    \centering
+    internal $d$-simplices \\ of $C(n+2d,2d)$
+  } \right\} \longleftrightarrow 
+  \left\{ \parbox{.5\textwidth}{
+   \centering
+   indecomposable non-projective-injective\\
+   direct summands of $\prescript{}{A^{(d)}_n}M$
+  } \right\}
+ \]
+ which induces a bijection
+ \[
+  \left\{ \parbox{.2\textwidth}{
+    \centering
+    triangulations \\ of $C(n+2d,2d)$
+  } \right\} \longleftrightarrow 
+  \left\{ \parbox{.29\textwidth}{
+   \centering
+   tilting modules of $A^{(d)}_n$ \\
+   contained in $\prescript{}{A^{(d)}_n}M$
+  } \right\}.
+ \]
+ Moreover, in section 4 of~\cite{ot}, Oppermann and Thomas prove that two
+ triangulations of the cyclic polytope $C(n+2d,2d)$ are related by a so-called
+ \emph{bistellar flip} if the corresponding tilting modules are related by a
+ \emph{mutation}.
+
+ In two dimensions, a \emph{bistellar flip} is simply an arc \emph{flip}, as
+ defined in~\cref{def:flip}. In general, given $d+2$ points in $\mathbb{R}^{d}$,
+ such that no $d+1$ of them lie on a single hyperplane, there are exactly two
+ triangulations of their convex hull. Hence, given a triangulation $T$ of
+ $C(m,d)$, a \emph{bistellar flip} is a transformation of $T$ consisting of a
+ choice of a $(d+2)$-tuple of its vertices -- no $d+1$ lying on a single
+ hyperplane -- and replacing the part of $T$ lying inside their convex hull by
+ the latter's other triangulation.
+
+ By Theorem 4.3 in~\cite{ot}, any triangulation of $C(m,d)$ is related to any
+ other by a sequence of bistellar flips.
+
+ Before we discuss \emph{mutations} of tilting modules, we need to introduce
+ some (a little heavy) notation. A triangulation $T$ of $C(m,d)$ can be given as
+ a collection of subsets of the set of vertices $\{1,\ldots,m\}$, each with
+ $d+1$ elements -- the indices of the vertices forming a single $d$-simplex. A
+ bistellar flip then entails removing one such $(d+1)$-subset $(i_0,\ldots,i_d)$
+ from $T$ and adding a different subset $(j_0,\ldots,j_d)$ in such a way that
+ \[
+  (T \setminus \{(i_0,\ldots,i_d)\}) \cup \{(j_0,\ldots,j_d)\}
+ \]
+ is still a triangulation of $C(m,d)$.
+
+ Section 2 in~\cite{ot} is dedicated to the study of relevant combinatorial
+ properties of $C(m,d)$. In particular, certain collections of $(d+1)$-subsets
+ of $\{1,\ldots,m\}$, denoted $\mathbf{I}_m^{d}$, are introduced which enumerate
+ the direct summands of $\prescript{}{A_n^{(d)}}M$, in turn also denoted
+ $\prescript{}{A^{(d)}_n}M_{i_0,\ldots,i_d}$ for $(i_0,\ldots,i_d) \in
+ \mathbf{I}_m^{d}$. We intend not to reproduce the constructions here as such a
+ purpose would require explaining many intricacies of the combinatorics of
+ $C(m,d)$ which are otherwise irrelevant.
+
+ The important takeaway to us comes in the form of the following theorem, part
+ of Theorem 3.8 in~\cite{ot}. Recall that an $A^{(d)}_n$-module $X$ is called
+ \emph{rigid}, if $\ext^{i}(X,X) = 0$ for all $i>0$.
+
+ \begin{theorem}[Mutations of tilting modules]
+  \label{thm:tilting-modules}
+  Let $\prescript{}{A^{(d)}_n}M$ be the cluster tilting module of $A^{(d)}_n$
+  and $X \oplus \prescript{}{A^{(d)}_n}M_{i_0,\ldots,i_d}$ be a tilting
+  $A^{(d)}_n$-module with $X \in \add \prescript{}{A^{(d)}_n}M$. Assume that
+  $(j_0,\ldots,j_d) \in \mathbb{Z}^{d+1}$ is such that
+  \[
+   \prescript{}{A^{(d)}_n}M_{j_0,\ldots,j_d} \notin \add (X \oplus
+   \prescript{}{A^{(d)}_n}M_{i_0,\ldots,i_d})
+  \]
+  and $\prescript{}{A^{(d)}_n}M_{j_0,\ldots,j_d}$ is rigid. Then
+  \[
+   X \oplus \prescript{}{A^{(d)}_n}M_{j_0,\ldots,j_d}
+  \]
+  is a tilting $A^{(d)}_n$-module.
+ \end{theorem}
+
+ We call the tilting module $X \oplus \prescript{}{A^{(d)}_n}M_{j_0,\ldots,j_d}$
+ a \emph{mutation} of the tilting module $X \oplus
+ \prescript{}{A^{(d)}_n}M_{i_0,\ldots,i_d}$.
+
+ In particular, Oppermann and Thomas have shown (Theorem 4.4 in~\cite{ot}) that
+ the situation in~\Cref{thm:tilting-modules} arises when $(i_0,\ldots,i_d)$ is
+ exchanged for $(j_0,\ldots,j_d)$ in a bistellar flip of a triangulation $T$,
+ giving birth to the following result.
+
+ \begin{theorem}
+  Triangulations of $C(n+2d,2d)$ correspond bijectively to basic tilting modules
+  of $A^{(d)}_n$ contained in $\prescript{}{A^{(d)}_n}M$. Furthermore, two
+  triangulations are related by a bistellar flip if and only if the
+  corresponding tilting modules are related by a single mutation.
+ \end{theorem}
+
+ It is my aim to prove a similar string of results for path algebras of the
+ other Dynkin types. Those of type $D_n$, whose underlying quiver is also (as in
+ the case of $A_n$) of surface type, should be the simplest in this regard. I
+ expect the higher-dimensional analogue of a once-punctured polygon to also be a
+ punctured polytope with vertices in general position -- in fact a punctured
+ cyclic polytope. The Dynkin quivers of type $E_n$ for $6 \leq n \leq 8$ are
+ unfortunately \emph{not} of surface type and the search for a connected
+ geometric/combinatorial object will prove difficult. However, such an attempt
+ may also lead to a discovery of a more general framework usable for
+ `sufficiently well-behaved' algebras without the restriction of
+ representation-finiteness.
  \bibliography{refs.bib}
 \end{document}
