@@ -1,0 +1,145 @@
+\documentclass[a4paper,oneside,svgnames]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,citecolor=Green,urlcolor=Black]{hyperref}
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{tikz}
+\usetikzlibrary{arrows,math}
+\usepackage[noabbrev]{cleveref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Theorems
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\let\hom\relax
+\let\mod\relax
+\DeclareMathOperator{\ext}{Ext}
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\mod}{mod}
+\DeclareMathOperator{\soc}{soc}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\gldim}{gl.dim}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\title{Combinatorial Properties of Higher Cluster Categories}
+\author{Adam Klepáč}
+
+\begin{document}
+ \maketitle
+ \section*{Research Objectives}
+ \setcounter{section}{1}
+
+ The main objective of this project is to understand and describe the
+ combinatorics of higher-dimension\-al analogues of the path algebras (in the
+ sense of higher representation theory developed by Iyama in~\cite{iya}) of
+ affine Dynkin quivers and their associated generalized cluster categories (in
+ the sense described in~\cite[Section~5]{ot}, building upon~\cite{amiot1} and
+ \cite{amiot2}, or~\cite{guo}), possibly and hopefully aiding in an eventual
+ broader comprehension of the combinatorial structure of
+ $n$-representation-infinite algebras (see~\cite{hio}).
+
+ The path towards the goal of this project can be divided into several steps,
+ ordered chronologically and quite possibly also by level of difficulty.
+ 
+ \subsection{Combinatorial description of higher Auslander algebras of type $D$
+ and $E$ and the associated cluster categories}
+
+ The first step entails expanding upon the research done on the higher Auslander
+ algebras of type $A$ in~\cite{ot} with the auxiliary goal of deepening my
+ understanding of higher representation theory and the theory of cluster
+ categories.
+
+ Dynkin quivers of type $D$ arise (as well as those of type $A$) from
+ triangulations of bordered surfaces with marked points -- in this case the
+ surface in question is a disk with finite number of marked points on its
+ boundary and one marked point in its interior. The most natural
+ higher-dimensional structure whose triangulations should describe basic tilting
+ modules of their path algebras and also the basic cluster tilting objects of
+ their associated cluster categories is the cyclic polytope with a distinguished
+ point in its interior. As the higher Auslander algebras of such algebras are
+ $n$-representation-finite, the necessary theory is already in place and it
+ remains to successfully describe (in combinatorial terms) the tilting objects
+ in question.
+
+ Quivers of Dynkin type $E$ do not arise from triangulations of bordered
+ surfaces and thus there are no obvious hints as to which combinatorial
+ structure captures the nature of the tilting modules of the higher Auslander
+ algebras of their path algebras. Nonetheless, as there are only three Dynkin
+ diagrams of type $E$, at worst such structures can be found on a case-by-case
+ basis.
+
+ \subsection{Generalization of the theory of higher Auslander algebras to path
+ algebras of quivers of affine Dynkin type}
+ \label{step-2}
+
+ The iterative construction of higher Auslander algebras detailed in~\cite{iya}
+ hinges on the property of the `starting' algebra being representation-finite
+ and hereditary and thus having a (up to multiplicity unique) cluster tilting
+ object. In order to study representation-infinite path algebras from the same
+ viewpoint, a generalization of this theory which compensates for the
+ non-existence of such an object is paramount. An ideal generalization would be
+ one that is also symmetric with respect to changes in orientation of the
+ original quiver which now influences the structure of the associated cluster
+ algebras and cluster categories.
+
+ The construction of $n$-represention-infinite algebras of type $\tilde{A}$
+ from~\cite[Section~5]{hio} seems promising but still fully depends on the
+ chosen orientation of the graph $\tilde{A}_n$ and in degree 0 yields path
+ algebras of the resulting quiver only in cases when the chosen orientation is
+ acyclic. I suspect, however, that the latter will be a prevailing issue and
+ path algebras of the (exactly two) quivers of type $\tilde{A}$ with cyclic
+ orientation will need to be either excluded or treated separately.
+
+ \subsection{Combinatorial description of the generalized higher Auslander
+ algebras of quivers of affine Dynkin type}
+ \label{step-3}
+
+ Continuing in the same vein, I intend to find or construct a combinatorial
+ structure which would encapsulate information about the (primarily tilting)
+ modules of the generalized higher Auslander algebras from step~\ref{step-2}.
+ Such a structure will undoubtedly fail to be finite but I find it unreasonable
+ to try to predict what such a structure could look like considering I have not
+ yet conceptualized, much less studied, said generalization.
+
+ The division of the category of finitely generated modules over
+ $n$-representation-infinite algebras into $n$-preprojective, $n$-regular and
+ $n$-preinjective parts from~\cite[Theorem 4.18]{hio} is bound to prove itself
+ useful in this endeavour as it already allowed a deeper delve into the
+ combinatorics of the AR quivers of these algebras (\cite{gll}).
+
+ \subsection{Construction of a generalized cluster category associated to the
+ generalized higher Auslander algebras of affine Dynkin type}
+
+ The final step is to construct a generalized cluster category in a manner
+ similar to the one employed in~\cite[Section~5]{ot} for
+ $n$-representation-infinite algebras or, at least, for the generalized higher
+ Auslander algebras of affine Dynkin type from step~\ref{step-2}. It is not yet
+ clear which of the two approaches (\cite{amiot1} or \cite{guo}) is preferable,
+ or if one shouldn't even seek generalization of a different kind entirely. In
+ any case, the resulting cluster category must be $n$-Calabi-Yau, admit an
+ $m$-cluster tilting object ($n$ and $m$ need not be equal but dependant), its
+ cluster tilting objects should in the 2-dimensional case correspond to clusters
+ of the connected cluster algebra and the combinatorial description of its
+ cluster tilting objects must be compatible (in the vague sense of `bearing a
+ related structure') with the description from step~\ref{step-3}.
+
+\end{document}

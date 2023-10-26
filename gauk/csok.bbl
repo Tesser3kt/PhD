@@ -1,0 +1,1075 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{as}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9f82a18e86d8728cd034164f4d902170}{%
+           family={Auslander},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b9804bf546cf1ab7f1ff945cbd3f729d}{%
+           family={Smalø},
+           familyi={S\bibinitperiod},
+           given={Sverre\bibnamedelima O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{fullhash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{bibnamehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{authorbibnamehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{authornamehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{authorfullhash}{a5f611a5e1cc94d442dabb566f77040f}
+      \field{labelalpha}{AS81}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0021-8693}
+      \field{journaltitle}{Journal of Algebra}
+      \field{number}{2}
+      \field{title}{Almost split sequences in subcategories}
+      \field{volume}{69}
+      \field{year}{1981}
+      \field{pages}{426\bibrangedash 454}
+      \range{pages}{29}
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0021869381902143
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0021869381902143
+      \endverb
+    \endentry
+    \entry{fz1}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a183f65383a180a1e8ab1a2743c9c612}{%
+           family={Fomin},
+           familyi={F\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5c5b0848949961762ca4b2b033891999}{%
+           family={Zelevinsky},
+           familyi={Z\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{fullhash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{bibnamehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{authorbibnamehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{authornamehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{authorfullhash}{0a5e50e1402f041c19d73ff0783982c7}
+      \field{extraname}{1}
+      \field{labelalpha}{FZ01}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{C}luster algebras {I}: {F}oundations}
+      \field{year}{2001}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0104151v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0104151v1
+      \endverb
+    \endentry
+    \entry{fz3}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a183f65383a180a1e8ab1a2743c9c612}{%
+           family={Fomin},
+           familyi={F\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5c5b0848949961762ca4b2b033891999}{%
+           family={Zelevinsky},
+           familyi={Z\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{fullhash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{bibnamehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{authorbibnamehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{authornamehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{authorfullhash}{0a5e50e1402f041c19d73ff0783982c7}
+      \field{extraname}{2}
+      \field{labelalpha}{FZ01}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Y}-systems and generalized associahedra}
+      \field{year}{2001}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/hep-th/0111053v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/hep-th/0111053v1
+      \endverb
+    \endentry
+    \entry{fzb}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d838946ce00ca60574be5443b463ac97}{%
+           family={Berenstein},
+           familyi={B\bibinitperiod},
+           given={Arkady},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a183f65383a180a1e8ab1a2743c9c612}{%
+           family={Fomin},
+           familyi={F\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5c5b0848949961762ca4b2b033891999}{%
+           family={Zelevinsky},
+           familyi={Z\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1fadf6c3c43e454a2670fc848b9f1ffb}
+      \strng{fullhash}{1fadf6c3c43e454a2670fc848b9f1ffb}
+      \strng{bibnamehash}{1fadf6c3c43e454a2670fc848b9f1ffb}
+      \strng{authorbibnamehash}{1fadf6c3c43e454a2670fc848b9f1ffb}
+      \strng{authornamehash}{1fadf6c3c43e454a2670fc848b9f1ffb}
+      \strng{authorfullhash}{1fadf6c3c43e454a2670fc848b9f1ffb}
+      \field{labelalpha}{BFZ03}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{C}luster algebras {III}: {U}pper bounds and double {B}ruhat cells}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0305434v3
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0305434v3
+      \endverb
+    \endentry
+    \entry{fz4}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a183f65383a180a1e8ab1a2743c9c612}{%
+           family={Fomin},
+           familyi={F\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5c5b0848949961762ca4b2b033891999}{%
+           family={Zelevinsky},
+           familyi={Z\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{fullhash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{bibnamehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{authorbibnamehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{authornamehash}{0a5e50e1402f041c19d73ff0783982c7}
+      \strng{authorfullhash}{0a5e50e1402f041c19d73ff0783982c7}
+      \field{extraname}{3}
+      \field{labelalpha}{FZ03}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{C}luster algebras {II}: {F}inite type classification}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0208229v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0208229v2
+      \endverb
+    \endentry
+    \entry{gsv}{article}{}
+      \name{author}{3}{}{%
+        {{hash=88ee17cbafa64e99d137a851fca16352}{%
+           family={Gekhtman},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7bab9690b0d8a06ced3829a83e51f25a}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bbac92d5687ea900ace48f3d6f32fc0f}{%
+           family={Vainshtein},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2fe83bf8db0761f9045115fe36bd563a}
+      \strng{fullhash}{2fe83bf8db0761f9045115fe36bd563a}
+      \strng{bibnamehash}{2fe83bf8db0761f9045115fe36bd563a}
+      \strng{authorbibnamehash}{2fe83bf8db0761f9045115fe36bd563a}
+      \strng{authornamehash}{2fe83bf8db0761f9045115fe36bd563a}
+      \strng{authorfullhash}{2fe83bf8db0761f9045115fe36bd563a}
+      \field{labelalpha}{GSV03}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{C}luster algebras and {P}oisson geometry}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0208033v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0208033v2
+      \endverb
+    \endentry
+    \entry{mrz}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ff06146416b8154a7e6fb252f1be8ee6}{%
+           family={Marsh},
+           familyi={M\bibinitperiod},
+           given={Bethany},
+           giveni={B\bibinitperiod}}}%
+        {{hash=189f7bbc153b84eb7f8bfc7220acc170}{%
+           family={Reineke},
+           familyi={R\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5c5b0848949961762ca4b2b033891999}{%
+           family={Zelevinsky},
+           familyi={Z\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e403bd018520edc864f5b5e4f76bdc8d}
+      \strng{fullhash}{e403bd018520edc864f5b5e4f76bdc8d}
+      \strng{bibnamehash}{e403bd018520edc864f5b5e4f76bdc8d}
+      \strng{authorbibnamehash}{e403bd018520edc864f5b5e4f76bdc8d}
+      \strng{authornamehash}{e403bd018520edc864f5b5e4f76bdc8d}
+      \strng{authorfullhash}{e403bd018520edc864f5b5e4f76bdc8d}
+      \field{labelalpha}{MRZ03}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Generalized associahedra via quiver representations}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0205152v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0205152v2
+      \endverb
+    \endentry
+    \entry{s}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cf6bb93c8a489040078920743f243794}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Joshua\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf6bb93c8a489040078920743f243794}
+      \strng{fullhash}{cf6bb93c8a489040078920743f243794}
+      \strng{bibnamehash}{cf6bb93c8a489040078920743f243794}
+      \strng{authorbibnamehash}{cf6bb93c8a489040078920743f243794}
+      \strng{authornamehash}{cf6bb93c8a489040078920743f243794}
+      \strng{authorfullhash}{cf6bb93c8a489040078920743f243794}
+      \field{labelalpha}{Sco03}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{G}rassmannians and {C}luster {A}lgebras}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0311148v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0311148v1
+      \endverb
+    \endentry
+    \entry{bmrrt}{article}{}
+      \name{author}{5}{}{%
+        {{hash=843d6af7cc1ef5b498a1c0599eb04f74}{%
+           family={Buan},
+           familyi={B\bibinitperiod},
+           given={Aslak\bibnamedelima Bakke},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ff06146416b8154a7e6fb252f1be8ee6}{%
+           family={Marsh},
+           familyi={M\bibinitperiod},
+           given={Bethany},
+           giveni={B\bibinitperiod}}}%
+        {{hash=189f7bbc153b84eb7f8bfc7220acc170}{%
+           family={Reineke},
+           familyi={R\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=320ed8c2cd36c08056e76659009a657d}{%
+           family={Reiten},
+           familyi={R\bibinitperiod},
+           given={Idun},
+           giveni={I\bibinitperiod}}}%
+        {{hash=9daa1ef71a65b3f7c8642a8b5a872c6f}{%
+           family={Todorov},
+           familyi={T\bibinitperiod},
+           given={Gordana},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d716f3bc57d989536e8473a628658e9}
+      \strng{fullhash}{582cf01ff4a8c2a6a402a080cafe1f33}
+      \strng{bibnamehash}{1d716f3bc57d989536e8473a628658e9}
+      \strng{authorbibnamehash}{1d716f3bc57d989536e8473a628658e9}
+      \strng{authornamehash}{1d716f3bc57d989536e8473a628658e9}
+      \strng{authorfullhash}{582cf01ff4a8c2a6a402a080cafe1f33}
+      \field{labelalpha}{Bua+04}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{T}ilting theory and cluster combinatorics}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0402054v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0402054v1
+      \endverb
+    \endentry
+    \entry{k}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2b847b7c461a7a54334e6476f1125387}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{fullhash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{bibnamehash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{authorbibnamehash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{authornamehash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{authorfullhash}{2b847b7c461a7a54334e6476f1125387}
+      \field{extraname}{1}
+      \field{labelalpha}{Kel05}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{O}n triangulated orbit categories}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0503240v4
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0503240v4
+      \endverb
+    \endentry
+    \entry{fg}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=97956c92bf46a0fb4444aff48dd9acef}{%
+           family={Fock},
+           familyi={F\bibinitperiod},
+           given={V.\bibnamedelimi V.},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=b7270c14dbeed5c2b316daaa81f6eed4}{%
+           family={Goncharov},
+           familyi={G\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{9cf29cf6168792a402d7cdf12349730b}
+      \strng{fullhash}{9cf29cf6168792a402d7cdf12349730b}
+      \strng{bibnamehash}{9cf29cf6168792a402d7cdf12349730b}
+      \strng{authorbibnamehash}{9cf29cf6168792a402d7cdf12349730b}
+      \strng{authornamehash}{9cf29cf6168792a402d7cdf12349730b}
+      \strng{authorfullhash}{9cf29cf6168792a402d7cdf12349730b}
+      \field{labelalpha}{FG06}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Moduli spaces of local systems and higher Teichmuller theory}
+      \field{year}{2006}
+      \verb{eprint}
+      \verb math/0311149
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0311149v4
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0311149v4
+      \endverb
+    \endentry
+    \entry{schif}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0c3529bcc2d828fec04af8363bc9a5fa}{%
+           family={Schiffler},
+           familyi={S\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c3529bcc2d828fec04af8363bc9a5fa}
+      \strng{fullhash}{0c3529bcc2d828fec04af8363bc9a5fa}
+      \strng{bibnamehash}{0c3529bcc2d828fec04af8363bc9a5fa}
+      \strng{authorbibnamehash}{0c3529bcc2d828fec04af8363bc9a5fa}
+      \strng{authornamehash}{0c3529bcc2d828fec04af8363bc9a5fa}
+      \strng{authorfullhash}{0c3529bcc2d828fec04af8363bc9a5fa}
+      \field{labelalpha}{Sch06}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{A geometric model for cluster categories of type $D_n$}
+      \field{year}{2006}
+      \verb{eprint}
+      \verb math/0608264
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0608264v3
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0608264v3
+      \endverb
+    \endentry
+    \entry{ginz}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fd81af24de7d089fca02f6d0b3319d2d}{%
+           family={Ginzburg},
+           familyi={G\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd81af24de7d089fca02f6d0b3319d2d}
+      \strng{fullhash}{fd81af24de7d089fca02f6d0b3319d2d}
+      \strng{bibnamehash}{fd81af24de7d089fca02f6d0b3319d2d}
+      \strng{authorbibnamehash}{fd81af24de7d089fca02f6d0b3319d2d}
+      \strng{authornamehash}{fd81af24de7d089fca02f6d0b3319d2d}
+      \strng{authorfullhash}{fd81af24de7d089fca02f6d0b3319d2d}
+      \field{labelalpha}{Gin07}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Calabi-Yau algebras}
+      \field{year}{2007}
+      \verb{eprint}
+      \verb math/0612139
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0612139v3
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0612139v3
+      \endverb
+    \endentry
+    \entry{ifz}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=6dd8a3b6d6b978f5c2d1b237bfb0593e}{%
+           family={Iyama},
+           familyi={I\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+        {{hash=320ed8c2cd36c08056e76659009a657d}{%
+           family={Reiten},
+           familyi={R\bibinitperiod},
+           given={Idun},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{eba6111722ed614b9d812bbce80cf33f}
+      \strng{fullhash}{eba6111722ed614b9d812bbce80cf33f}
+      \strng{bibnamehash}{eba6111722ed614b9d812bbce80cf33f}
+      \strng{authorbibnamehash}{eba6111722ed614b9d812bbce80cf33f}
+      \strng{authornamehash}{eba6111722ed614b9d812bbce80cf33f}
+      \strng{authorfullhash}{eba6111722ed614b9d812bbce80cf33f}
+      \field{labelalpha}{IR07}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{Fomin-Zelevinsky mutation and tilting modules over Calabi-Yau algebras}
+      \field{year}{2007}
+      \verb{eprint}
+      \verb math/0605136
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0605136v3
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0605136v3
+      \endverb
+    \endentry
+    \entry{amiot2}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b022ee250d05caae6e48d02362d6bf11}{%
+           family={Amiot},
+           familyi={A\bibinitperiod},
+           given={Claire},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{fullhash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{bibnamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authorbibnamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authornamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authorfullhash}{b022ee250d05caae6e48d02362d6bf11}
+      \field{extraname}{1}
+      \field{labelalpha}{Ami08}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{PhD thesis, Université Denis Diderot - Paris 7}
+      \field{title}{{S}ur les petites catégories triangulées}
+      \field{year}{2008}
+    \endentry
+    \entry{fst}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a183f65383a180a1e8ab1a2743c9c612}{%
+           family={Fomin},
+           familyi={F\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d5e6086a0e195b1cd1f657652d8dbd63}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1c1b01befcae33ef017333c4e57143a3}{%
+           family={Thurston},
+           familyi={T\bibinitperiod},
+           given={Dylan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6effd6acaccda71432b9a0f688163951}
+      \strng{fullhash}{6effd6acaccda71432b9a0f688163951}
+      \strng{bibnamehash}{6effd6acaccda71432b9a0f688163951}
+      \strng{authorbibnamehash}{6effd6acaccda71432b9a0f688163951}
+      \strng{authornamehash}{6effd6acaccda71432b9a0f688163951}
+      \strng{authorfullhash}{6effd6acaccda71432b9a0f688163951}
+      \field{labelalpha}{FST08}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Mathematica, 201:83-146}
+      \field{title}{Cluster algebras and triangulated surfaces. {P}art {I}: {C}luster complexes}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0608367v3
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0608367v3
+      \endverb
+    \endentry
+    \entry{ks}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=cf27d9e4bd394efedf47095891bb2927}{%
+           family={Kontsevich},
+           familyi={K\bibinitperiod},
+           given={Maxim},
+           giveni={M\bibinitperiod}}}%
+        {{hash=83af258b6f55caf0e3e412df43bf9507}{%
+           family={Soibelman},
+           familyi={S\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1c486bd6befc1aa424e189638c2a721}
+      \strng{fullhash}{c1c486bd6befc1aa424e189638c2a721}
+      \strng{bibnamehash}{c1c486bd6befc1aa424e189638c2a721}
+      \strng{authorbibnamehash}{c1c486bd6befc1aa424e189638c2a721}
+      \strng{authornamehash}{c1c486bd6befc1aa424e189638c2a721}
+      \strng{authorfullhash}{c1c486bd6befc1aa424e189638c2a721}
+      \field{labelalpha}{KS08}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Stability structures, motivic Donaldson-Thomas invariants and cluster transformations}
+      \field{year}{2008}
+      \verb{eprint}
+      \verb 0811.2435
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/0811.2435v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/0811.2435v1
+      \endverb
+    \endentry
+    \entry{amiot1}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b022ee250d05caae6e48d02362d6bf11}{%
+           family={Amiot},
+           familyi={A\bibinitperiod},
+           given={Claire},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{fullhash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{bibnamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authorbibnamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authornamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authorfullhash}{b022ee250d05caae6e48d02362d6bf11}
+      \field{extraname}{2}
+      \field{labelalpha}{Ami09}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{Cluster categories for algebras of global dimension 2 and quivers with potential}
+      \field{year}{2009}
+      \verb{eprint}
+      \verb 0805.1035
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/0805.1035v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/0805.1035v2
+      \endverb
+    \endentry
+    \entry{k2}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2b847b7c461a7a54334e6476f1125387}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{fullhash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{bibnamehash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{authorbibnamehash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{authornamehash}{2b847b7c461a7a54334e6476f1125387}
+      \strng{authorfullhash}{2b847b7c461a7a54334e6476f1125387}
+      \field{extraname}{2}
+      \field{labelalpha}{Kel09}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{Deformed Calabi-Yau Completions}
+      \field{year}{2009}
+      \verb{eprint}
+      \verb 0908.3499
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/0908.3499v5
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/0908.3499v5
+      \endverb
+    \endentry
+    \entry{iya}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6dd8a3b6d6b978f5c2d1b237bfb0593e}{%
+           family={Iyama},
+           familyi={I\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{6dd8a3b6d6b978f5c2d1b237bfb0593e}
+      \strng{fullhash}{6dd8a3b6d6b978f5c2d1b237bfb0593e}
+      \strng{bibnamehash}{6dd8a3b6d6b978f5c2d1b237bfb0593e}
+      \strng{authorbibnamehash}{6dd8a3b6d6b978f5c2d1b237bfb0593e}
+      \strng{authornamehash}{6dd8a3b6d6b978f5c2d1b237bfb0593e}
+      \strng{authorfullhash}{6dd8a3b6d6b978f5c2d1b237bfb0593e}
+      \field{labelalpha}{Iya10}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cluster tilting for higher {A}uslander algebras}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/0809.4897v3
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/0809.4897v3
+      \endverb
+    \endentry
+    \entry{io}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6dd8a3b6d6b978f5c2d1b237bfb0593e}{%
+           family={Iyama},
+           familyi={I\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+        {{hash=6ee5a8f0ab8a46e70429a5edbd49ebe1}{%
+           family={Oppermann},
+           familyi={O\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6ecf7d2affe73621bb6c36873c96dad}
+      \strng{fullhash}{e6ecf7d2affe73621bb6c36873c96dad}
+      \strng{bibnamehash}{e6ecf7d2affe73621bb6c36873c96dad}
+      \strng{authorbibnamehash}{e6ecf7d2affe73621bb6c36873c96dad}
+      \strng{authornamehash}{e6ecf7d2affe73621bb6c36873c96dad}
+      \strng{authorfullhash}{e6ecf7d2affe73621bb6c36873c96dad}
+      \field{labelalpha}{IO10}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{n-representation-finite algebras and n-{APR} tilting}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/0909.0593v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/0909.0593v2
+      \endverb
+    \endentry
+    \entry{ot}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6ee5a8f0ab8a46e70429a5edbd49ebe1}{%
+           family={Oppermann},
+           familyi={O\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1d740d2a346b625d025acf4400707c5c}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Hugh},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{fullhash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{bibnamehash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{authorbibnamehash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{authornamehash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{authorfullhash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \field{labelalpha}{OT11}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Higher dimensional cluster combinatorics and representation theory}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1001.5437v4
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1001.5437v4
+      \endverb
+    \endentry
+    \entry{gmn}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=467a6baf6ae29d9a98d1ef08639cb409}{%
+           family={Gaiotto},
+           familyi={G\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4d6832d87fe456203eaeac6377608146}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Gregory\bibnamedelima W.},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=79e31cbda8c61c41b6091f1a6b66c46d}{%
+           family={Neitzke},
+           familyi={N\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ea43a768848dd45cc91b09f9ba2bfa1}
+      \strng{fullhash}{0ea43a768848dd45cc91b09f9ba2bfa1}
+      \strng{bibnamehash}{0ea43a768848dd45cc91b09f9ba2bfa1}
+      \strng{authorbibnamehash}{0ea43a768848dd45cc91b09f9ba2bfa1}
+      \strng{authornamehash}{0ea43a768848dd45cc91b09f9ba2bfa1}
+      \strng{authorfullhash}{0ea43a768848dd45cc91b09f9ba2bfa1}
+      \field{labelalpha}{GMN12}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{title}{Framed BPS States}
+      \field{year}{2012}
+      \verb{eprint}
+      \verb 1006.0146
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1006.0146v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1006.0146v2
+      \endverb
+    \endentry
+    \entry{guo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4c830868e00e44a6b206f642f0899a4c}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Lingyan},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{fullhash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{bibnamehash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{authorbibnamehash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{authornamehash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{authorfullhash}{4c830868e00e44a6b206f642f0899a4c}
+      \field{labelalpha}{Guo12}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{PhD thesis, Université Paris Diderot - Paris 7}
+      \field{title}{{C}atégories amassées supérieureset frises tropicales}
+      \field{year}{2012}
+    \endentry
+    \entry{gko}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1f671f392f75004a037a7acc36a2a02f}{%
+           family={Geiss},
+           familyi={G\bibinitperiod},
+           given={Christof},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2b847b7c461a7a54334e6476f1125387}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6ee5a8f0ab8a46e70429a5edbd49ebe1}{%
+           family={Oppermann},
+           familyi={O\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Walter de Gruyter {GmbH}}%
+      }
+      \strng{namehash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{fullhash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{bibnamehash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{authorbibnamehash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{authornamehash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{authorfullhash}{87a07922c13e36ef9d33e6a8530250b7}
+      \field{labelalpha}{GKO13}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal für die reine und angewandte Mathematik (Crelles Journal)}
+      \field{month}{1}
+      \field{number}{675}
+      \field{title}{n-angulated categories}
+      \field{volume}{2013}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://doi.org/10.1515%2Fcrelle.2011.177
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515%2Fcrelle.2011.177
+      \endverb
+    \endentry
+    \entry{hio}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9520d89ec8d045f019c020377e097c80}{%
+           family={Herschend},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6dd8a3b6d6b978f5c2d1b237bfb0593e}{%
+           family={Iyama},
+           familyi={I\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+        {{hash=6ee5a8f0ab8a46e70429a5edbd49ebe1}{%
+           family={Oppermann},
+           familyi={O\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{fullhash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{bibnamehash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{authorbibnamehash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{authornamehash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{authorfullhash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \field{labelalpha}{HIO14}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{From the viewpoint of higher dimensional Auslander–Reiten theory, we introduce a new class of finite dimensional algebras of global dimension n, which we call n-representation infinite. They are a certain analog of representation infinite hereditary algebras, and we study three important classes of modules: n-preprojective, n-preinjective and n-regular modules. We observe that their homological behaviour is quite interesting. For instance they provide first examples of algebras having infinite Ext1-orthogonal families of modules. Moreover we give general constructions of n-representation infinite algebras. Applying Minamotoʼs theory on Fano algebras in non-commutative algebraic geometry, we describe the category of n-regular modules in terms of the corresponding preprojective algebra. Then we introduce n-representation tame algebras, and show that the category of n-regular modules decomposes into the categories of finite dimensional modules over localizations of the preprojective algebra. This generalizes the classical description of regular modules over tame hereditary algebras. As an application, we show that the representation dimension of an n-representation tame algebra is at least n+2.}
+      \field{issn}{0001-8708}
+      \field{journaltitle}{Advances in Mathematics}
+      \field{title}{n-representation infinite algebras}
+      \field{volume}{252}
+      \field{year}{2014}
+      \field{pages}{292\bibrangedash 342}
+      \range{pages}{51}
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001870813003642
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001870813003642
+      \endverb
+      \keyw{Auslander–Reiten theory,Preprojective algebra,Fano algebra,-representation finite algebra,Representation dimension}
+    \endentry
+    \entry{djw}{article}{}
+      \name{author}{3}{}{%
+        {{hash=632bbf0794333806ca7b4b34f3cdd864}{%
+           family={Dyckerhoff},
+           familyi={D\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b3b03e8702e2db21cea6f13221ae7b29}{%
+           family={Jasso},
+           familyi={J\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e658f2dd3cd2b2f29a1b6b0798199b55}{%
+           family={Walde},
+           familyi={W\bibinitperiod},
+           given={Tashi},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{af8f842b5285966360f061a4cb506bc2}
+      \strng{fullhash}{af8f842b5285966360f061a4cb506bc2}
+      \strng{bibnamehash}{af8f842b5285966360f061a4cb506bc2}
+      \strng{authorbibnamehash}{af8f842b5285966360f061a4cb506bc2}
+      \strng{authornamehash}{af8f842b5285966360f061a4cb506bc2}
+      \strng{authorfullhash}{af8f842b5285966360f061a4cb506bc2}
+      \field{labelalpha}{DJW19}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Mathematics}
+      \field{note}{Cited by: 12; All Open Access, Bronze Open Access, Green Open Access}
+      \field{title}{Simplicial structures in higher Auslander–Reiten theory}
+      \field{type}{Article}
+      \field{volume}{355}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85070678684&doi=10.1016%2fj.aim.2019.106762&partnerID=40&md5=70875d157ac34398c1f304716cf2121c
+      \endverb
+      \verb{url}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85070678684&doi=10.1016%2fj.aim.2019.106762&partnerID=40&md5=70875d157ac34398c1f304716cf2121c
+      \endverb
+    \endentry
+    \entry{djy}{article}{}
+      \name{author}{3}{}{%
+        {{hash=632bbf0794333806ca7b4b34f3cdd864}{%
+           family={Dyckerhoff},
+           familyi={D\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b3b03e8702e2db21cea6f13221ae7b29}{%
+           family={Jasso},
+           familyi={J\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f55b0e92a7f8d01fc0db38c79b86b6c1}{%
+           family={Lekili},
+           familyi={L\bibinitperiod},
+           given={Yankι},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b747a245c979c21888b65a7a7742373}
+      \strng{fullhash}{5b747a245c979c21888b65a7a7742373}
+      \strng{bibnamehash}{5b747a245c979c21888b65a7a7742373}
+      \strng{authorbibnamehash}{5b747a245c979c21888b65a7a7742373}
+      \strng{authornamehash}{5b747a245c979c21888b65a7a7742373}
+      \strng{authorfullhash}{5b747a245c979c21888b65a7a7742373}
+      \field{labelalpha}{DJL21}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Forum of Mathematics, Sigma}
+      \field{note}{Cited by: 8; All Open Access, Gold Open Access, Green Open Access}
+      \field{title}{The symplectic geometry of higher Auslander algebras: Symmetric products of disks}
+      \field{type}{Article}
+      \field{volume}{9}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85102142135&doi=10.1017%2ffms.2021.2&partnerID=40&md5=843f2df0508cc166084e4d9f78c5e5a8
+      \endverb
+      \verb{url}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85102142135&doi=10.1017%2ffms.2021.2&partnerID=40&md5=843f2df0508cc166084e4d9f78c5e5a8
+      \endverb
+    \endentry
+    \entry{gll}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=7cbd21fa35237397b7b6afdd69d81696}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Jin\bibnamedelima Yun},
+           giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=4964a2fc770cc8d21c2b4331f9631759}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Xiaojian},
+           giveni={X\bibinitperiod}}}%
+        {{hash=bd6f31e3163eefb773ece2872dc9cbf9}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Deren},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1ea6c69e943901697bed7bfad86fac4}
+      \strng{fullhash}{a1ea6c69e943901697bed7bfad86fac4}
+      \strng{bibnamehash}{a1ea6c69e943901697bed7bfad86fac4}
+      \strng{authorbibnamehash}{a1ea6c69e943901697bed7bfad86fac4}
+      \strng{authornamehash}{a1ea6c69e943901697bed7bfad86fac4}
+      \strng{authorfullhash}{a1ea6c69e943901697bed7bfad86fac4}
+      \field{labelalpha}{GLL22}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{$\mathbb{Z}Q$ type constructions in higher representation theory}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 1908.06546
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1908.06546v3
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1908.06546v3
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

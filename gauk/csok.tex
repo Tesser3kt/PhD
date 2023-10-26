@@ -1,0 +1,540 @@
+\documentclass[a4paper,oneside,svgnames]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,citecolor=Green,urlcolor=Black]{hyperref}
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{tikz}
+\usetikzlibrary{arrows,math}
+\usepackage[noabbrev]{cleveref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mathtools}
+
+% Theorems
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\let\hom\relax
+\let\mod\relax
+\DeclareMathOperator{\ext}{Ext}
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\mod}{mod}
+\DeclareMathOperator{\soc}{soc}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\gldim}{gl.dim}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\title{Combinatorial Properties of Higher Cluster Categories}
+\author{Adam Klepáč}
+
+\begin{document}
+ \maketitle
+ \section*{Current State of Knowledge}
+
+ In~\cite{fz1}, Fomin and Zelenivsky introduce \emph{cluster algebras} to
+ provide an algebraic-combinatorial description of the structure of dual
+ canonical bases in coordinate rings of varieties associated to semisimple
+ algebraic groups. Such descriptions were indeed found in several cases
+ (see~\cite{fzb}, \cite{s}). Applications of cluster algebras have since been
+ discovered in, for instance, Poisson geometry (\cite{gsv}), discrete dynamical
+ systems (e.g.~\cite{fz3}), higher Teichmüller spaces (\cite{fg}) or commutative
+ and non-commutative algebraic geometry (\cite{ifz}, \cite{ks} or~\cite{gmn}).
+
+ Of particular interest to me are cluster algebras of \emph{finite type}. Those
+ were fully classified in~\cite{fz4} -- a cluster algebra $\mathcal{A}(Q)$ is of
+ finite type if and only if the underlying graph $\Delta$ of the associated
+ quiver $Q$ is a (simply-laced) Dynkin diagram
+ (figure~\ref{fig:dynkin-diagrams}). It was shown in~\cite{mrz} that in this
+ case, the combinatorics of $\mathcal{A}(Q)$ can be obtained from the category
+ of \emph{decorated representations} of $Q$. However, with the construction of a
+ \emph{cluster category} in~\cite{bmrrt}, emerged a more symmetric way of
+ describing the combinatorics of $\mathcal{A}(Q)$.
+ \begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{.6\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node at (0,0) {$A_n$};
+    \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (6,0) {};
+    \draw (d) -- (e);
+   \end{tikzpicture}
+   \vspace{1em}
+  \end{subfigure}
+  \begin{subfigure}[b]{.6\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node at (0,0) {$D_n$};
+    \node[circle,fill,inner sep=1pt] (a1) at (1,0.5) {};
+    \node[circle,fill,inner sep=1pt] (a2) at (1,-0.5) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    
+    \draw (a1) -- (b);
+    \draw (a2) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (6,0) {};
+    \draw (d) -- (e);
+    
+   \end{tikzpicture}
+   \vspace{1em}
+  \end{subfigure}
+  \begin{subfigure}[b]{.6\textwidth}
+   \centering
+   \begin{tikzpicture}
+    \node at (0,0) {$E_n$};
+    \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    \node[circle,fill,inner sep=1pt] (f) at (3,-0.5) {};
+    
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+    \draw (c) -- (f);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (6,0) {};
+    \draw (d) -- (e);
+   \end{tikzpicture}
+  \end{subfigure}
+  \caption{Simply-laced Dynkin diagrams of types $A_n,D_n$ and $E_n$.}
+  \label{fig:dynkin-diagrams}
+ \end{figure}
+
+ Concretely, let $k$ be a field, let $\Lambda \coloneqq kQ$ denote the path
+ algebra of $Q$ and $\mathcal{D} \coloneqq D^{b}(\mod \Lambda)$ the bounded
+ derived category of finitely generated $\Lambda$-modules with shift functor
+ $[1]$. Let $G:\mathcal{D} \to \mathcal{D}$ be a triangle functor with some
+ necessary additional properties (see~\cite{k}). We denote by $\mathcal{D} / G$
+ the corresponding orbit category, that is, a category with objects the
+ $G$-orbits of objects of $\mathcal{D}$ and with morphisms
+ \[
+  \hom_{\mathcal{D} / G}(\bar{X},\bar{Y}) = \coprod_{i \in \Z}
+  \hom_{\mathcal{D}}(G^{i}X,Y)
+ \]
+ where $X,Y \in \mathcal{D}$ and $\bar{X},\bar{Y}$ are the corresponding objects
+ of $\mathcal{D} / G$. In~\cite{k}, it is shown that $\mathcal{D} / G$ is
+ triangulated, the shift functor in $\mathcal{D} / G$ is induced by $[1]$ -- we
+ shall denote it the same -- and that $\mathcal{D} / G$ is Krull-Schmidt. We
+ write $\ext^{1}(U,V) \coloneqq \hom(U,V[1])$ where the morphisms are considered
+ in $\mathcal{D}$ or $\mathcal{D} / G$.
+
+ Henceforth, we focus on $\mathcal{D} / G$ with the special choice $G \coloneqq
+ \tau^{-1}[1]$ where $\tau$ is the AR translation in $\mathcal{D}$ (induced by
+ $D \mathrm{Tr}$ on non-projective indecomposable modules in $\mod \Lambda$ and
+ satisfying $\tau(P) = I[-1]$ for $P$ indecomposable projective and $I$
+ indecomposable injective with $\soc I \cong P / \rad P$). Because of its
+ connection to the theory of cluster algebras, we call it the \emph{cluster
+ category} associated to $\Lambda$. When $k$ is algebraically closed and $Q$ of
+ Dynkin type, the cluster category $\mathcal{C} \coloneqq \mathcal{D} / G$
+ depends (as shown in~\cite{bmrrt}) only on the underlying graph $\Delta$ of $Q$
+ and the choice of orientation is immaterial. We write $\mathcal{C} =
+ \mathcal{C}(\Delta)$. Most importantly, in this case, the combinatorics of the
+ cluster algebra $\mathcal{A}(Q)$ can be fully recovered in terms of
+ $\ext^{1}$-groups of $\mathcal{C}$. In particular, the clusters of
+ $\mathcal{A}(Q)$ are in 1-1 correspondence with the cluster tilting objects of
+ $\mathcal{C}$ -- objects $T \in \mathcal{C}$ such that $\ext^{1}(T,T) = 0$ and
+ $T$ has the maximal number of non-isomorphic direct summands.
+
+ In~\cite{fst}, cluster algebras of \emph{surface} type are introduced. These
+ are cluster algebras whose underlying quiver arises from ideal triangulations
+ of bordered surfaces with marked points -- connected oriented 2-dimensional
+ Riemann surfaces with a finite number of distinguished points in their closure.
+ Both cluster algebras of finite type and those of surface type share a
+ `2-dimensional quality'. In the case of cluster algebras of surface type, it is
+ the dimension of the surface; the 2-dimensionality of cluster algebras of
+ finite type is reflected in the fact that the associated cluster category is
+ 2-Calabi-Yau (see~\cite[Proposition~1.7]{bmrrt}). It seems natural to seek
+ higher-dimensional analogues of these constructions.
+
+ The only cluster algebras of both finite and surface type are those with
+ underlying quiver of Dynkin type $A$ or $D$. Quivers of types not Dynkin fail
+ to produce cluster algebras of finite type and quivers of Dynkin type $E$ fail
+ to correspond to any triangulation of any bordered surface with marked points.
+ As the combinatorial properties of $\mathcal{A}(Q)$ depend only on the
+ underlying graph of $Q$, the main focus shifts to the path algebra $kQ$ (with
+ $Q$ being arbitrarily oriented) and the associated cluster category.
+
+ The paper~\cite{ot} discusses the connection between $d$-Auslander algebras of
+ $kA_n$ (with $A_n$ meaning the linearly-oriented quiver of Dynkin type $A$ on
+ $n$ vertices) and cyclic polytopes of dimension $2d$ on $n + 2d$ vertices. 
+
+ The \emph{cyclic polytope} $C(m,\delta)$ is the convex hull of $m$ distinct
+ points on the moment curve $t \mapsto (t,t^2,\ldots,t ^{\delta})$ of dimension
+ $\delta$. It is the most natural higher-dimensional analogue of a disc with a
+ finite number of distinguished points on its boundary whose triangulations give
+ rise to quivers of Dynkin type $A$ (see~\cite{fst}).
+
+ The notions of \emph{$n$-cluster tilting} modules and
+ \emph{$n$-representation-finite} algebras are introduced in~\cite{iya}
+ and~\cite{io}, respectively. Suppose $\Lambda$ is any finite-dimensional
+ algebra over a field $k$. A module $M \in \mod \Lambda$ is called $n$-cluster
+ tilting if
+ \begin{align*}
+  \add M &= \{X \in \mod \Lambda \mid \ext^{i}(X,M) = 0 \; \forall i \in
+  \{1,\ldots,n-1\}\}\\
+         &= \{X \in \mod\Lambda \mid \ext^{i}(M,X) = 0 \; \forall i \in
+         \{1,\ldots,n-1\}\}.
+ \end{align*}
+ If $\Lambda$ has an $n$-cluster tilting module and also $\gldim\Lambda \leq n$,
+ then $\Lambda$ is called $n$-representation-finite. In such case, the
+ endomorphism algebra $\Gamma \coloneqq \End_{\Lambda}(M)$ is called the
+ $n$-Auslander algebra of $\Lambda$ and denoted $\Lambda^{(n)}$. Iyama
+ (\cite{iya}) shows that if $\Lambda$ is $n$-representation-finite, then
+ $\End_{\Lambda}(M)$ is $(n+1)$-representation-finite, allowing for an inductive
+ construction of higher Auslander algebras of a $1$-representation-finite (that
+ is, representation-finite and hereditary) algebra. Since representation-finite
+ hereditary algebras are precisely the path algebras of Dynkin quivers, the list
+ of algebras to study narrows dramatically. Moreover, for such algebras, Iyama
+ gives a complete description of their higher Auslander algebras in terms of
+ their AR quivers and relations (see~\cite[Section~6]{iya}).
+
+ In~\cite{ot}, Oppermann and Thomas focus chiefly on the path algebra $\Lambda
+ \coloneqq kA_n$, its $(d-1)$-st higher Auslander algebras (denoted $A^{d}_n$)
+ and the associated (generalized) cluster category. They discover a bijection
+ \[
+  \left\{ 
+   \parbox{.17\textwidth}{
+    \centering
+    triangulations of\\
+    $C(n+2d,2d)$
+   }
+  \right\}
+  \longleftrightarrow
+  \left\{ 
+   \parbox{.27\textwidth}{
+    \centering
+    basic tilting modules of $A^{d}_n$\\
+    contained in $\add\prescript{}{A^{d}_n}{M}$
+   }
+  \right\},
+ \]
+ where $\prescript{}{A^{d}_n}{M}$ is the $d$-cluster tilting module of $A^{d}_n$
+ which is unique up to multiplicity (\cite{iya}). Furthermore,
+ in~\cite[Section~5]{ot}, the authors generalize the concept of a triangulated
+ cluster category to a $(d+2)$-angulated cluster category for any
+ $d$-represention-finite algebra $\Lambda$. See~\cite{gko} for a definition of
+ an $n$-angulated category. Specifically, a full subcategory $\mathcal{A}$ of a
+ triangulated category $\mathcal{B}$ is called $\delta$-cluster tilting if
+ $\mathcal{A}$ is functorially finite in $\mathcal{B}$ (see~\cite{as}) and
+ $\mathcal{A}$ coincides with both
+ \[
+  \{T \in \mathcal{B} \mid \hom_{\mathcal{B}}(\mathcal{A},T[i]) = 0 \; \forall
+  i \in \{1,\ldots,\delta-1\}\} \quad \text{and} \quad \{T \in \mathcal{B} \mid
+  \hom_{\mathcal{B}}(T,\mathcal{A}[i]) = 0 \; \forall i \in
+  \{1,\ldots,\delta-1\}\}.
+ \]
+ If $\add T$ is a $\delta$-cluster tilting subcategory of $\mathcal{B}$, the
+ object $T$ is called $\delta$-cluster tilting. If $\Lambda$ is
+ $d$-representation-finite, $S$ denotes the Serre functor on $\mathcal{D} =
+ D^{b}(\mod\Lambda)$ and $S_d$ its $d$-th desuspension $S[-d]$, then the
+ category
+ \[
+  \mathcal{U} \coloneqq \add \{S^{i}_d\Lambda \mid i \in \Z\} = \add \{M[id]
+  \mid i \in \Z\},
+ \]
+ where $M$ is a $d$-cluster tilting $\Lambda$-module, is a $d$-cluster tilting
+ subcategory of $\mathcal{D}$ (see~\cite[Theorem 1.23]{iya}). The
+ $(d+2)$-angulated cluster category of $\Lambda$ is then defined as the orbit
+ category
+ \[
+  \mathcal{O}_{\Lambda} \coloneqq \mathcal{U} / S_{2d}.
+ \]
+ It is shown in~\cite[Theorem~5.2]{ot} that this category is Krull-Schmidt and
+ $2d$-Calabi-Yau and the isomorphism classes of indecomposable objects of
+ $\mathcal{O}_{\Lambda}$ are in 1-1 correspondence with the indecomposable
+ summands of $M \oplus \Lambda[d]$. Finally, in the case of $\Lambda = kA_n$,
+ the authors prove there is a correspondence
+ \[
+  \left\{ 
+   \parbox{.19\textwidth}{
+    \centering
+    internal $d$-simplices\\
+    of $C(n+2d+1,2d)$
+   }
+  \right\}
+  \longleftrightarrow
+  \left\{ 
+   \parbox{.16\textwidth}{
+    \centering
+    indecomposable
+    objects of $\mathcal{O}_{A^{d}_n}$
+   }
+  \right\},
+ \]
+ which induces the correspondence
+ \[
+  \left\{ 
+   \parbox{.17\textwidth}{
+    \centering
+    triangulations of\\
+    $C(n+2d+1,2d)$
+   }
+  \right\}
+  \longleftrightarrow
+  \left\{ 
+   \parbox{.19\textwidth}{
+    \centering
+    basic cluster tilting
+    objects of $\mathcal{O}_{A^{d}_n}$
+   }
+  \right\}.
+ \]
+
+ In recent strongly related papers~\cite{djw} and~\cite{djy}, an alternative
+ combinatorial description of (perfect derived categories of) higher Auslander
+ algebras of type $A$ is given from the viewpoint of symplectic geometry and
+ simplicial theory, respectively.
+
+ It is my aim to reproduce these results (namely those in~\cite{ot}) for the
+ path algebras of quivers of Dynkin type $D$ and $E$ and their associated
+ cluster categories. In the case of type $D$, such quivers correspond to ideal
+ triangulations of a disc with finite number of marked points on its boundary
+ and a single marked point in its interior (\cite{fst}). The obvious
+ higher-dimensional analogue is again the cyclic polytope with one distinguished
+ point in its interior. Unfortunately, quivers of Dynkin type $E$ do not arise
+ from triangulations of bordered surfaces with marked points and thus one is
+ required to search for a combinatorial counterpart which is not necessarily
+ `geometric'.
+
+ It should be noted that the 2-dimensional (or classical) cluster categories of
+ type $D$ were already studied from a geometric point of view in~\cite{schif}.
+
+ Next, I intend to focus on higher-dimensional analogues and the cluster
+ categories of path algebras $kQ$ which are not represen\-tation-finite and
+ hereditary, that is, $Q$ is not Dynkin. Since full combinatorial description
+ doesn't seem at all plausible in the current state of research, I hope to find
+ hints towards such a goal by studying path algebras of quivers which are `close
+ enough' to Dynkin quivers so that the theory doesn't get completely out of
+ hand. Concretely, I shall focus on quivers whose underlying graphs are
+ so-called \emph{affine} Dynkin diagrams
+ (figure~\ref{fig:affine-dynkin-diagrams}).
+ \begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{.41\textwidth}
+   \begin{tikzpicture}
+    \node at (0,0) {$\tilde{A}_n$};
+    \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (6,0) {};
+    \draw (d) -- (e);
+
+    \node[circle,fill,inner sep=1pt] (f) at (3.5,-1) {};
+    \draw (a) -- (f);
+    \draw (e) -- (f);
+   \end{tikzpicture}
+   \vspace{1em}
+  \end{subfigure}\linebreak
+  \begin{subfigure}[b]{.41\textwidth}
+   \begin{tikzpicture}
+    \node at (0,0) {$\tilde{D}_n$};
+    \node[circle,fill,inner sep=1pt] (a1) at (1,0.5) {};
+    \node[circle,fill,inner sep=1pt] (a2) at (1,-0.5) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    
+    \draw (a1) -- (b);
+    \draw (a2) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- ++(0.5,0);
+
+    \node at (4,0) {$\ldots$};
+    \draw (4.5,0) -- ++(0.5,0);
+
+    \node[circle,fill,inner sep=1pt] (d) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (e1) at (6,0.5) {};
+    \node[circle,fill,inner sep=1pt] (e2) at (6,-0.5) {};
+    \draw (d) -- (e1);
+    \draw (d) -- (e2);
+   \end{tikzpicture}
+   \vspace{1em}
+  \end{subfigure}\linebreak
+  \begin{subfigure}[b]{.41\textwidth}
+   \begin{tikzpicture}
+    \node at (0,0) {$\tilde{E}_6$};
+    \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    \node[circle,fill,inner sep=1pt] (f) at (3,-0.5) {};
+    \node[circle,fill,inner sep=1pt] (g) at (3,-1) {};
+    \node[circle,fill,inner sep=1pt] (d) at (4,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (5,0) {};
+    
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- (d);
+    \draw (d) -- (e);
+    \draw (c) -- (f);
+    \draw (f) -- (g);
+   \end{tikzpicture}
+  \end{subfigure}\linebreak
+  \begin{subfigure}[b]{.41\textwidth}
+   \begin{tikzpicture}
+    \node at (-1,0) {$\tilde{E}_7$};
+    \node[circle,fill,inner sep=1pt] (z) at (0,0) {};
+    \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    \node[circle,fill,inner sep=1pt] (f) at (3,-0.5) {};
+    \node[circle,fill,inner sep=1pt] (d) at (4,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (g) at (6,0) {};
+    
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- (d);
+    \draw (d) -- (e);
+    \draw (c) -- (f);
+    \draw (z) -- (a);
+    \draw (e) -- (g);
+   \end{tikzpicture}
+  \end{subfigure}\linebreak
+  \begin{subfigure}[b]{.41\textwidth}
+   \begin{tikzpicture}
+    \node at (-1,0) {$\tilde{E}_7$};
+    \node[circle,fill,inner sep=1pt] (z) at (0,0) {};
+    \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
+    \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
+    \node[circle,fill,inner sep=1pt] (c) at (3,0) {};
+    \node[circle,fill,inner sep=1pt] (f) at (2,-0.5) {};
+    \node[circle,fill,inner sep=1pt] (d) at (4,0) {};
+    \node[circle,fill,inner sep=1pt] (e) at (5,0) {};
+    \node[circle,fill,inner sep=1pt] (g) at (6,0) {};
+    \node[circle,fill,inner sep=1pt] (h) at (7,0) {};
+    
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- (d);
+    \draw (d) -- (e);
+    \draw (b) -- (f);
+    \draw (z) -- (a);
+    \draw (e) -- (g);
+    \draw (g) -- (h);
+   \end{tikzpicture}
+  \end{subfigure}\linebreak
+  \caption{Affine Dynkin diagrams of types $\tilde{A}_n$, $\tilde{D}_n$,
+  $\tilde{E}_6$, $\tilde{E}_7$ and $\tilde{E}_8$.}
+  \label{fig:affine-dynkin-diagrams}
+ \end{figure}
+
+ Several required generalizations of the aforewritten theory for
+ $n$-representation-finite algebras have already been constructed.
+ In~\cite{hio}, \emph{$n$-representation-infinite} algebras are defined in
+ general and, particularly, $n$-representation-infinite algebras of type
+ $\tilde{A}$ are constructed as certain graded orbit algebras. The authors then
+ proceed to show that the degree 0 parts of these algebras are indeed the path
+ algebras of quivers of type $\tilde{A}$. Whether such construction proves
+ significant in the study of combinatorial properties of these algebras remains
+ to be seen. Moreover, by~\cite[Theorem 4.18]{hio}, the category of finitely
+ generated modules over any $n$-representation-infinite algebra splits into its
+ $n$-preprojective, $n$-regular and $n$-preinjective components. This fact has
+ been successfully used to, for example, study the combinatorics of AR quivers
+ of $n$-representation-infinite path algebras $kQ$ through the truncations of
+ the (generalized) \emph{repetition quiver} $\Z Q$ -- a quiver whose vertices
+ are elements of $\Z \times Q_0$ and for each arrow $i \to j$ in $Q_1$ there are
+ arrows $(p,i) \to (p,j)$ and $(p-1,j) \to (p,i)$ where $p$ ranges over $\Z$
+ (see~\cite{gll}).
+
+ To the best of my knowledge, there has thus far not been developed a notion of
+ a generalized $n$-Auslander algebra for algebras where the existence of an
+ $n$-cluster tilting module is not guaranteed which would allow for an iterative
+ construction similar in nature to the one for algebras
+ $n$-representation-finite. I do not expect to be able to develop such theory in
+ full generality, but I expect the path algebras of affine Dynkin quivers will
+ provide a more hospitable place to such endeavour.
+
+ There exist multiple definitions of `higher-dimensional' cluster categories.
+ One is due to C. Amiot (\cite{amiot2} and~\cite{amiot1}) and stays true to the
+ original definition in~\cite{k}. She defines the triangulated category
+ $\mathcal{C}^{\delta}_{\Lambda}$ of any algebra $\Lambda$ with $\gldim\Lambda
+ \leq \delta$ as the \emph{triangulated hull} of the orbit category
+ $D^{b}(\mod\Lambda) / S_{\delta}$ where, again, $S$ is the Serre functor on
+ $D^{b}(\mod\Lambda)$ and $S_{\delta} \coloneqq S[-\delta]$. She then proceeds
+ to prove that as long as $\mathcal{C}^{\delta}_{\Lambda}$ is $\hom$-finite, it
+ is $\delta$-Calabi-Yau and admits a $\delta$-cluster tilting object. The
+ $(d+2)$-angulated cluster category $\mathcal{O}_{\Lambda}$ for $\Lambda$
+ $n$-representation-finite defined in~\cite{ot} and discussed above is a
+ $d$-cluster tilting subcategory of $\mathcal{C}^{2d}_{\Lambda}$.
+
+ Another approach is due to Guo (\cite{guo}). Given a differential-graded
+ $k$-algebra $\Lambda$, we denote by $\per \Lambda$ its \emph{perfect derived
+ category}, that is, the smallest triangulated subcategory of $D(\Lambda)$ --
+ the \emph{unbounded} derived category of $\Lambda$ -- containing $\Lambda$
+ which is closed under forming direct summands. Supposing $\Lambda$ satisfies
+ certain additional properties (laid out in~\cite[Section~3.2]{guo}), in
+ particular, assuming $\Lambda$ is $(m+2)$-Calabi-Yau as a bimodule for an
+ integer $m$, the \emph{generalized $m$-cluster category} associated with
+ $\Lambda$ is defined as the triangulated quotient $\per \Lambda /
+ D^{b}(\mod\Lambda)$. It is $(m+1)$-Calabi-Yau and hosts an $m$-cluster tilting
+ object. This generalized notion of a cluster category can be related to path
+ algebras of finite quivers by works of Ginzburg and Keller. For a finite quiver
+ $Q$ with potential $W$, Ginzburg defines (\cite[Section~4.2]{ginz}) certain
+ differential-graded $k$-algebra $\Gamma(Q,W)$ whose underlying graded algebra
+ is the path algebra $k \hat{Q}$ with $\hat{Q}$ being a graded quiver
+ constructed from $Q$. The algebra $\Gamma(Q,W)$ is later shown by Keller
+ (\cite{k2}) to satisfy the criteria laid out in~\cite[Section~3.2]{guo}. In
+ particular, this algebra is always $3$-Calabi-Yau, suggesting possibilities of
+ constructions of this nature for higher-dimensional analogues of the path
+ algebra $kQ$.
+
+ No parallels between $n$-representation-infinite algebras or generalized
+ cluster categories and purely combinatorial structures have thus far been
+ drawn. While focusing on the path algebras of affine Dynkin quivers, it seems
+ necessary to generalize the construction of higher Auslander algebras
+ from~\cite{iya} to account for the loss of a guaranteed existence of an
+ $n$-cluster tilting module. Similarly, an alternative construction of the
+ generalized cluster categories associated to such path algebras might be
+ required to remedy the fact that the orientation of the quiver has now
+ influence on the overall structure. I hope to prove that, at least in this
+ `almost-Dynkin' case, there still exist natural combinatorial descriptions of
+ the tilting modules of these path algebras and the tilting objects of their
+ associated generalized cluster categories which are mutually compatible.
+
+ \printbibliography
+\end{document}
