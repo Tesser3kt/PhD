@@ -1,0 +1,85 @@
+\documentclass[a4paper,oneside,svgnames]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,citecolor=Green,urlcolor=Black]{hyperref}
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{tikz}
+\usetikzlibrary{arrows,math}
+\usepackage[noabbrev]{cleveref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Theorems
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\let\hom\relax
+\let\mod\relax
+\DeclareMathOperator{\ext}{Ext}
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\mod}{mod}
+\DeclareMathOperator{\soc}{soc}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\gldim}{gl.dim}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\title{Combinatorial Properties of Higher Cluster Categories}
+\author{Adam Klepáč}
+
+\begin{document}
+ \maketitle
+ \section*{Methods of Research}
+ \setcounter{section}{1}
+
+ The majority of the first year will be spent on research objective 1 -- the
+ combinatorial description of higher Auslander algebras of path algebras of
+ Dynkin type $D$ and $E$ and their associated cluster categories -- followed by
+ a thorough study of the theory of generalized cluster categories (mainly
+ \cite[Sections 3 and 4]{amiot1}, \cite[Chapters 5,6 and 7]{amiot2} and
+ \cite[Chapters 2 and 3]{guo}), of $n$-representation-infinite algebras
+ (\cite[Sections 1-5]{hio}) and $n$-angulated categories (the entirety
+ of~\cite{gko}).
+
+ The correspondence between quivers of Dynkin type $D$ and triangulations of
+ discs with marked points on their boundaries and one in their interior is bound
+ to prove crucial for this endeavour. Unlike in the case of triangulations of
+ discs with marked points lying only on their boundaries (giving rise to quivers
+ of type $A$), the existence of an inner marked point naturally leads to the
+ concept of a self-folded triangle (a triangle with only two distinct sides).
+ The first relatively non-trivial task will entail generalizing this concept to
+ higher dimensions and understanding the triangulations of a cyclic polytope
+ with a distinguished point in its interior.
+
+ In~\cite[Section 3]{ot}, an orientation of $A_n$ is chosen that guarantees the
+ equality $\hom_{A^{1}_n}(P_i,P_j) = 0$ whenever $i > j$ (here $P_i$ denotes the
+ projective cover of the simple module $S_i$ concentrated in vertex $i$). With
+ the right approach, this choice makes the study of partial tilting modules of
+ $A^{d}_n$ contained in $\add \prescript{}{A^{d}_n}{M}$ (here
+ $\prescript{}{A^{d}_n}{M}$ denotes the cluster tilting module of $A^{d}_n$)
+ smooth and elegant. Such an orientation cannot be chosen for the quivers of
+ type $D$ or $E$ and thus irregularities will inevitably occur and need to be
+ dealt with. More irregularities lurk within the connection between bistellar
+ flips of the triangulations of cyclic polytopes and mutations of basic tilting
+ modules of $A^{d}_n$ detailed in~\cite[Section 4]{ot}. The issue lies in the
+ fact that the folded edges in self-folded triangles cannot be flipped. This
+ situation does not arise in the study of triangulations of discs without
+ internal marked points and is likely to propagate to higher dimensions.
+
+\end{document}

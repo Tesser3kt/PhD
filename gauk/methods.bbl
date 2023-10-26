@@ -1,0 +1,229 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{amiot2}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b022ee250d05caae6e48d02362d6bf11}{%
+           family={Amiot},
+           familyi={A\bibinitperiod},
+           given={Claire},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{fullhash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{bibnamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authorbibnamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authornamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authorfullhash}{b022ee250d05caae6e48d02362d6bf11}
+      \field{extraname}{1}
+      \field{labelalpha}{Ami08}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{PhD thesis, Université Denis Diderot - Paris 7}
+      \field{title}{{S}ur les petites catégories triangulées}
+      \field{year}{2008}
+    \endentry
+    \entry{amiot1}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b022ee250d05caae6e48d02362d6bf11}{%
+           family={Amiot},
+           familyi={A\bibinitperiod},
+           given={Claire},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{fullhash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{bibnamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authorbibnamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authornamehash}{b022ee250d05caae6e48d02362d6bf11}
+      \strng{authorfullhash}{b022ee250d05caae6e48d02362d6bf11}
+      \field{extraname}{2}
+      \field{labelalpha}{Ami09}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{Cluster categories for algebras of global dimension 2 and quivers with potential}
+      \field{year}{2009}
+      \verb{eprint}
+      \verb 0805.1035
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/0805.1035v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/0805.1035v2
+      \endverb
+    \endentry
+    \entry{ot}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6ee5a8f0ab8a46e70429a5edbd49ebe1}{%
+           family={Oppermann},
+           familyi={O\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1d740d2a346b625d025acf4400707c5c}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Hugh},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{fullhash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{bibnamehash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{authorbibnamehash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{authornamehash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \strng{authorfullhash}{03e189c3fa2fad81e20eefdb124d3c37}
+      \field{labelalpha}{OT11}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Higher dimensional cluster combinatorics and representation theory}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1001.5437v4
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1001.5437v4
+      \endverb
+    \endentry
+    \entry{guo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4c830868e00e44a6b206f642f0899a4c}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Lingyan},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{fullhash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{bibnamehash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{authorbibnamehash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{authornamehash}{4c830868e00e44a6b206f642f0899a4c}
+      \strng{authorfullhash}{4c830868e00e44a6b206f642f0899a4c}
+      \field{labelalpha}{Guo12}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{PhD thesis, Université Paris Diderot - Paris 7}
+      \field{title}{{C}atégories amassées supérieureset frises tropicales}
+      \field{year}{2012}
+    \endentry
+    \entry{gko}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1f671f392f75004a037a7acc36a2a02f}{%
+           family={Geiss},
+           familyi={G\bibinitperiod},
+           given={Christof},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2b847b7c461a7a54334e6476f1125387}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6ee5a8f0ab8a46e70429a5edbd49ebe1}{%
+           family={Oppermann},
+           familyi={O\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Walter de Gruyter {GmbH}}%
+      }
+      \strng{namehash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{fullhash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{bibnamehash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{authorbibnamehash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{authornamehash}{87a07922c13e36ef9d33e6a8530250b7}
+      \strng{authorfullhash}{87a07922c13e36ef9d33e6a8530250b7}
+      \field{labelalpha}{GKO13}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal für die reine und angewandte Mathematik (Crelles Journal)}
+      \field{month}{1}
+      \field{number}{675}
+      \field{title}{n-angulated categories}
+      \field{volume}{2013}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://doi.org/10.1515%2Fcrelle.2011.177
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515%2Fcrelle.2011.177
+      \endverb
+    \endentry
+    \entry{hio}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9520d89ec8d045f019c020377e097c80}{%
+           family={Herschend},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6dd8a3b6d6b978f5c2d1b237bfb0593e}{%
+           family={Iyama},
+           familyi={I\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+        {{hash=6ee5a8f0ab8a46e70429a5edbd49ebe1}{%
+           family={Oppermann},
+           familyi={O\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{fullhash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{bibnamehash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{authorbibnamehash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{authornamehash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \strng{authorfullhash}{1cbe09d27e06e2416594317cd3a9ee3f}
+      \field{labelalpha}{HIO14}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{From the viewpoint of higher dimensional Auslander–Reiten theory, we introduce a new class of finite dimensional algebras of global dimension n, which we call n-representation infinite. They are a certain analog of representation infinite hereditary algebras, and we study three important classes of modules: n-preprojective, n-preinjective and n-regular modules. We observe that their homological behaviour is quite interesting. For instance they provide first examples of algebras having infinite Ext1-orthogonal families of modules. Moreover we give general constructions of n-representation infinite algebras. Applying Minamotoʼs theory on Fano algebras in non-commutative algebraic geometry, we describe the category of n-regular modules in terms of the corresponding preprojective algebra. Then we introduce n-representation tame algebras, and show that the category of n-regular modules decomposes into the categories of finite dimensional modules over localizations of the preprojective algebra. This generalizes the classical description of regular modules over tame hereditary algebras. As an application, we show that the representation dimension of an n-representation tame algebra is at least n+2.}
+      \field{issn}{0001-8708}
+      \field{journaltitle}{Advances in Mathematics}
+      \field{title}{n-representation infinite algebras}
+      \field{volume}{252}
+      \field{year}{2014}
+      \field{pages}{292\bibrangedash 342}
+      \range{pages}{51}
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001870813003642
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001870813003642
+      \endverb
+      \keyw{Auslander–Reiten theory,Preprojective algebra,Fano algebra,-representation finite algebra,Representation dimension}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
