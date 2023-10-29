@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'goals.blg'
-[43] biber:340> INFO - === Thu Oct 26, 2023, 09:14:07
-[60] Biber.pm:419> INFO - Reading 'goals.bcf'
-[99] Biber.pm:979> INFO - Found 7 citekeys in bib section 0
-[107] Biber.pm:4419> INFO - Processing section 0
-[113] Biber.pm:4610> INFO - Looking for bibtex file 'refs.bib' for section 0
-[114] bibtex.pm:1713> INFO - LaTeX decoding ...
-[127] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
-[164] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[164] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[164] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[164] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[169] bbl.pm:660> INFO - Writing 'goals.bbl' with encoding 'UTF-8'
-[171] bbl.pm:763> INFO - Output to goals.bbl
-[172] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_EmJU/8fe4c9854184545302f21ebf0d47516c_14680.utf8, line 157, warning: 33 characters of junk seen at toplevel
-[172] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_EmJU/8fe4c9854184545302f21ebf0d47516c_14680.utf8, line 173, warning: 33 characters of junk seen at toplevel
-[172] Biber.pm:133> INFO - WARNINGS: 2
+[30] biber:340> INFO - === So říj 28, 2023, 16:11:34
+[35] Biber.pm:419> INFO - Reading 'goals.bcf'
+[63] Biber.pm:979> INFO - Found 6 citekeys in bib section 0
+[69] Biber.pm:4419> INFO - Processing section 0
+[73] Biber.pm:4610> INFO - Looking for bibtex file 'refs.bib' for section 0
+[74] bibtex.pm:1713> INFO - LaTeX decoding ...
+[85] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
+[110] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[111] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[111] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[111] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[114] bbl.pm:660> INFO - Writing 'goals.bbl' with encoding 'UTF-8'
+[116] bbl.pm:763> INFO - Output to goals.bbl
+[116] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_i8FB/8fe4c9854184545302f21ebf0d47516c_71480.utf8, line 157, warning: 33 characters of junk seen at toplevel
+[116] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_i8FB/8fe4c9854184545302f21ebf0d47516c_71480.utf8, line 173, warning: 33 characters of junk seen at toplevel
+[116] Biber.pm:133> INFO - WARNINGS: 2

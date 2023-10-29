@@ -271,8 +271,8 @@
  \]
  where $M$ is a $d$-cluster tilting $\Lambda$-module, is a $d$-cluster tilting
  subcategory of $\mathcal{D}$ (see~\cite[Theorem 1.23]{iya}). The
- $(d+2)$-angulated cluster category of $\Lambda$ is then defined as the orbit
- category
+ $(d+2)$-angulated cluster category associated to $\Lambda$ is then defined as
+ the orbit category
  \[
   \mathcal{O}_{\Lambda} \coloneqq \mathcal{U} / S_{2d}.
  \]
@@ -333,21 +333,30 @@
  required to search for a combinatorial counterpart which is not necessarily
  `geometric'.
 
- It should be noted that the 2-dimensional (or classical) cluster categories of
- type $D$ were already studied from a geometric point of view in~\cite{schif}.
+ It is important to note that a geometric description of higher cluster
+ categories of types $A$ and $D$ was already given in~\cite{bm1} and~\cite{bm2}.
+ However, the notion of a $d$-cluster category used in these papers is not
+ `higher-dimensional' in the sense of this text -- they are certain orbit
+ categories introduced in~\cite{k} associated to a hereditary algebra. They have
+ a $2$-dimensional AR quiver (see~\cite[Section 6]{iya}) and the combinatorics
+ of their cluster tilting objects are modelled by subdivisions of polygons. In
+ our setting, a more general concept of a $d$-cluster category is needed (as are
+ the ones introduced in~\cite{amiot2}, \cite{amiot1} and~\cite{guo}) since the
+ higher Auslander algebras of representation-finite and hereditary algebras are
+ in general not hereditary themselves.
 
- Next, I intend to focus on higher-dimensional analogues and the cluster
+ Next, I intend to focus on higher-dimensional analogues and higher cluster
  categories of path algebras $kQ$ which are not represen\-tation-finite and
- hereditary, that is, $Q$ is not Dynkin. Since full combinatorial description
- doesn't seem at all plausible in the current state of research, I hope to find
- hints towards such a goal by studying path algebras of quivers which are `close
- enough' to Dynkin quivers so that the theory doesn't get completely out of
- hand. Concretely, I shall focus on quivers whose underlying graphs are
- so-called \emph{affine} Dynkin diagrams
+ hereditary, that is, where $Q$ is not Dynkin. Since full combinatorial
+ description doesn't seem at all plausible in the current state of research, I
+ hope to find hints towards such a goal by studying path algebras of quivers
+ which are `close enough' to Dynkin quivers so that the theory doesn't get
+ completely out of hand. Concretely, I shall focus on quivers whose underlying
+ graphs are so-called \emph{affine} Dynkin diagrams
  (figure~\ref{fig:affine-dynkin-diagrams}).
  \begin{figure}[ht]
   \centering
-  \begin{subfigure}[b]{.41\textwidth}
+  \begin{subfigure}[b]{.53\textwidth}
    \begin{tikzpicture}
     \node at (0,0) {$\tilde{A}_n$};
     \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
@@ -371,7 +380,7 @@
    \end{tikzpicture}
    \vspace{1em}
   \end{subfigure}\linebreak
-  \begin{subfigure}[b]{.41\textwidth}
+  \begin{subfigure}[b]{.53\textwidth}
    \begin{tikzpicture}
     \node at (0,0) {$\tilde{D}_n$};
     \node[circle,fill,inner sep=1pt] (a1) at (1,0.5) {};
@@ -395,7 +404,7 @@
    \end{tikzpicture}
    \vspace{1em}
   \end{subfigure}\linebreak
-  \begin{subfigure}[b]{.41\textwidth}
+  \begin{subfigure}[b]{.53\textwidth}
    \begin{tikzpicture}
     \node at (0,0) {$\tilde{E}_6$};
     \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
@@ -414,7 +423,7 @@
     \draw (f) -- (g);
    \end{tikzpicture}
   \end{subfigure}\linebreak
-  \begin{subfigure}[b]{.41\textwidth}
+  \begin{subfigure}[b]{.53\textwidth}
    \begin{tikzpicture}
     \node at (-1,0) {$\tilde{E}_7$};
     \node[circle,fill,inner sep=1pt] (z) at (0,0) {};
@@ -435,9 +444,9 @@
     \draw (e) -- (g);
    \end{tikzpicture}
   \end{subfigure}\linebreak
-  \begin{subfigure}[b]{.41\textwidth}
+  \begin{subfigure}[b]{.53\textwidth}
    \begin{tikzpicture}
-    \node at (-1,0) {$\tilde{E}_7$};
+    \node at (-1,0) {$\tilde{E}_8$};
     \node[circle,fill,inner sep=1pt] (z) at (0,0) {};
     \node[circle,fill,inner sep=1pt] (a) at (1,0) {};
     \node[circle,fill,inner sep=1pt] (b) at (2,0) {};
@@ -469,24 +478,25 @@
  general and, particularly, $n$-representation-infinite algebras of type
  $\tilde{A}$ are constructed as certain graded orbit algebras. The authors then
  proceed to show that the degree 0 parts of these algebras are indeed the path
- algebras of quivers of type $\tilde{A}$. Whether such construction proves
- significant in the study of combinatorial properties of these algebras remains
- to be seen. Moreover, by~\cite[Theorem 4.18]{hio}, the category of finitely
- generated modules over any $n$-representation-infinite algebra splits into its
- $n$-preprojective, $n$-regular and $n$-preinjective components. This fact has
- been successfully used to, for example, study the combinatorics of AR quivers
- of $n$-representation-infinite path algebras $kQ$ through the truncations of
- the (generalized) \emph{repetition quiver} $\Z Q$ -- a quiver whose vertices
- are elements of $\Z \times Q_0$ and for each arrow $i \to j$ in $Q_1$ there are
- arrows $(p,i) \to (p,j)$ and $(p-1,j) \to (p,i)$ where $p$ ranges over $\Z$
- (see~\cite{gll}).
+ algebras of quivers of type $\tilde{A}$ with acyclic orientation. Whether such
+ construction proves significant in the study of combinatorial properties of
+ these algebras remains to be seen. Moreover, by~\cite[Theorem 4.18]{hio}, a
+ certain distinguished full subcategory of the category of finitely generated
+ modules over any $n$-representation-infinite algebra splits into its
+ $n$-preprojective, $n$-regular and $n$-preinjective subcategories -- a fact
+ that can be potentially used to study the combinatorics of AR quivers of
+ $n$-representation-infinite algebras.
+
+ Intriguing in this regard is also the relation between
+ $n$-representation-infinite algebras and their $(n+1)$-preprojective algebras
+ (first introduced in~\cite{gp}) depicted in~\cite[Theorem B]{gi}.
 
  To the best of my knowledge, there has thus far not been developed a notion of
- a generalized $n$-Auslander algebra for algebras where the existence of an
+ a generalized higher Auslander algebra for algebras where the existence of an
  $n$-cluster tilting module is not guaranteed which would allow for an iterative
  construction similar in nature to the one for algebras
  $n$-representation-finite. I do not expect to be able to develop such theory in
- full generality, but I expect the path algebras of affine Dynkin quivers will
+ full generality but I believe the path algebras of affine Dynkin quivers will
  provide a more hospitable place to such endeavour.
 
  There exist multiple definitions of `higher-dimensional' cluster categories.
@@ -502,26 +512,26 @@
  $n$-representation-finite defined in~\cite{ot} and discussed above is a
  $d$-cluster tilting subcategory of $\mathcal{C}^{2d}_{\Lambda}$.
 
- Another approach is due to Guo (\cite{guo}), generalizing the construction from~\cite[Section~4]{amiot1}. Given a differential-graded
- $k$-algebra $\Lambda$, we denote by $\per \Lambda$ its \emph{perfect derived
- category}, that is, the smallest triangulated subcategory of $D(\Lambda)$ --
- the \emph{unbounded} derived category of $\Lambda$ -- containing $\Lambda$
- which is closed under forming direct summands. Supposing $\Lambda$ satisfies
- certain additional properties (laid out in~\cite[Section~3.2]{guo}), in
- particular, assuming $\Lambda$ is $(m+2)$-Calabi-Yau as a bimodule for an
- integer $m$, the \emph{generalized $m$-cluster category} associated with
- $\Lambda$ is defined as the triangulated quotient $\per \Lambda /
- D^{b}(\Lambda)$. It is $(m+1)$-Calabi-Yau and hosts an $m$-cluster tilting
- object. This generalized notion of a cluster category can be related to path
- algebras of finite quivers by works of Ginzburg and Keller. For a finite quiver
- $Q$ with potential $W$, Ginzburg defines (\cite[Section~4.2]{ginz}) certain
- differential-graded $k$-algebra $\Gamma(Q,W)$ whose underlying graded algebra
- is the path algebra $k \hat{Q}$ with $\hat{Q}$ being a graded quiver
- constructed from $Q$. The algebra $\Gamma(Q,W)$ is later shown by Keller
- (\cite{k2}) to satisfy the criteria laid out in~\cite[Section~3.2]{guo}. In
- particular, this algebra is always $3$-Calabi-Yau, suggesting possibilities of
- constructions of this nature for higher-dimensional analogues of the path
- algebra $kQ$.
+ Another approach is due to Guo (\cite{guo}), generalizing the construction
+ from~\cite[Section~4]{amiot1}. Given a differential-graded $k$-algebra
+ $\Lambda$, we denote by $\per \Lambda$ its \emph{perfect derived category},
+ that is, the smallest triangulated subcategory of $D(\Lambda)$ -- the
+ \emph{unbounded} derived category of $\Lambda$ -- containing $\Lambda$ which is
+ closed under forming direct summands. Supposing $\Lambda$ satisfies certain
+ additional properties (laid out in~\cite[Section~3.2]{guo}), in particular,
+ assuming $\Lambda$ is $(m+2)$-Calabi-Yau as a bimodule for an integer $m$, the
+ \emph{generalized $m$-cluster category} associated with $\Lambda$ is defined as
+ the triangulated quotient $\per \Lambda / D^{b}(\Lambda)$. It is
+ $(m+1)$-Calabi-Yau and hosts an $m$-cluster tilting object. This generalized
+ notion of a cluster category can be related to path algebras of finite quivers
+ by works of Ginzburg and Keller. For a finite quiver $Q$ with potential $W$,
+ Ginzburg defines (\cite[Section~4.2]{ginz}) certain differential-graded
+ $k$-algebra $\Gamma(Q,W)$ whose underlying graded algebra is the path algebra
+ $k \hat{Q}$ with $\hat{Q}$ being a graded quiver constructed from $Q$. The
+ algebra $\Gamma(Q,W)$ is later shown by Keller (\cite{k2}) to satisfy the
+ criteria laid out in~\cite[Section~3.2]{guo}. In particular, this algebra is
+ always $3$-Calabi-Yau, suggesting possibilities of constructions of this nature
+ for higher-dimensional analogues of the path algebra $kQ$.
 
  No parallels between $n$-representation-infinite algebras or generalized
  cluster categories and purely combinatorial structures have thus far been
@@ -533,8 +543,8 @@
  required to remedy the fact that the orientation of the quiver has now
  influence on the overall structure. I hope to prove that, at least in this
  `almost-Dynkin' case, there still exist natural combinatorial descriptions of
- the tilting modules of these path algebras and the tilting objects of their
- associated generalized cluster categories which are mutually compatible.
+ the tilting modules of these path algebras and the cluster tilting objects of
+ their associated generalized cluster categories which are mutually compatible.
 
  \printbibliography
 \end{document}

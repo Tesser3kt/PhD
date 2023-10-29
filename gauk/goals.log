@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.6)  26 OCT 2023 09:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.26)  28 OCT 2023 17:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,7 +6,7 @@ entering extended mode
 **goals.tex
 (./goals.tex
 LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-08-29>
+L3 programming layer <2023-08-11>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsart.cls
 Document Class: amsart 2020/05/29 v2.20.6
 \linespacing=\dimen140
@@ -484,19 +484,19 @@ File: biblatex.cfg
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
  (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2023-08-29 L3 programming layer (loader) 
+Package: expl3 2023-08-11 L3 programming layer (loader) 
  (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count413
 \l__pdf_internal_box=\box54
 ))
 Package biblatex Info: ... and expl3
-(biblatex)             2023-08-29 L3 programming layer (loader) 
+(biblatex)             2023-08-11 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2023-08-29 L3 Experimental document command parser
+Package: xparse 2023-02-02 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
@@ -897,25 +897,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] (./goals.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-08-29>
+L3 programming layer <2023-08-11>
  ***********
 Package rerunfilecheck Info: File `goals.out' has not changed.
-(rerunfilecheck)             Checksum: 9CD6C9CBDBC0579CA204F4D8855BCF00;2836.
+(rerunfilecheck)             Checksum: 0A29EF16FA57DDD080A68125A22BCA6B;2821.
 Package logreq Info: Writing requests to 'goals.run.xml'.
 \openout1 = `goals.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32901 strings out of 474934
- 632867 string characters out of 5759818
- 1936807 words of memory out of 5000000
- 53841 multiletter control sequences out of 15000+600000
+ 32900 strings out of 475189
+ 632830 string characters out of 5763838
+ 1935254 words of memory out of 5000000
+ 53586 multiletter control sequences out of 15000+600000
  566612 words of font info for 61 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  102i,6n,107p,1307b,1307s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{cite.0@gll} has been referenced but does not exist, replaced by a fixed one
-
 
 pdfTeX warning (dest): name{cite.0@hio} has been referenced but does not exist, replaced by a fixed one
 
@@ -935,10 +932,10 @@ pdfTeX warning (dest): name{cite.0@ot} has been referenced but does not exist, r
 pdfTeX warning (dest): name{cite.0@iya} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on goals.pdf (2 pages, 107477 bytes).
+Output written on goals.pdf (2 pages, 108124 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
+ 107 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

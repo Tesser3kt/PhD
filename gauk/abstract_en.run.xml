@@ -41,13 +41,13 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="1">
+  <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>csok.bcf</file>
+      <file>abstract_en.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>csok.bbl</file>
+      <file>abstract_en.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -64,19 +64,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>csok</infile>
+      <infile>abstract_en</infile>
     </cmdline>
     <input>
-      <file>csok.bcf</file>
+      <file>abstract_en.bcf</file>
     </input>
     <output>
-      <file>csok.bbl</file>
+      <file>abstract_en.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>csok.bbl</file>
+      <file>abstract_en.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>csok.bcf</file>
+      <file>abstract_en.bcf</file>
     </requires>
     <requires type="editable">
       <file>refs.bib</file>

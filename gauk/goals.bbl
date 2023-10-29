@@ -206,49 +206,6 @@
       \endverb
       \keyw{Auslander–Reiten theory,Preprojective algebra,Fano algebra,-representation finite algebra,Representation dimension}
     \endentry
-    \entry{gll}{misc}{}
-      \name{author}{3}{}{%
-        {{hash=7cbd21fa35237397b7b6afdd69d81696}{%
-           family={Guo},
-           familyi={G\bibinitperiod},
-           given={Jin\bibnamedelima Yun},
-           giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
-        {{hash=4964a2fc770cc8d21c2b4331f9631759}{%
-           family={Lu},
-           familyi={L\bibinitperiod},
-           given={Xiaojian},
-           giveni={X\bibinitperiod}}}%
-        {{hash=bd6f31e3163eefb773ece2872dc9cbf9}{%
-           family={Luo},
-           familyi={L\bibinitperiod},
-           given={Deren},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{fullhash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{bibnamehash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{authorbibnamehash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{authornamehash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{authorfullhash}{a1ea6c69e943901697bed7bfad86fac4}
-      \field{labelalpha}{GLL22}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{math.RT}
-      \field{eprinttype}{arXiv}
-      \field{title}{$\mathbb{Z}Q$ type constructions in higher representation theory}
-      \field{year}{2022}
-      \verb{eprint}
-      \verb 1908.06546
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/1908.06546v3
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/1908.06546v3
-      \endverb
-    \endentry
   \enddatalist
 \endrefsection
 \endinput

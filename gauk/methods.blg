@@ -1,19 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'methods.blg'
-[45] biber:340> INFO - === Thu Oct 26, 2023, 20:31:16
-[54] Biber.pm:419> INFO - Reading 'methods.bcf'
-[95] Biber.pm:979> INFO - Found 6 citekeys in bib section 0
-[103] Biber.pm:4419> INFO - Processing section 0
-[109] Biber.pm:4610> INFO - Looking for bibtex file 'refs.bib' for section 0
-[110] bibtex.pm:1713> INFO - LaTeX decoding ...
-[123] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
-[158] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[158] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[158] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[158] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[164] bbl.pm:660> INFO - Writing 'methods.bbl' with encoding 'UTF-8'
-[165] bbl.pm:763> INFO - Output to methods.bbl
-[166] Biber.pm:131> WARN - legacy month field 'jan' in entry 'gko' is not an integer - this will probably not sort properly.
-[166] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_f31o/8fe4c9854184545302f21ebf0d47516c_42240.utf8, line 157, warning: 33 characters of junk seen at toplevel
-[166] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_f31o/8fe4c9854184545302f21ebf0d47516c_42240.utf8, line 173, warning: 33 characters of junk seen at toplevel
-[166] Biber.pm:133> INFO - WARNINGS: 3
+[30] biber:340> INFO - === Ne říj 29, 2023, 09:30:03
+[39] Biber.pm:419> INFO - Reading 'methods.bcf'
+[66] Biber.pm:979> INFO - Found 6 citekeys in bib section 0
+[72] Biber.pm:4419> INFO - Processing section 0
+[76] Biber.pm:4610> INFO - Looking for bibtex file 'refs.bib' for section 0
+[77] bibtex.pm:1713> INFO - LaTeX decoding ...
+[88] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
+[114] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[114] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[114] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[114] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[118] bbl.pm:660> INFO - Writing 'methods.bbl' with encoding 'UTF-8'
+[119] bbl.pm:763> INFO - Output to methods.bbl
+[119] Biber.pm:131> WARN - legacy month field 'jan' in entry 'gko' is not an integer - this will probably not sort properly.
+[119] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_oi3Q/8fe4c9854184545302f21ebf0d47516c_18721.utf8, line 157, warning: 33 characters of junk seen at toplevel
+[119] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_oi3Q/8fe4c9854184545302f21ebf0d47516c_18721.utf8, line 173, warning: 33 characters of junk seen at toplevel
+[120] Biber.pm:133> INFO - WARNINGS: 3

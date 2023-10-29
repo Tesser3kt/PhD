@@ -1,0 +1,91 @@
+\documentclass[a4paper,oneside,svgnames]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,citecolor=Green,urlcolor=Black]{hyperref}
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{tikz}
+\usetikzlibrary{arrows,math}
+\usepackage[noabbrev]{cleveref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Theorems
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\let\hom\relax
+\let\mod\relax
+\DeclareMathOperator{\ext}{Ext}
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\mod}{mod}
+\DeclareMathOperator{\soc}{soc}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\gldim}{gl.dim}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\title{Combinatorial Properties of Higher Cluster Categories}
+\author{Adam Klepáč}
+
+\begin{document}
+ \maketitle
+ \section*{Summary}
+ \setcounter{section}{1}
+
+ The main objective of the project is to understand and describe the
+ combinatorics of higher-dimension\-al analogues of the path algebras (in the
+ sense of higher representation theory) of affine Dynkin quivers and their
+ associated higher cluster categories, possibly and hopefully aiding in an
+ eventual broader comprehension of the combinatorial structure of
+ $n$-representation-infinite algebras.
+
+ The first year will be dedicated to the study of the combinatorics of tilting
+ modules in higher Auslander algebras of the path algebras of type $D$ and $E$
+ Dynkin quivers and the cluster tilting objects of their associated higher 
+ cluster categories. A full combinatorial description is already in place for
+ these algebras and categories of Dynkin type $A$ by means of triangulations of
+ cyclic polytopes. It remains to extend this theory to also include types $D$
+ and $E$.
+
+ In the next two years, I aim to generalize this theory further by studying path
+ algebras of affine Dynkin quivers (of types $\tilde{A}$, $\tilde{D}$ and
+ $\tilde{E}$) which are no longer representation-finite and thus the concept of
+ higher Auslander algebras is not defined in this case. Due to the apparent
+ proximity of these path algebras to those of pure Dynkin type, it seems
+ reasonable to expect that a generalized version of a higher Auslander algebra
+ can be constructed. For instance, there already exists a construction of
+ $n$-representation-infinite algebras of type $\tilde{A}$. The search for a
+ combinatorial description of the tilting modules of these algebras will mainly
+ involve computing their Auslander-Reiten quivers and finding a regular
+ criterion which can be used to check whether a given module is tilting. I
+ intend to first find such a combinatorial model in the low-dimensional setting
+ and see if it propagates well to higher dimensions. If it does not, it likely
+ means the model is wrong, but it can also point to errors in my conception of
+ the generalized higher Auslander algebras. Finally, for these algebras, I hope
+ to find a suitable construction of a cluster category whose cluster tilting
+ objects will share the same combinatorial model as the tilting modules of its
+ associated algebra and, last but not least, its cluster tilting objects will in
+ the low-dimensional case also correspond to the clusters of the connected
+ cluster algebra. Higher cluster categories have already been defined and
+ studied. I suspect the right construction will turn out to be a certain
+ distinguished $d$-cluster tilting subcategory of the higher cluster category
+ associated to the algebra in question just as it is the case for higher
+ Auslander algebras of Dynkin type $A$.
+
+\end{document}

@@ -19,6 +19,52 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global}
+    \entry{gp}{article}{}
+      \name{author}{2}{}{%
+        {{hash=390151ba5f6cdd7387c449c3a387af2e}{%
+           family={Gel{'}fand},
+           familyi={G\bibinitperiod},
+           given={I.\bibnamedelimi M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=46242cbbe989adff0d3358d90aec45be}{%
+           family={Ponomarev},
+           familyi={P\bibinitperiod},
+           given={V.\bibnamedelimi A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media {LLC}}%
+      }
+      \strng{namehash}{927fea5fbc5f60c7298e43e34e25b58d}
+      \strng{fullhash}{927fea5fbc5f60c7298e43e34e25b58d}
+      \strng{bibnamehash}{927fea5fbc5f60c7298e43e34e25b58d}
+      \strng{authorbibnamehash}{927fea5fbc5f60c7298e43e34e25b58d}
+      \strng{authornamehash}{927fea5fbc5f60c7298e43e34e25b58d}
+      \strng{authorfullhash}{927fea5fbc5f60c7298e43e34e25b58d}
+      \field{labelalpha}{GP79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Functional Analysis and Its Applications}
+      \field{month}{7}
+      \field{number}{3}
+      \field{title}{Model algebras and representations of graphs}
+      \field{volume}{13}
+      \field{year}{1979}
+      \field{pages}{157\bibrangedash 166}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1007/bf01077482
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007%2Fbf01077482
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007%2Fbf01077482
+      \endverb
+    \endentry
     \entry{as}{article}{}
       \name{author}{2}{}{%
         {{hash=9f82a18e86d8728cd034164f4d902170}{%
@@ -381,6 +427,45 @@
       \verb https://arxiv.org/abs/math/0503240v4
       \endverb
     \endentry
+    \entry{bm1}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=25540c6a9fabc85529ca22ed7dd4f88e}{%
+           family={Baur},
+           familyi={B\bibinitperiod},
+           given={Karin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ff06146416b8154a7e6fb252f1be8ee6}{%
+           family={Marsh},
+           familyi={M\bibinitperiod},
+           given={Bethany},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{a91caf081c185147803e7121f2d552f4}
+      \strng{fullhash}{a91caf081c185147803e7121f2d552f4}
+      \strng{bibnamehash}{a91caf081c185147803e7121f2d552f4}
+      \strng{authorbibnamehash}{a91caf081c185147803e7121f2d552f4}
+      \strng{authornamehash}{a91caf081c185147803e7121f2d552f4}
+      \strng{authorfullhash}{a91caf081c185147803e7121f2d552f4}
+      \field{extraname}{1}
+      \field{labelalpha}{BM06}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{A geometric description of $m$-cluster categories}
+      \field{year}{2006}
+      \verb{eprint}
+      \verb math/0607151
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0607151v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0607151v1
+      \endverb
+    \endentry
     \entry{fg}{misc}{}
       \name{author}{2}{}{%
         {{hash=97956c92bf46a0fb4444aff48dd9acef}{%
@@ -419,37 +504,47 @@
       \verb https://arxiv.org/abs/math/0311149v4
       \endverb
     \endentry
-    \entry{schif}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=0c3529bcc2d828fec04af8363bc9a5fa}{%
-           family={Schiffler},
-           familyi={S\bibinitperiod},
-           given={Ralf},
-           giveni={R\bibinitperiod}}}%
+    \entry{bm2}{article}{}
+      \name{author}{2}{}{%
+        {{hash=25540c6a9fabc85529ca22ed7dd4f88e}{%
+           family={Baur},
+           familyi={B\bibinitperiod},
+           given={Karin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d314a39303b36358f2c2ed403c768470}{%
+           family={Marsh},
+           familyi={M\bibinitperiod},
+           given={Bethany\bibnamedelima Rose},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
-      \strng{namehash}{0c3529bcc2d828fec04af8363bc9a5fa}
-      \strng{fullhash}{0c3529bcc2d828fec04af8363bc9a5fa}
-      \strng{bibnamehash}{0c3529bcc2d828fec04af8363bc9a5fa}
-      \strng{authorbibnamehash}{0c3529bcc2d828fec04af8363bc9a5fa}
-      \strng{authornamehash}{0c3529bcc2d828fec04af8363bc9a5fa}
-      \strng{authorfullhash}{0c3529bcc2d828fec04af8363bc9a5fa}
-      \field{labelalpha}{Sch06}
+      \list{publisher}{1}{%
+        {Oxford University Press ({OUP})}%
+      }
+      \strng{namehash}{ff840a7c9be12e3aae8a9fe4cb73f633}
+      \strng{fullhash}{ff840a7c9be12e3aae8a9fe4cb73f633}
+      \strng{bibnamehash}{ff840a7c9be12e3aae8a9fe4cb73f633}
+      \strng{authorbibnamehash}{ff840a7c9be12e3aae8a9fe4cb73f633}
+      \strng{authornamehash}{ff840a7c9be12e3aae8a9fe4cb73f633}
+      \strng{authorfullhash}{ff840a7c9be12e3aae8a9fe4cb73f633}
+      \field{extraname}{2}
+      \field{labelalpha}{BM07}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{math.RT}
-      \field{eprinttype}{arXiv}
-      \field{title}{A geometric model for cluster categories of type $D_n$}
-      \field{year}{2006}
-      \verb{eprint}
-      \verb math/0608264
+      \field{journaltitle}{International Mathematics Research Notices}
+      \field{month}{1}
+      \field{title}{A Geometric Description of the $m$-cluster Categories of Type $D$}
+      \field{volume}{2007}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1093/imrn/rnm011
       \endverb
       \verb{urlraw}
-      \verb https://arxiv.org/abs/math/0608264v3
+      \verb https://doi.org/10.1093%2Fimrn%2Frnm011
       \endverb
       \verb{url}
-      \verb https://arxiv.org/abs/math/0608264v3
+      \verb https://doi.org/10.1093%2Fimrn%2Frnm011
       \endverb
     \endentry
     \entry{ginz}{misc}{}
@@ -984,6 +1079,51 @@
       \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85070678684&doi=10.1016%2fj.aim.2019.106762&partnerID=40&md5=70875d157ac34398c1f304716cf2121c
       \endverb
     \endentry
+    \entry{gi}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4d677f54c32f14b0a0c58b626a4b6e44}{%
+           family={Grant},
+           familyi={G\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6dd8a3b6d6b978f5c2d1b237bfb0593e}{%
+           family={Iyama},
+           familyi={I\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{18346d83cf733782523c0b5b1e12b227}
+      \strng{fullhash}{18346d83cf733782523c0b5b1e12b227}
+      \strng{bibnamehash}{18346d83cf733782523c0b5b1e12b227}
+      \strng{authorbibnamehash}{18346d83cf733782523c0b5b1e12b227}
+      \strng{authornamehash}{18346d83cf733782523c0b5b1e12b227}
+      \strng{authorfullhash}{18346d83cf733782523c0b5b1e12b227}
+      \field{labelalpha}{GI20}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Compositio Mathematica}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{Higher preprojective algebras, {K}oszul algebras, and superpotentials}
+      \field{volume}{156}
+      \field{year}{2020}
+      \field{pages}{2588\bibrangedash 2627}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1112/s0010437x20007538
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1112%2Fs0010437x20007538
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1112%2Fs0010437x20007538
+      \endverb
+    \endentry
     \entry{djy}{article}{}
       \name{author}{3}{}{%
         {{hash=632bbf0794333806ca7b4b34f3cdd864}{%
@@ -1024,49 +1164,6 @@
       \endverb
       \verb{url}
       \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85102142135&doi=10.1017%2ffms.2021.2&partnerID=40&md5=843f2df0508cc166084e4d9f78c5e5a8
-      \endverb
-    \endentry
-    \entry{gll}{misc}{}
-      \name{author}{3}{}{%
-        {{hash=7cbd21fa35237397b7b6afdd69d81696}{%
-           family={Guo},
-           familyi={G\bibinitperiod},
-           given={Jin\bibnamedelima Yun},
-           giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
-        {{hash=4964a2fc770cc8d21c2b4331f9631759}{%
-           family={Lu},
-           familyi={L\bibinitperiod},
-           given={Xiaojian},
-           giveni={X\bibinitperiod}}}%
-        {{hash=bd6f31e3163eefb773ece2872dc9cbf9}{%
-           family={Luo},
-           familyi={L\bibinitperiod},
-           given={Deren},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{fullhash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{bibnamehash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{authorbibnamehash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{authornamehash}{a1ea6c69e943901697bed7bfad86fac4}
-      \strng{authorfullhash}{a1ea6c69e943901697bed7bfad86fac4}
-      \field{labelalpha}{GLL22}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{math.RT}
-      \field{eprinttype}{arXiv}
-      \field{title}{$\mathbb{Z}Q$ type constructions in higher representation theory}
-      \field{year}{2022}
-      \verb{eprint}
-      \verb 1908.06546
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/1908.06546v3
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/1908.06546v3
       \endverb
     \endentry
   \enddatalist
