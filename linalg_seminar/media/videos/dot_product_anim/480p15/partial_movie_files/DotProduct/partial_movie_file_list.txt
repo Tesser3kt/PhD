@@ -1,1 +1,5 @@
 # This file is used internally by FFMPEG.
+file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/2208845399_1018691012_2511660954.mp4'
+file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/2208845399_4042641242_2021636782.mp4'
+file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/2208845399_3001086258_2950180634.mp4'
+file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/2208845399_4042641242_262426620.mp4'
