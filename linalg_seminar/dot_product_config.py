@@ -23,23 +23,32 @@ class Colors:
     canonical = BLUE
     canonical_light = BLUE_A
     bisector = WHITE
+    cos = TEAL
+    sin = RED
+    angle = PURPLE
 
 
 @dataclass
 class SkipScene:
-    many_dots: bool = True
-    projection_line: bool = True
-    perpendicular_lines: bool = True
-    zoom_in: bool = True
-    dot_vector: bool = True
-    multiplication: bool = True
-    reset: bool = True
-    addition: bool = True
-    canonical_basis: bool = True
-    matrix: bool = True
-    bisector_line: bool = True
-    double_proj: bool = True
-    second_coor: bool = True
-    second_coor_text: bool = True
+    many_dots: bool = False
+    projection_line: bool = False
+    perpendicular_lines: bool = False
+    zoom_in: bool = False
+    dot_vector: bool = False
+    multiplication: bool = False
+    reset: bool = False
+    addition: bool = False
+    canonical_basis: bool = False
+    matrix: bool = False
+    bisector_line: bool = False
+    double_proj: bool = False
+    second_coor: bool = False
+    second_coor_text: bool = False
     second_reset: bool = False
-    first_coor: bool = True
+    first_coor: bool = False
+    non_unit: bool = False
+    back_to_unit: bool = False
+    matrix_text_change: bool = False
+    question: bool = False
+    new_vectors: bool = False
+    triangle: bool = False

@@ -460,23 +460,25 @@ class DotProduct(MovingCameraScene):
         self.next_section(name="Matrix", skip_animations=SkipScene.matrix)
         matrix_text = MathTex(
             "\\big(",
-            "\\hphantom{u_x}",
+            "u_1",
             "\\;\\;",
-            "\\hphantom{u_y}",
+            "u_2",
             "\\big)",
             "\\mathbf{v}" "=",
             "L",
             "(",
             "\\mathbf{v}",
             ")",
-            substrings_to_isolate=["\\mathbf{v}", "L"],
+            substrings_to_isolate=["\\mathbf{v}", "L", "u_1", "u_2"],
             tex_to_color_map={
                 "\\mathbf{v}": Colors.vectors,
                 "L": Colors.mapping,
+                "u_1": Colors.projection_line,
+                "u_2": Colors.projection_line,
             },
             font_size=General.scale_font_size,
         ).move_to(1.2 * (UP + 1.5 * RIGHT))
-        self.play(Write(matrix_text))
+        self.play(Write(matrix_text[0]), Write(matrix_text[4:]))
 
         self.wait()
 
@@ -574,15 +576,8 @@ class DotProduct(MovingCameraScene):
             tip_length=General.scale_tip_length,
             stroke_width=General.scale_width,
         )
-        e22_label = MathTex(
-            r"u_2 \cdot \mathbf{u}",
-            color=Colors.canonical_light,
-            font_size=General.scale_font_size // 2,
-        ).next_to(e22.get_end(), direction=DR, buff=0.05)
 
-        self.play(
-            AnimationGroup(Transform(e2_proj, e22), Write(e22_label), lag_ratio=0.5)
-        )
+        self.play(Transform(e2_proj, e22))
 
         self.wait()
 
@@ -596,23 +591,19 @@ class DotProduct(MovingCameraScene):
             "\\mathbf{e_2}",
             ")",
             "=",
-            "u_2 \\cdot \\| \\mathbf{u} \\|",
-            "=",
             "u_2",
             substrings_to_isolate=[
                 "L",
                 "\\mathbf{e_2}",
                 "u_2",
-                "u_2 \\cdot \\| \\mathbf{u} \\|",
             ],
             tex_to_color_map={
                 "L": Colors.mapping,
                 "\\mathbf{e_2}": Colors.canonical,
                 "u_2": Colors.projection_line_light,
-                "u_2 \\cdot \\| \\mathbf{u} \\|": Colors.projection_line_light,
             },
             font_size=General.scale_font_size,
-        ).move_to(0.5 * DOWN + 1.5 * RIGHT)
+        ).move_to(0.4 * DOWN + 2 * RIGHT)
         self.play(Write(coor_text))
 
         self.wait()
@@ -628,10 +619,382 @@ class DotProduct(MovingCameraScene):
                 u2,
                 u2_label,
                 e22,
-                e22_label,
                 bisector_line,
             ),
             FadeIn(e2_label),
+            Write(matrix_text[3]),
         )
+
+        self.wait()
+
+        # First coor
+        self.next_section(name="First Coordinate", skip_animations=SkipScene.first_coor)
+
+        new_coor_text = MathTex(
+            "L",
+            "(",
+            "\\mathbf{e_1}",
+            ")",
+            "=",
+            "u_1",
+            substrings_to_isolate=[
+                "L",
+                "\\mathbf{e_1}",
+                "u_1",
+            ],
+            tex_to_color_map={
+                "L": Colors.mapping,
+                "\\mathbf{e_1}": Colors.canonical,
+                "u_1": Colors.projection_line_light,
+            },
+            font_size=General.scale_font_size,
+        ).move_to(0.4 * DOWN + 2 * RIGHT)
+
+        self.play(Transform(coor_text, new_coor_text))
+
+        self.play(Write(matrix_text[1]))
+
+        self.wait()
+
+        # Non-unit vectors
+        self.next_section(name="Non Unit", skip_animations=SkipScene.non_unit)
+
+        u.save_state()
+        new_u_label = (
+            MathTex(
+                r"\frac{1}{\|\mathbf{u}\|} \cdot \mathbf{u}",
+                color=Colors.projection_line,
+                font_size=(3 * General.scale_font_size) // 4,
+            )
+            .set_opacity(0.7)
+            .next_to(u.get_center(), direction=UP, buff=0.1)
+        )
+
+        u.generate_target()
+        u.target = Vector(
+            1.5 * u.get_end(),
+            color=Colors.projection_line,
+            tip_length=General.scale_tip_length,
+            stroke_width=General.scale_width,
+        )
+        self.play(Unwrite(coor_text))
+        self.play(
+            MoveToTarget(u),
+            u_label.animate.set_opacity(0.7).next_to(
+                u.target.get_center(), direction=UP, buff=0.1
+            ),
+        )
+
+        self.wait()
+
+        # Back to unit vector
+        self.next_section(name="Back to Unit", skip_animations=SkipScene.back_to_unit)
+
+        self.play(
+            Restore(u),
+            Transform(u_label, new_u_label),
+        )
+
+        matrix_text.generate_target()
+        matrix_text.target = MathTex(
+            r"\frac{1}{\|\mathbf{u}\|}",
+            "\\big(",
+            "u_1",
+            "\\;\\;",
+            "u_2",
+            "\\big)",
+            "\\mathbf{v}",
+            "=",
+            "L",
+            "(",
+            "\\mathbf{v}",
+            ")",
+            "\\cdot",
+            "\\|\\mathbf{u}\\|",
+            substrings_to_isolate=[
+                "\\mathbf{v}",
+                "L",
+                "u_1",
+                "u_2",
+                r"\frac{1}{\|\mathbf{u}\|}",
+                "\\|\\mathbf{u}\\|",
+            ],
+            tex_to_color_map={
+                "\\mathbf{v}": Colors.vectors,
+                "L": Colors.mapping,
+                "u_1": Colors.projection_line,
+                "u_2": Colors.projection_line,
+                r"\frac{1}{\|\mathbf{u}\|}": Colors.projection_line,
+                "\\|\\mathbf{u}\\|": Colors.projection_line,
+            },
+            font_size=General.scale_font_size,
+        ).move_to(1.2 * (UP + 1.5 * RIGHT))
+
+        matrix_text.target[-1].set_opacity(0)
+        matrix_text.target[-2].set_opacity(0)
+        self.play(MoveToTarget(matrix_text))
+
+        self.wait()
+
+        # Matrix text change
+        self.next_section(
+            name="Matrix Text Change", skip_animations=SkipScene.matrix_text_change
+        )
+
+        matrix_text.generate_target()
+        matrix_text.target.move_to(3 * UP)
+        matrix_text.target.scale(2)
+
+        self.play(
+            Restore(self.camera.frame),
+            FadeOut(axes, u, u_label, e1, e2, e1_label, e2_label),
+            MoveToTarget(matrix_text),
+        )
+
+        matrix_text.generate_target()
+        matrix_text.target = MathTex(
+            "\\big(",
+            "u_1",
+            "\\;\\;",
+            "u_2",
+            "\\big)",
+            "\\mathbf{v}",
+            "=",
+            "L",
+            "(",
+            "\\mathbf{v}",
+            ")",
+            "\\|\\mathbf{u}\\|",
+            substrings_to_isolate=[
+                "\\mathbf{v}",
+                "L",
+                "u_1",
+                "u_2",
+                "\\|\\mathbf{u}\\|",
+            ],
+            tex_to_color_map={
+                "\\mathbf{v}": Colors.vectors,
+                "L": Colors.mapping,
+                "u_1": Colors.projection_line,
+                "u_2": Colors.projection_line,
+                "\\|\\mathbf{u}\\|": Colors.projection_line,
+            },
+        ).move_to(1.5 * UP)
+
+        self.play(MoveToTarget(matrix_text))
+
+        self.wait()
+
+        next_text = MathTex(
+            r"\mathbf{u}",
+            r"\cdot",
+            r"\mathbf{v}",
+            "=",
+            "L",
+            "(",
+            "\\mathbf{v}",
+            ")",
+            r"\|\mathbf{u}\|",
+            substrings_to_isolate=[
+                r"\mathbf{v}",
+                "L",
+                r"\mathbf{u}",
+                r"\|\mathbf{u}\|",
+            ],
+            tex_to_color_map={
+                r"\mathbf{v}": Colors.vectors,
+                "L": Colors.mapping,
+                r"\mathbf{u}": Colors.projection_line,
+                r"\|\mathbf{u}\|": Colors.projection_line,
+            },
+        ).next_to(matrix_text, direction=DOWN, buff=0.5)
+
+        self.play(FadeIn(next_text, shift=DOWN))
+
+        self.wait()
+
+        next_text2 = MathTex(
+            r"\mathbf{u}",
+            r"\cdot",
+            r"\mathbf{v}",
+            "=",
+            "(",
+            r"\text{velikost projekce }",
+            r"\mathbf{v}",
+            r"\text{ na }",
+            r"\mathrm{LO}(",
+            r"\mathbf{u}",
+            ")",
+            ")",
+            r"(",
+            r"\text{velikost }",
+            r"\mathbf{u}",
+            ")",
+            substrings_to_isolate=[
+                r"\mathbf{v}",
+                r"\mathbf{u}",
+            ],
+            tex_to_color_map={
+                r"\mathbf{v}": Colors.vectors,
+                r"\mathbf{u}": Colors.projection_line,
+            },
+        ).next_to(next_text, direction=DOWN, buff=0.5)
+
+        self.play(FadeIn(next_text2, shift=DOWN))
+
+        self.wait()
+
+        next_text3 = MathTex(
+            r"\mathbf{v}",
+            r"\cdot",
+            r"\mathbf{u}",
+            "=",
+            "(",
+            r"\text{velikost projekce }",
+            r"\mathbf{u}",
+            r"\text{ na }",
+            r"\mathrm{LO}(",
+            r"\mathbf{v}",
+            ")",
+            ")",
+            r"(",
+            r"\text{velikost }",
+            r"\mathbf{v}",
+            ")",
+            substrings_to_isolate=[
+                r"\mathbf{v}",
+                r"\mathbf{u}",
+            ],
+            tex_to_color_map={
+                r"\mathbf{v}": Colors.vectors,
+                r"\mathbf{u}": Colors.projection_line,
+            },
+        ).next_to(next_text2, direction=DOWN, buff=0.5)
+
+        self.play(FadeIn(next_text3, shift=DOWN))
+
+        self.wait()
+
+        self.next_section(name="Question", skip_animations=SkipScene.question)
+
+        question = MathTex(
+            r"L_{\mathbf{u}}(\mathbf{v})",
+            r"\overset{?}{=}",
+            r"\|\mathbf{v}\|",
+            r"\cos",
+            "(" r"\text{úhel mezi }",
+            r"\mathbf{u}",
+            r"\text{ a }",
+            r"\mathbf{v}",
+            ")",
+            substrings_to_isolate=[
+                r"L_{\mathbf{u}}(\mathbf{v})",
+                r"\mathbf{v}",
+                r"\|\mathbf{v}\|",
+                r"\mathbf{u}",
+            ],
+            tex_to_color_map={
+                r"L_{\mathbf{u}}(\mathbf{v})": Colors.projections,
+                r"\mathbf{v}": Colors.vectors,
+                r"\|\mathbf{v}\|": Colors.vectors,
+                r"\mathbf{u}": Colors.projection_line,
+            },
+        ).move_to(ORIGIN)
+        question[0].set_color(Colors.projections)
+
+        self.play(
+            AnimationGroup(
+                AnimationGroup(
+                    Unwrite(matrix_text),
+                    Unwrite(next_text),
+                    Unwrite(next_text2),
+                    Unwrite(next_text3),
+                    lag_ratio=0,
+                ),
+                Write(question),
+                lag_ratio=0.8,
+            )
+        )
+
+        self.play(question.animate.shift(3.5 * UP), FadeIn(axes))
+
+        self.wait()
+
+        self.next_section(name="New Vectors", skip_animations=SkipScene.new_vectors)
+
+        u = Vector(
+            axes.coords_to_point(3, 1),
+            color=Colors.projection_line,
+            tip_length=General.tip_length,
+        )
+
+        v = Vector(
+            axes.coords_to_point(1, 2),
+            color=Colors.vectors,
+            tip_length=General.tip_length,
+        )
+
+        u_line = Line(
+            -2 * u.get_end(),
+            2 * u.get_end(),
+            color=Colors.projection_line,
+            stroke_width=2,
+        )
+
+        self.play(Create(u), Create(v))
+        self.play(Create(u_line))
+
+        self.wait()
+
+        # Rotation and triangle
+        self.next_section(name="Triangle", skip_animations=SkipScene.triangle)
+
+        v_proj = Dot(u_line.get_projection(v.get_end()), color=Colors.cos, radius=0.12)
+        perp_line = DashedLine(
+            v.get_end(),
+            v_proj.get_center(),
+            color=Colors.sin,
+        )
+
+        self.play(AnimationGroup(Create(perp_line), Create(v_proj), lag_ratio=0.5))
+
+        self.play(
+            Transform(
+                v_proj,
+                Line(ORIGIN, v_proj.get_center(), color=Colors.cos, stroke_width=8),
+            ),
+        )
+
+        self.wait()
+
+        self.play(
+            u.animate.rotate(-0.32, about_point=ORIGIN),
+            v.animate.rotate(-0.32, about_point=ORIGIN),
+            u_line.animate.rotate(-0.32, about_point=ORIGIN),
+            perp_line.animate.rotate(-0.32, about_point=ORIGIN),
+            v_proj.animate.rotate(-0.32, about_point=ORIGIN),
+        )
+
+        self.wait()
+
+        theta = Angle(v, u, radius=1, other_angle=True, color=Colors.angle, z_index=-1)
+        theta_label = MathTex(r"\theta", color=Colors.angle, font_size=36).next_to(
+            theta.point_from_proportion(0.5), direction=UR, buff=0.1
+        )
+        self.play(Create(theta), Write(theta_label))
+
+        v_length_label = (
+            MathTex(r"\|\mathbf{v}\|", color=Colors.vectors, font_size=36)
+            .next_to(v.get_end(), direction=LEFT, buff=0.6)
+            .shift(0.2 * DOWN)
+        )
+        cos_label = MathTex(
+            r"\|\mathbf{v}\|\cos\theta", color=Colors.cos, font_size=36
+        ).next_to(v_proj.get_center(), direction=DOWN, buff=0.2)
+        sin_label = MathTex(
+            r"\|\mathbf{v}\|\sin\theta", color=Colors.sin, font_size=36
+        ).next_to(perp_line.get_center(), direction=RIGHT, buff=0.2)
+
+        self.play(Write(v_length_label), Write(cos_label), Write(sin_label))
 
         self.wait()
