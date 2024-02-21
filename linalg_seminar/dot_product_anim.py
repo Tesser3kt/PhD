@@ -166,8 +166,8 @@ class DotProduct(MovingCameraScene):
         )
         self.play(ReplacementTransform(dots[0], w))
 
-        w_label = MathTex("\\mathbf{w}", color=Colors.projections).next_to(
-            w.get_center(), direction=DR, buff=0.1
+        w_label = MathTex("t \\cdot \\mathbf{u}", color=Colors.projections).next_to(
+            w.get_end(), direction=DR, buff=0.1
         )
         self.play(Write(w_label))
 
@@ -184,12 +184,12 @@ class DotProduct(MovingCameraScene):
             "\\mathbf{v}",
             ")",
             "=",
-            "\\mathbf{w}",
-            substrings_to_isolate=["L", "\\mathbf{v}", "\\mathbf{w}"],
+            "t \\cdot \\mathbf{u}",
+            substrings_to_isolate=["L", "\\mathbf{v}", "t \\cdot \\mathbf{u}"],
             tex_to_color_map={
                 "L": Colors.mapping,
                 "\\mathbf{v}": Colors.vectors,
-                "\\mathbf{w}": Colors.projections,
+                "t \\cdot \\mathbf{u}": Colors.projections,
             },
         ).move_to(2 * DOWN + 1.5 * RIGHT)
         self.play(Write(linearity_text))
@@ -230,8 +230,8 @@ class DotProduct(MovingCameraScene):
             Transform(w, w2),
             Transform(
                 w_label,
-                MathTex("2\\mathbf{w}", color=Colors.projections).next_to(
-                    w2.get_center(), direction=DR, buff=0.1
+                MathTex("2t \\cdot \\mathbf{u}", color=Colors.projections).next_to(
+                    w2.get_end(), direction=DR, buff=0.1
                 ),
             ),
         )
@@ -247,12 +247,16 @@ class DotProduct(MovingCameraScene):
                     "2\\mathbf{v}",
                     ")",
                     "=",
-                    "2\\mathbf{w}",
-                    substrings_to_isolate=["L", "2\\mathbf{v}", "2\\mathbf{w}"],
+                    "2t \\cdot \\mathbf{u}",
+                    substrings_to_isolate=[
+                        "L",
+                        "2\\mathbf{v}",
+                        "2t \\cdot \\mathbf{u}",
+                    ],
                     tex_to_color_map={
                         "L": Colors.mapping,
                         "2\\mathbf{v}": Colors.vectors,
-                        "2\\mathbf{w}": Colors.projections,
+                        "2t \\cdot \\mathbf{u}": Colors.projections,
                     },
                 ).move_to(2 * DOWN + 1.5 * RIGHT),
             )
@@ -295,8 +299,8 @@ class DotProduct(MovingCameraScene):
             w2.get_end(),
             color=Colors.vectors,
         )
-        w2_label = MathTex("\\mathbf{w_2}", color=Colors.projections).next_to(
-            (w2.get_end() + w.get_end()) / 2, direction=DR, buff=0.1
+        w2_label = MathTex("s \\cdot \\mathbf{u}", color=Colors.projections).next_to(
+            w2.get_end(), direction=DR, buff=0.1
         )
         self.play(Create(perp_line3), Create(w2))
         self.play(Write(w2_label))
@@ -335,27 +339,23 @@ class DotProduct(MovingCameraScene):
                 MathTex(
                     "L",
                     "(",
-                    "\\mathbf{v}",
-                    "+",
                     "\\mathbf{v_2}",
+                    "+",
+                    "\\mathbf{v}",
                     ")",
                     "=",
-                    "\\mathbf{w}",
-                    "+",
-                    "\\mathbf{w_2}",
+                    "(s + t) \\cdot \\mathbf{u}",
                     substrings_to_isolate=[
                         "L",
                         "\\mathbf{v}",
-                        "\\mathbf{w}",
+                        "(s + t) \\cdot \\mathbf{u}",
                         "\\mathbf{v_2}",
-                        "\\mathbf{w_2}",
                     ],
                     tex_to_color_map={
                         "L": Colors.mapping,
                         "\\mathbf{v}": Colors.vectors,
                         "\\mathbf{v_2}": Colors.vectors,
-                        "\\mathbf{w}": Colors.projections,
-                        "\\mathbf{w_2}": Colors.projections,
+                        "(s + t) \\cdot \\mathbf{u}": Colors.projections,
                     },
                 ).move_to(2 * DOWN + 1 * RIGHT),
             )
@@ -578,10 +578,60 @@ class DotProduct(MovingCameraScene):
             r"u_2 \cdot \mathbf{u}",
             color=Colors.canonical_light,
             font_size=General.scale_font_size // 2,
-        ).next_to(e22.get_center(), direction=RIGHT, buff=0.1)
+        ).next_to(e22.get_end(), direction=DR, buff=0.05)
 
         self.play(
             AnimationGroup(Transform(e2_proj, e22), Write(e22_label), lag_ratio=0.5)
+        )
+
+        self.wait()
+
+        self.next_section(
+            name="Second Coordinate Text", skip_animations=SkipScene.second_coor_text
+        )
+
+        coor_text = MathTex(
+            "L",
+            "(",
+            "\\mathbf{e_2}",
+            ")",
+            "=",
+            "u_2 \\cdot \\| \\mathbf{u} \\|",
+            "=",
+            "u_2",
+            substrings_to_isolate=[
+                "L",
+                "\\mathbf{e_2}",
+                "u_2",
+                "u_2 \\cdot \\| \\mathbf{u} \\|",
+            ],
+            tex_to_color_map={
+                "L": Colors.mapping,
+                "\\mathbf{e_2}": Colors.canonical,
+                "u_2": Colors.projection_line_light,
+                "u_2 \\cdot \\| \\mathbf{u} \\|": Colors.projection_line_light,
+            },
+            font_size=General.scale_font_size,
+        ).move_to(0.5 * DOWN + 1.5 * RIGHT)
+        self.play(Write(coor_text))
+
+        self.wait()
+
+        self.next_section(name="Second Reset", skip_animations=SkipScene.second_reset)
+
+        self.play(
+            FadeOut(
+                u_proj,
+                e2_proj,
+                perp_line,
+                perp_line2,
+                u2,
+                u2_label,
+                e22,
+                e22_label,
+                bisector_line,
+            ),
+            FadeIn(e2_label),
         )
 
         self.wait()

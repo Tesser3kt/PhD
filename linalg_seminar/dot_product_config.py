@@ -39,4 +39,7 @@ class SkipScene:
     matrix: bool = True
     bisector_line: bool = True
     double_proj: bool = True
-    second_coor: bool = False
+    second_coor: bool = True
+    second_coor_text: bool = True
+    second_reset: bool = False
+    first_coor: bool = True
