@@ -184,16 +184,24 @@ class DotProduct(MovingCameraScene):
             "\\mathbf{v}",
             ")",
             "=",
-            "t \\cdot \\mathbf{u}",
-            substrings_to_isolate=["L", "\\mathbf{v}", "t \\cdot \\mathbf{u}"],
+            "t \\cdot \\|\\mathbf{u}\\|",
+            "=",
+            "t",
+            substrings_to_isolate=[
+                "L",
+                "\\mathbf{v}",
+                "t \\cdot \\|\\mathbf{u}\\|",
+                "t",
+            ],
             tex_to_color_map={
                 "L": Colors.mapping,
                 "\\mathbf{v}": Colors.vectors,
-                "t \\cdot \\mathbf{u}": Colors.projections,
+                "t \\cdot \\|\\mathbf{u}\\|": Colors.projections,
+                "t": Colors.projections,
             },
         ).move_to(2 * DOWN + 1.5 * RIGHT)
         self.play(Write(linearity_text))
-        linearity_text.save_state()
+        linearity_text[2].set_color(Colors.vectors)
 
         self.wait()
 
@@ -247,16 +255,16 @@ class DotProduct(MovingCameraScene):
                     "2\\mathbf{v}",
                     ")",
                     "=",
-                    "2t \\cdot \\mathbf{u}",
+                    "2t",
                     substrings_to_isolate=[
                         "L",
                         "2\\mathbf{v}",
-                        "2t \\cdot \\mathbf{u}",
+                        "2t",
                     ],
                     tex_to_color_map={
                         "L": Colors.mapping,
                         "2\\mathbf{v}": Colors.vectors,
-                        "2t \\cdot \\mathbf{u}": Colors.projections,
+                        "2t": Colors.projections,
                     },
                 ).move_to(2 * DOWN + 1.5 * RIGHT),
             )
@@ -267,14 +275,35 @@ class DotProduct(MovingCameraScene):
         # Reset
         self.next_section(name="Reset", skip_animations=SkipScene.reset)
 
+        shorter_linearity_text = MathTex(
+            "L",
+            "(",
+            "\\mathbf{v}",
+            ")",
+            "=",
+            "t",
+            substrings_to_isolate=[
+                "L",
+                "\\mathbf{v}",
+                "t",
+            ],
+            tex_to_color_map={
+                "L": Colors.mapping,
+                "\\mathbf{v}": Colors.vectors,
+                "t": Colors.projections,
+            },
+        ).move_to(2 * DOWN + 1.5 * RIGHT)
+        shorter_linearity_text[2].set_color(Colors.vectors)
+
         self.play(
             Restore(v),
             Restore(v_label),
             Restore(w),
             Restore(w_label),
-            Restore(linearity_text),
+            Transform(linearity_text, shorter_linearity_text),
             FadeOut(perp_line2),
         )
+        linearity_text.save_state()
 
         # Addition
         self.next_section(name="Addition", skip_animations=SkipScene.addition)
@@ -344,18 +373,18 @@ class DotProduct(MovingCameraScene):
                     "\\mathbf{v}",
                     ")",
                     "=",
-                    "(s + t) \\cdot \\mathbf{u}",
+                    "s + t",
                     substrings_to_isolate=[
                         "L",
                         "\\mathbf{v}",
-                        "(s + t) \\cdot \\mathbf{u}",
+                        "s + t",
                         "\\mathbf{v_2}",
                     ],
                     tex_to_color_map={
                         "L": Colors.mapping,
                         "\\mathbf{v}": Colors.vectors,
                         "\\mathbf{v_2}": Colors.vectors,
-                        "(s + t) \\cdot \\mathbf{u}": Colors.projections,
+                        "s + t": Colors.projections,
                     },
                 ).move_to(2 * DOWN + 1 * RIGHT),
             )

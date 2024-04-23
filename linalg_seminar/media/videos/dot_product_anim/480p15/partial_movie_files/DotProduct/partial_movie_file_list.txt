@@ -1,9 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/1863698273_1769763163_1586678043.mp4'
-file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/1863698273_1242357832_2391402329.mp4'
-file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/1863698273_4042641242_2847235238.mp4'
-file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/1863698273_3846100295_186033762.mp4'
-file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/1863698273_4042641242_3036919827.mp4'
-file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/1863698273_3638317399_1144695836.mp4'
-file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/1863698273_3382992378_3341672276.mp4'
-file 'file:/home/tesserekt/source/repos/PhD/linalg_seminar/media/videos/dot_product_anim/480p15/partial_movie_files/DotProduct/1863698273_4042641242_3965226910.mp4'

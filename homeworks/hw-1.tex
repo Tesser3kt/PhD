@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt]{article}
+
+% Colors %
+\usepackage[dvipsnames]{xcolor}
+
+% Page Layout %
+\usepackage[margin=1.5in]{geometry}
+
+% Fancy Headers %
+\usepackage{fancyhdr}
+\fancyhf{}
+\cfoot{\thepage}
+\rhead{Adam Klepáč}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{16pt}
+
+% Math
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{faktor}
+\usepackage{import}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+
+% Theorems
+\usepackage{amsthm}
+\usepackage{thmtools}
+
+% Title %
+\title{\Huge\textsf{Assignment I}\\
+ \Large\textsf{Dualities In Triangulated Categories}
+ \author{}
+ \date{}
+}
+
+% Table of Contents %
+\usepackage{hyperref}
+\hypersetup{
+ colorlinks=true,
+ linktoc=all,
+ linkcolor=blue
+}
+
+% Tables %
+\usepackage{booktabs}
+
+% Enumerate %
+\usepackage{enumitem}
+
+% Operators %
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Ob}{Ob}
+\DeclareMathOperator{\op}{op}
+
+% Common operators %
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+
+% American Paragraph Skip %
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% Document %
+\pagestyle{fancy}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{enumerate}[label=(\arabic*)]
+ \item Consider the arrow $X \overset{f}{\longrightarrow} Y$. By the axiom
+  (TR1), there exists a distinguished triangle
+ \begin{center}
+  \begin{tikzcd}
+   X \arrow[r, "f"] & Y \arrow[r,"i"] & W \arrow [r,"j"] & \Sigma X.
+  \end{tikzcd}
+ \end{center}
+ Also, by the axiom (TR3), there exists an arrow $\alpha:W \to Z \oplus Z'$,
+ such that the diagram
+ \begin{center}
+  \begin{tikzcd}[row sep=large]
+   X \arrow[r, "f"] \arrow[d,"{\begin{psmallmatrix} 1_X \\ 0
+   \end{psmallmatrix}}"] & Y \arrow[r,"i"] \arrow[d,"{\begin{psmallmatrix} 1_Y
+   \\ 0 \end{psmallmatrix}}"] & W \arrow [r,"j"] \arrow[d,dashed,"\exists
+   \alpha"] & \Sigma X \arrow[d,"{\begin{psmallmatrix} 1_{\Sigma X} \\ 0
+   \end{psmallmatrix}}"]\\ X \oplus X' \arrow[r, "f \oplus f'"] & Y \oplus Y'
+   \arrow[r, "g \oplus g'"] & Z \oplus Z' \arrow[r, "h \oplus h'"] & \Sigma X
+   \oplus \Sigma X' 
+  \end{tikzcd}
+ \end{center}
+ commutes, where $1_A$ denotes the identity arrow of $A$ and
+ $\begin{psmallmatrix} 1_A \\ 0 \end{psmallmatrix}$ the (unique) inclusion
+ arrow $A \hookrightarrow A \oplus A'$ for $A \in \{X,Y,\Sigma X\}$.
+
+ Finally, consider the diagram
+ \begin{center}
+  \begin{tikzcd}[row sep=large]
+   X \arrow[r, "f"] \arrow[d,"{\begin{psmallmatrix} 1_X \\ 0
+   \end{psmallmatrix}}"] & Y \arrow[r,"i"] \arrow[d,"{\begin{psmallmatrix} 1_Y
+   \\ 0 \end{psmallmatrix}}"] & W \arrow [r,"j"] \arrow[d,dashed,"\exists
+   \alpha"] & \Sigma X \arrow[d,"{\begin{psmallmatrix} 1_{\Sigma X} \\ 0
+   \end{psmallmatrix}}"]\\ X \oplus X' \arrow[r, "f \oplus f'"] \arrow[d,"(1_X
+   \; 0)"] & Y \oplus Y' \arrow[r, "g \oplus g'"] \arrow[d,"(1_Y \; 0)"] & Z
+   \oplus Z' \arrow[r, "h \oplus h'"] \arrow[d, "(1_Z \; 0)"] & \Sigma X \oplus
+   \Sigma X' \arrow[d,"(1_{\Sigma X} \; 0)"] \\ X \arrow[r, "f"] & Y
+   \arrow[r,"g"] & Z \arrow [r,"h"] & \Sigma X,
+  \end{tikzcd}
+ \end{center}
+ where $(1_A \; 0)$ denote the projection arrows. The top rectangle is
+ commutative by (TR3) and the commutativity of the bottom rectangle is obvious.
+ Thus, the diagram is a morphism of triangles. Moreover, the maps $(1_A \; 0)
+ \circ \begin{psmallmatrix} 1_A \\ 0 \end{psmallmatrix} = 1_A$ are all
+ isomorphisms so \textbf{Lemma 2.14.} asserts that also $(1_Z \; 0) \circ
+ \alpha$ is an isomorphism which in turn means that $T$ is isomorphic to the
+ distinguished triangle
+ \begin{center}
+  \begin{tikzcd}
+   X \arrow[r, "f"] & Y \arrow[r,"i"] & W \arrow [r,"j"] & \Sigma X
+  \end{tikzcd}
+ \end{center}
+ making it a distinguished triangle as well, by (TR0).
+ 
+ The argument for the distinction of $T'$ is nearly identical.
+\item By definition of $\mathsf{K}(\Z)$, the triangle
+ \begin{center}
+  \begin{tikz-cd}
+   
+  \end{tikz-cd}
+ \end{center}
+\end{enumerate}
+
+\end{document}
