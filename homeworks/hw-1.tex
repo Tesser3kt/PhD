@@ -131,12 +131,58 @@
  making it a distinguished triangle as well, by (TR0).
  
  The argument for the distinction of $T'$ is nearly identical.
-\item By definition of $\mathsf{K}(\Z)$, the triangle
- \begin{center}
-  \begin{tikz-cd}
-   
-  \end{tikz-cd}
- \end{center}
+\item 
+ \begin{enumerate}[label=(\roman*)]
+ \item By definition of $\mathsf{K}(\Z)$, there exists a distinguished triangle
+  \begin{center}
+   \begin{tikzcd}
+    \Z / 2 \arrow[r, "\cdot 2"] & \Z / 4 \arrow[r, "i"] & C(\cdot 2) \arrow[r,
+    "c_{\cdot 2}"] & \Sigma(\Z / 2),
+   \end{tikzcd}
+  \end{center}
+  where $i: \Z / 4 \hookrightarrow C( \cdot 2)$ is the canonical inclusion for
+  $C( \cdot 2)$ is the complex $(\Z / 2 \overset{-( \cdot
+  2)}{\longrightarrow} \Z / 4)$ concentrated in degrees $1$ and $0$.
+
+  Assume for contradiction that there also exists a map $h: \Z / 2 \to \Sigma(\Z
+  / 2)$ such that
+  \begin{center}
+   \begin{tikzcd}
+    \Z / 2 \arrow[r, "\cdot 2"] & \Z / 4 \arrow[r, "\bmod 2"] & \Z / 2 \arrow[r,
+    "h"] & \Sigma(\Z / 2)
+   \end{tikzcd}
+  \end{center}
+  is a distinguished triangle. By (TR3), there exists a map $\alpha: C( \cdot 2)
+  \to \Z / 2$ making the diagram
+  \begin{center}
+   \begin{tikzcd}
+    \Z / 2 \arrow[r, "\cdot 2"] \arrow[d,"1"] & \Z / 4 \arrow[r, "i"]
+    \arrow[d,"1"] & C(\cdot 2) \arrow[r, "c_{\cdot 2}"] \arrow[d, dashed,
+    "\exists \alpha"] & \Sigma(\Z / 2) \arrow[d,"1"] \\
+    \Z / 2 \arrow[r, "\cdot 2"] & \Z / 4 \arrow[r, "\bmod 2"] & \Z / 2 \arrow[r,
+    "h"] & \Sigma(\Z / 2)
+   \end{tikzcd}
+  \end{center}
+  commute. By commutativity of the central square, we get that the map $\alpha
+  \circ i - \bmod \; 2$ is null-homotopic, which in the case of complexes
+  concentrated in degree $0$ simply means that $\alpha \circ i = \bmod \, 2$. As
+  $i$ is just $\Z / 4 \overset{1}{\longrightarrow} \Z / 4$ in degree $0$, it
+  follows that $\alpha = \bmod \; 2$. By definition of $C( \cdot 2)$, the map
+  $c_{ \cdot 2}:C( \cdot 2) \to \Sigma(\Z / 2)$ is the map $\Z / 2
+  \overset{1}{\longrightarrow} \Z / 2$ in degree $1$. The commutativity of the
+  rightmost square implies that $c_{ \cdot 2} = h \circ \alpha = h \circ \bmod
+  \; 2$. Nonetheless, this is a contradiction as $h \circ \bmod \; 2 = 0$
+  because
+  \begin{center}
+   \begin{tikzcd}
+    \Z / 2 \arrow[r, "\cdot 2"] & \Z / 4 \arrow[r, "\bmod 2"] & \Z / 2 \arrow[r,
+    "h"] & \Sigma(\Z / 2)
+   \end{tikzcd}
+  \end{center}
+  is a triangle. It follows that there indeed doesn't exist a distinguished
+  triangle of the above form.
+ \item 
+ \end{enumerate}
 \end{enumerate}
 
 \end{document}
