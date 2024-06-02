@@ -1,0 +1,5 @@
+\babel@toc {american}{}\relax 
+\babel@toc {american}{}\relax 
+\beamer@sectionintoc {1}{Fundamentals \\ \normalsize \textcolor {black!60!bgcolorAlt}{Algebras, Modules, Quivers}}{3}{0}{1}
+\beamer@sectionintoc {2}{Auslander-Reiten Theory \\ \normalsize \textcolor {black!60!bgcolorAlt}{Path Algebras, Representations, AR Quivers}}{19}{0}{2}
+\beamer@sectionintoc {3}{Elements}{27}{0}{3}

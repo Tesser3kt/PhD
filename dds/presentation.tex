@@ -1,0 +1,66 @@
+% !TeX program = lualatex
+\documentclass[
+	american,
+	sections numbered,
+	usenames,
+	xcolor=dvipsnames,
+	aspectratio=169,
+]{beamer}
+
+\mode<presentation>
+
+\usepackage{babel}
+\usepackage[babel]{microtype}
+\usepackage[babel]{csquotes}
+\usepackage[american]{isodate}
+
+\usepackage[T1]{fontenc}
+\usepackage{FiraMono}
+
+\usetheme[progressbar=frametitle]{metropolis}
+
+%%% GRAPHICS %%%
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{cd,positioning}
+
+%%% MATH & SCIENCE %%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{siunitx}
+\usepackage{bm}
+\usepackage{dsfont}
+\usepackage{mathtools}
+
+%%% FLOATS %%%
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{subcaption}
+
+%\usepackage{biblatex}
+%\bibliography{literature.bib}
+
+
+\input{setup-colors.tex}
+\input{setup-beamer.tex}
+\input{setup-math.tex}
+\input{setup-plots.tex}
+
+
+\title{Interesting Combinatorics In Higher Auslander Theory}
+\author{Adam Klepáč}
+\institute[CUNI]{Charles University in Prague}
+\date[DDS-M]{10th Day of Doctoral Students of the School of Mathematics}
+
+\titlegraphic{\includegraphics[height=.30\textheight]{logo.png}}
+
+\begin{document}
+\begin{frame}[plain]
+	\titlepage
+\end{frame}
+
+\input{content}
+\end{document}
