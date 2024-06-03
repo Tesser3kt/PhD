@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.5.24)  2 JUN 2024 21:25
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.5.24)  3 JUN 2024 07:49
  restricted system commands enabled.
 **presentation.tex
 (./presentation.tex
@@ -2473,7 +2473,12 @@ t line 48.
 
 ] [49
 
-] [50
+]
+\openout4 = presentation.vrb
+ (./presentation.vrb) [50
+
+] (./presentation.vrb)
+[51
 
 ])
 \tf@nav=\write6
@@ -2495,14 +2500,14 @@ Package rerunfilecheck Info: File `presentation.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51216 strings out of 476324
+ 51230 strings out of 476324
  125031,1977958 words of node,token memory allocated
- 7118 words of node memory still in use:
-   78 hlist, 13 vlist, 9 rule, 19 disc, 6 local_par, 6 math, 217 glue, 33 kern, 
-21 penalty, 2 margin_kern, 165 glyph, 675 attribute, 72 glue_spec, 339 attribute
-_list, 4 write, 109 pdf_literal, 6 pdf_action, 48 pdf_colorstack nodes
-   avail lists: 1:7,2:4180,3:2087,4:309,5:250,6:29,7:2974,8:43,9:951,10:22,11:10
-4
+ 10085 words of node memory still in use:
+   103 hlist, 15 vlist, 9 rule, 25 disc, 6 local_par, 12 math, 335 glue, 46 kern
+, 21 penalty, 2 margin_kern, 231 glyph, 1021 attribute, 72 glue_spec, 512 attrib
+ute_list, 4 write, 184 pdf_literal, 6 pdf_action, 48 pdf_colorstack nodes
+   avail lists: 1:7,2:3661,3:2012,4:309,5:237,6:29,7:2784,8:43,9:924,10:22,11:98
+
  71879 multiletter control sequences out of 65536+600000
  158 fonts using 30298223 bytes
  128i,17n,139p,1902b,1508s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2524,10 +2529,10 @@ s/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
 pfb>
-Output written on presentation.pdf (50 pages, 353292 bytes).
+Output written on presentation.pdf (51 pages, 356542 bytes).
 
-PDF statistics: 400 PDF objects out of 1000 (max. 8388607)
- 305 compressed objects within 4 object streams
- 104 named destinations out of 1000 (max. 131072)
+PDF statistics: 406 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 106 named destinations out of 1000 (max. 131072)
  40 words of extra memory for PDF output out of 10000 (max. 100000000)
 

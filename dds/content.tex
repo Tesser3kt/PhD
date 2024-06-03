@@ -585,27 +585,45 @@
  \end{figure}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
  \frametitle{Triangulations and tilting modules}
  \begin{theorem}[Thomas H., Oppermann S.]
-  There is a bijection
+  There are bijections
   \begin{figure}[h]
    \centering
    \begin{tikzpicture}
-    \node[align=center] (a) at (0,0) {Triangulations \\ of $C(n + 2d,2d)$};
+    \node[align=center] (a) at (0,0) {Some $2d$-simplices \\ of $C(n+2d,2d)$};
     \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (a.south west) --
      (a.north west);
     \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (a.south
      east) -- (a.north east);
 
-    \node[align=center] (b) at (6,0) {Tilting modules of $\Lambda^{(d)}$ \\
-     contained in $\add M^{(d)}$};
+    \node[align=center] (b) at (6,0) {Indecomposable \\ modules over
+     $\Lambda^{(d)}$};
     \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (b.south west) --
      (b.north west);
     \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (b.south
      east) -- (b.north east);
     
     \draw[<->,shorten <=10pt, shorten >=10pt] (a.east) -- (b.west);
+    
+    \pause
+    \begin{scope}[yshift=-2cm]
+     \node[align=center] (a) at (0,0) {Triangulations \\ of $C(n + 2d,2d)$};
+     \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (a.south west) --
+      (a.north west);
+     \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (a.south
+      east) -- (a.north east);
+
+     \node[align=center] (b) at (6,0) {Tilting modules over $\Lambda^{(d)}$ \\
+      contained in $\add M^{(d)}$};
+     \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (b.south west) --
+      (b.north west);
+     \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (b.south
+      east) -- (b.north east);
+     
+     \draw[<->,shorten <=10pt, shorten >=10pt] (a.east) -- (b.west);
+    \end{scope}
    \end{tikzpicture}
   \end{figure}
  \end{theorem}

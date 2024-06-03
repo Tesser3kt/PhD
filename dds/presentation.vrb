@@ -1,49 +1,41 @@
-\frametitle{Higher Auslander algebras of type $A$}
- \begin{figure}[h]
-  \centering
- 	 \begin{tikzpicture}[scale=0.75]
- 		\node[circle,fill,inner sep=2pt] (a1) at (0,0) {};
- 		\node[circle,fill,inner sep=2pt] (b1) at (1,0.5) {};
- 		\node[circle,fill,inner sep=2pt] (c1) at (2,0) {};
- 		\node[circle,fill,inner sep=2pt] (d1) at (2,1) {};
- 		\node[circle,fill,inner sep=2pt] (e1) at (3,0.5) {};
- 		\node[circle,fill,inner sep=2pt] (f1) at (4,0) {};
+\frametitle{Triangulations and tilting modules}
+ \begin{theorem}[Thomas H., Oppermann S.]
+  There are bijections
+  \begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+    \node[align=center] (a) at (0,0) {Some $2d$-simplices \\ of $C(n+2d,2d)$};
+    \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (a.south west) --
+     (a.north west);
+    \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (a.south
+     east) -- (a.north east);
 
- 		\draw[->,shorten <=3pt, shorten >=3pt] (a1) -- (b1);
- 		\draw[->,shorten <=3pt, shorten >=3pt] (b1) -- (c1);
- 		\draw[->,shorten <=3pt, shorten >=3pt] (b1) -- (d1);
- 		\draw[->,shorten <=3pt, shorten >=3pt] (c1) -- (e1);
- 		\draw[->,shorten <=3pt, shorten >=3pt] (d1) -- (e1);
- 		\draw[->,shorten <=3pt, shorten >=3pt] (e1) -- (f1);
+    \node[align=center] (b) at (6,0) {Indecomposable \\ modules over
+     $\Lambda^{(d)}$};
+    \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (b.south west) --
+     (b.north west);
+    \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (b.south
+     east) -- (b.north east);
 
- 		\node[circle,fill,inner sep=2pt] (c2) at (1,-2) {};
- 		\node[circle,fill,inner sep=2pt] (e2) at (2,-1.5) {};
- 		\node[circle,fill,inner sep=2pt] (f2) at (3,-2) {};
+    \draw[<->,shorten <=10pt, shorten >=10pt] (a.east) -- (b.west);
 
- 		\draw[->,shorten <=3pt, shorten >=3pt] (c2) -- (e2);
- 		\draw[->,shorten <=3pt, shorten >=3pt] (e2) -- (f2);
+    \pause
+    \begin{scope}[yshift=-2cm]
+     \node[align=center] (a) at (0,0) {Triangulations \\ of $C(n + 2d,2d)$};
+     \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (a.south west) --
+      (a.north west);
+     \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (a.south
+      east) -- (a.north east);
 
- 		\draw[red,->,shorten <=3pt, shorten >=3pt] (c1) -- (c2);
- 		\draw[red,->,shorten <=3pt, shorten >=3pt] (e1) -- (e2);
- 		\draw[red,->,shorten <=3pt, shorten >=3pt] (f1) -- (f2);
+     \node[align=center] (b) at (6,0) {Tilting modules over $\Lambda^{(d)}$ \\
+      contained in $\add M^{(d)}$};
+     \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (b.south west) --
+      (b.north west);
+     \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (b.south
+      east) -- (b.north east);
 
- 		\node[circle,fill,inner sep=2pt] (f3) at (2,-4) {};
- 		\draw[red,->,shorten <=3pt, shorten >=3pt] (f2) -- (f3);
-
- 		\node[circle,fill,inner sep=2pt] (c4) at (5,-1) {};
- 		\node[circle,fill,inner sep=2pt] (e4) at (6,-0.5) {};
- 		\node[circle,fill,inner sep=2pt] (f4) at (7,-1) {};
-
- 		\draw[->,shorten <=3pt, shorten >=3pt] (c4) -- (e4);
- 		\draw[->,shorten <=3pt, shorten >=3pt] (e4) -- (f4);
-
- 		\node[circle,fill,inner sep=2pt] (f5) at (6,-3) {};
- 		\draw[red,->,shorten <=3pt, shorten >=3pt] (f4) -- (f5);
-
- 		\draw[blue,->,shorten <=3pt, shorten >=3pt] (c2) -- (c4);
- 		\draw[blue,->,shorten <=3pt, shorten >=3pt] (e2) -- (e4);
- 		\draw[blue,->,shorten <=3pt, shorten >=3pt] (f2) -- (f4);
- 		\draw[blue,->,shorten <=3pt, shorten >=3pt] (f3) -- (f5);
- 	 \end{tikzpicture}
-  \caption*{The AR quiver of $\Lambda^{(2)}$.}
- \end{figure}
+     \draw[<->,shorten <=10pt, shorten >=10pt] (a.east) -- (b.west);
+    \end{scope}
+   \end{tikzpicture}
+  \end{figure}
+ \end{theorem}
