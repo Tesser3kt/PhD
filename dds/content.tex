@@ -183,166 +183,430 @@
  	quiver $Q$ such that $\Lambda = kQ / I$ for some admissible ideal $I$ of $kQ$.
  \end{theorem}
  \pause
- \begin{theorem}[Gabriel's]
- 	Let $\Lambda$ be as above. Then, $\Lambda$ is 
+ \begin{theorem}
+ 	Let $\Lambda$ be as above. Then, $\Lambda = kQ$ for a quiver $Q$ if and only
+ 	if $\Lambda$ is \alert{hereditary} (submodules of projective modules are
+ 	projective).
  \end{theorem}
 \end{frame}
 
-\begin{frame}{Integrals and Other Expressions}
-	\begin{equation}
-		\iint_{\partial\Omega}f(x)\diff{x} \in \complexes
-	\end{equation}
-	\begin{align}
-		E &= mc^2\\
-		F &= ma
-	\end{align}
-
-	\seprule
-	
-	\begin{tabular}{rl}
-		$m$ & Mass\\
-		$c$ & Speed of light
-	\end{tabular}
-\end{frame}
-\begin{frame}{Theorems, Lemmas, ...}
-	\begin{thm}
-		The following statement is correct
-		\begin{equation}
-			\frac{\partial f(\vec{x})}{\partial x_i} = \sum_{l=1}^{L}\cos\left(l\frac{2\pi}{L} + 0\right)
-		\end{equation}
-	\end{thm}
+\begin{frame}
+ \frametitle{Dynkin quivers}
+ \begin{theorem}[Gabriel's]
+ 	Let $\Lambda$ be as above. Then, $\Lambda = kQ$ where $Q$ (as an indirected
+ 	graph) is \alert{Dynkin} if and only if $\Lambda$ is
+ 	\alert{representation-finite} (the number, up to isomorphism, of
+ 	indecomposable finite-dimensional $\Lambda$-modules is finite).
+ \end{theorem}
 \end{frame}
 
-\section{Elements}
+\begin{frame}
+ \frametitle{Dynkin quivers}
+ \begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+   \node[circle,fill,inner sep=2pt] (a) at (0,0) {};
+   \node[circle,fill,inner sep=2pt] (b) at (1,0) {};
+   \node[circle,fill,inner sep=2pt] (c) at (2,0) {};
+   \node at (3,0) {$\cdots$};
+   \node[circle,fill,inner sep=2pt] (d) at (4,0) {};
+   \node[left=3mm of a] {$A_n:$};
 
-\begin{frame}[fragile]{Typography}
-	\begin{verbatim}The theme provides sensible defaults to
-		\emph{emphasize} text, \alert{accent} parts
-		or show \textbf{bold} results.\end{verbatim}
-	
-	\begin{center}becomes\end{center}
-	
-	The theme provides sensible defaults to \emph{emphasize} text,
-	\alert{accent} parts or show \textbf{bold} results.
-\end{frame}
+   \draw (a) -- (b);
+   \draw (b) -- (c);
+   \draw (c) -- (2.5,0);
+   \draw (3.5,0) -- (d);
+	 
+	 \begin{scope}[yshift=-1.5cm]
+  	\node[circle,fill,inner sep=2pt] (a) at (0,0) {};
+  	\node[circle,fill,inner sep=2pt] (b) at (1,0) {};
+  	\node[circle,fill,inner sep=2pt] (c) at (2,0) {};
+  	\node at (3,0) {$\cdots$};
+  	\node[circle,fill,inner sep=2pt] (d) at (4,0) {};
+  	\node[circle,fill,inner sep=2pt] (e) at (4.5,0.5) {};
+  	\node[circle,fill,inner sep=2pt] (f) at (4.5,-0.5) {};
 
-\begin{frame}{Font feature test}
-	\begin{itemize}
-		\item Regular
-		\item \textit{Italic}
-		\item \textsc{Small Caps}
-		\item \textbf{Bold}
-		\item \textbf{\textit{Bold Italic}}
-		\item \textbf{\textsc{Bold Small Caps}}
-		\item \texttt{Monospace}
-		\item \texttt{\textit{Monospace Italic}}
-		\item \texttt{\textbf{Monospace Bold}}
-		\item \texttt{\textbf{\textit{Monospace Bold Italic}}}
-	\end{itemize}
-\end{frame}
+   	\draw (a) -- (b);
+   	\draw (b) -- (c);
+   	\draw (c) -- (2.5,0);
+   	\draw (3.5,0) -- (d);
+   	\draw (d) -- (e);
+   	\draw (d) -- (f);
 
-\begin{frame}{Lists}
-	\begin{columns}[T,onlytextwidth]
-		\column{0.33\textwidth}
-		Items
-		\begin{itemize}
-			\item Milk \item Eggs \item Potatoes
-		\end{itemize}
-		
-		\column{0.33\textwidth}
-		Enumerations
-		\begin{enumerate}
-			\item First, \item Second and \item Last.
-		\end{enumerate}
-		
-		\column{0.33\textwidth}
-		Descriptions
-		\begin{description}
-			\item[PowerPoint] Meeh. \item[Beamer] Yeeeha.
-		\end{description}
-	\end{columns}
-\end{frame}
-\begin{frame}{Tables}
-	\begin{table}
-		\caption{Largest cities in the world (source: Wikipedia)}
-		\begin{tabular}{@{} lr @{}}
-			\toprule
-			City & Population\\
-			\midrule
-			Mexico City & 20,116,842\\
-			Shanghai & 19,210,000\\
-			Peking & 15,796,450\\
-			Istanbul & 14,160,467\\
-			\bottomrule
-		\end{tabular}
-	\end{table}
-\end{frame}
-\begin{frame}{Blocks}
-	Three different block environments are pre-defined and may be styled with an
-	optional background color.
-	
-	\begin{columns}[T,onlytextwidth]
-		\column{0.45\textwidth}
-		\begin{block}{Default}
-			Block content.
-		\end{block}
-		
-		\begin{alertblock}{Alert}
-			Block content.
-		\end{alertblock}
-		
-		\begin{exampleblock}{Example}
-			Block content.
-		\end{exampleblock}
-		
-		\column{0.45\textwidth}
-		
-		\metroset{block=fill}
-		
-		\begin{block}{Default}
-			Block content.
-		\end{block}
-		
-		\begin{alertblock}{Alert}
-			Block content.
-		\end{alertblock}
-		
-		\begin{exampleblock}{Example}
-			Block content.
-		\end{exampleblock}
-		
-	\end{columns}
-\end{frame}
-\begin{frame}{Line plots}
-	\begin{figure}
-		\begin{tikzpicture}
-			\begin{axis}[
-				betterplot,
-				width=0.9\textwidth,
-				height=6cm,
-				]
-				
-				\addplot {sin(deg(x))};
-				\addplot+[samples=100] {sin(deg(2*x))};
-				
-			\end{axis}
-		\end{tikzpicture}
-	\end{figure}
+   	\node[left=3mm of a] {$D_n:$};
+	 \end{scope}
+	 \begin{scope}[yshift=-3cm]
+  	\node[circle,fill,inner sep=2pt] (a) at (0,0) {};
+  	\node[circle,fill,inner sep=2pt] (b) at (1,0) {};
+  	\node[circle,fill,inner sep=2pt] (c) at (2,0) {};
+  	\node[circle,fill,inner sep=2pt] (d) at (3,0) {};
+  	\node[circle,fill,inner sep=2pt] (e) at (4,0) {};
+  	\node[circle,fill,inner sep=2pt] (f) at (2,0.5) {};
+
+   	\draw (a) -- (b);
+   	\draw (b) -- (c);
+   	\draw (c) -- (f);
+   	\draw (c) -- (d);
+   	\draw (d) -- (e);
+
+   	\node[left=3mm of a] {$E_6:$};
+	 \end{scope}
+	 \begin{scope}[yshift=-4.5cm]
+  	\node[circle,fill,inner sep=2pt] (a) at (0,0) {};
+  	\node[circle,fill,inner sep=2pt] (b) at (1,0) {};
+  	\node[circle,fill,inner sep=2pt] (c) at (2,0) {};
+  	\node[circle,fill,inner sep=2pt] (d) at (3,0) {};
+  	\node[circle,fill,inner sep=2pt] (e) at (4,0) {};
+  	\node[circle,fill,inner sep=2pt] (f) at (2,0.5) {};
+  	\node[circle,fill,inner sep=2pt] (g) at (5,0) {};
+
+   	\draw (a) -- (b);
+   	\draw (b) -- (c);
+   	\draw (c) -- (f);
+   	\draw (c) -- (d);
+   	\draw (d) -- (e);
+   	\draw (e) -- (g);
+
+   	\node[left=3mm of a] {$E_7:$};
+	 \end{scope}
+	 \begin{scope}[yshift=-6cm]
+  	\node[circle,fill,inner sep=2pt] (a) at (0,0) {};
+  	\node[circle,fill,inner sep=2pt] (b) at (1,0) {};
+  	\node[circle,fill,inner sep=2pt] (c) at (2,0) {};
+  	\node[circle,fill,inner sep=2pt] (d) at (3,0) {};
+  	\node[circle,fill,inner sep=2pt] (e) at (4,0) {};
+  	\node[circle,fill,inner sep=2pt] (f) at (2,0.5) {};
+  	\node[circle,fill,inner sep=2pt] (g) at (5,0) {};
+  	\node[circle,fill,inner sep=2pt] (h) at (6,0) {};
+
+   	\draw (a) -- (b);
+   	\draw (b) -- (c);
+   	\draw (c) -- (f);
+   	\draw (c) -- (d);
+   	\draw (d) -- (e);
+   	\draw (e) -- (g);
+   	\draw (g) -- (h);
+   	\node[left=3mm of a] {$E_8:$};
+	 \end{scope}
+  \end{tikzpicture}
+ \end{figure}
 \end{frame}
 
-\begin{frame}[standout,plain]
-	Standout Frame!
+\begin{frame}
+ \frametitle{Auslander-Reiten quiver}
+ \begin{alertblock}{The category $\cmod \Lambda$}
+ 	All the (right) $\Lambda$-modules and the homomorphisms between them form an
+ 	\alert{abelian category}, which we denote $\cmod \Lambda$.
+ \end{alertblock}
+ \pause
+ We wish to record the data of $\cmod \Lambda$ in the form of a quiver.
+
+ \pause
+ The vertices are (isomorphism classes of) indecomposable $\Lambda$-modules and
+ the number of arrows between two $\Lambda$-modules $M,N$ is the dimension of
+ $\mathrm{Irr}(M,N)$.
+
+ \pause
+ We call this quiver, the \alert{Auslander-Reiten quiver} of $\Lambda$.
 \end{frame}
 
+\begin{frame}
+ \frametitle{Auslander-Reiten quiver -- Example}
+ The Auslander-Reiten quiver of the path algebra $k(\tikz[baseline=-3pt]{
+ 	\node[circle,fill,inner sep=1.5pt] (a) at (0,0) {};
+ 	\node[circle,fill,inner sep=1.5pt] (b) at (0.75,0) {};
+ 	\node[circle,fill,inner sep=1.5pt] (c) at (1.5,0) {};
 
-\appendix
-\begin{frame}[fragile]{Backup slides}
-	Sometimes, it is useful to add slides at the end of your presentation to
-	refer to during audience questions.
-	
-	The best way to do this is to include the \verb|appendixnumberbeamer|
-	package in your preamble and call \verb|\appendix| before your backup slides.
-	
-	The theme will automatically turn off slide numbering and progress bars for
-	slides in the appendix.
+ 	\draw[<-,shorten <=2pt, shorten >=2pt] (a) -- (b);
+ 	\draw[<-,shorten <=2pt, shorten >=2pt] (b) -- (c);
+ })$ is
+ \begin{figure}[h]
+  \centering
+ 	 \begin{tikzpicture}
+ 		\node[circle,fill,inner sep=2pt] (a) at (0,0) {};
+ 		\node[circle,fill,inner sep=2pt] (b) at (1,1) {};
+ 		\node[circle,fill,inner sep=2pt] (c) at (2,0) {};
+ 		\node[circle,fill,inner sep=2pt] (d) at (2,2) {};
+ 		\node[circle,fill,inner sep=2pt] (e) at (3,1) {};
+ 		\node[circle,fill,inner sep=2pt] (f) at (4,0) {};
+
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (a) -- (b);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (b) -- (c);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (b) -- (d);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (c) -- (e);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (d) -- (e);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (e) -- (f);
+ 	 \end{tikzpicture}
+ \end{figure}
+\end{frame}
+
+\section{Higher Auslander Algebras \\ \normalsize
+\textcolor{black!60!bgcolorAlt}{Cluster Tilting Modules, Cyclic Polytopes}}
+
+\begin{frame}[fragile]
+ \frametitle{Module extensions}
+ \begin{alertblock}{The group of extensions}
+ 	An \alert{extension} of a $\Lambda$-module $M$ by a $\Lambda$-module $N$ is a
+ 	\alert{short exact sequence}
+ 	\begin{figure}[h]
+ 	 \centering
+ 	 \begin{tikzcd}
+ 	  0 \ar[r] & M \ar[r] & X \ar[r] & N \ar[r] & 0.
+ 	 \end{tikzcd}
+ 	\end{figure}
+ 	All the (equivalence classes of) extensions of $M$ by $N$ form a group which
+ 	we denote $\mathrm{Ext^{1}}(M,N)$.
+ \end{alertblock}
+ \pause
+ This construction can be extended to `$n$-fold' extensions of $M$ by $N$, that
+ is, \alert{long exact sequences}
+ \begin{figure}[h]
+  \centering
+  \begin{tikzcd}
+   0 \ar[r] & M \ar[r] & X_n \ar[r] & X_{n-1} \ar[r] & \cdots \ar[r] & X_1
+   \ar[r] & N \ar[r] & 0.
+  \end{tikzcd}
+ \end{figure}
+ The group of $n$-fold extensions of $M$ by $N$ is denoted
+ $\mathrm{Ext}^{n}(M,N)$.
+\end{frame}
+
+\begin{frame}
+ \frametitle{Cluster tilting modules}
+ \begin{block}{$\add M$}
+ 	For a $\Lambda$-module $M$, we denote by $\add M$ the full subcategory of
+ 	$\cmod \Lambda$ whose objects are the direct sums of direct summands of $M$.
+ \end{block}
+ \pause
+ \begin{alertblock}{$d$-cluster tilting module}
+ 	A $\Lambda$-module $M$ is $d$-cluster tilting if
+ 	\[
+ 	 \add M = \{X \in \cmod \Lambda \mid \mathrm{Ext}^{i}(X,M) = 0 \; \forall i
+ 	 \in \{1,\ldots,d-1\}\}.
+ 	\]
+ \end{alertblock}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Higher Auslander algebras}
+ \begin{const}[due to Iyama O.]
+ 	Let $\Lambda$ be a representation-finite hereditary algebra. Then, $\Lambda$
+ 	has a $1$-cluster tilting module $M^{(1)}$. Put $\Lambda^{(1)} \coloneqq
+ 	\mathrm{End}(M^{(1)})$.
+ 	\pause
+
+ 	The $k$-algebra $\Lambda^{(1)}$ has a $2$-cluster tilting module $M^{(2)}$.
+ 	Put $\Lambda^{(2)} \coloneqq \mathrm{End}(M^{(2)})$.
+ 	\pause
+
+ 	\centerline{$\vdots$}
+
+ 	The $k$-algebra $\Lambda^{(d)}$ has a $d$-cluster tilting module $M^{(d)}$.
+ 	Put $\Lambda^{(d+1)} \coloneqq \mathrm{End}(M^{(d)})$.
+ \end{const}
+ \pause
+ The $k$-algebra $\Lambda^{(d)}$ is called the $d$-Auslander algebra of
+ $\Lambda$.
+\end{frame}
+
+\begin{frame}[fragile]
+ \frametitle{Higher Auslander algebras of type $A$}
+ We apply Iyama's construction to $\Lambda \coloneqq k(\tikz[baseline=-3pt]{
+ 	\node[circle,fill,inner sep=1.5pt] (a) at (0,0) {};
+ 	\node[circle,fill,inner sep=1.5pt] (b) at (0.75,0) {};
+ 	\node[circle,fill,inner sep=1.5pt] (c) at (1.5,0) {};
+
+ 	\draw[<-,shorten <=2pt, shorten >=2pt] (a) -- (b);
+ 	\draw[<-,shorten <=2pt, shorten >=2pt] (b) -- (c);
+ })$. The AR quivers of $\Lambda, \Lambda^{(1)}$ and $\Lambda^{(2)}$ are the
+ following.
+ \pause
+ \begin{figure}[h]
+  \centering
+  \begin{subfigure}[t]{.49\textwidth}
+   \centering
+ 	 \begin{tikzpicture}
+ 		\node[circle,fill,inner sep=2pt] (a) at (0,0) {};
+ 		\node[circle,fill,inner sep=2pt] (b) at (1,1) {};
+ 		\node[circle,fill,inner sep=2pt] (c) at (2,0) {};
+ 		\node[circle,fill,inner sep=2pt] (d) at (2,2) {};
+ 		\node[circle,fill,inner sep=2pt] (e) at (3,1) {};
+ 		\node[circle,fill,inner sep=2pt] (f) at (4,0) {};
+
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (a) -- (b);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (b) -- (c);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (b) -- (d);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (c) -- (e);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (d) -- (e);
+ 		\draw[->,shorten <=5pt, shorten >=5pt] (e) -- (f);
+ 	 \end{tikzpicture}
+ 	 \caption*{The AR quiver of $\Lambda$.}
+  \end{subfigure}
+  \pause
+  \begin{subfigure}[t]{.49\textwidth}
+   \centering
+ 	 \begin{tikzpicture}[scale=0.75]
+ 		\node[circle,fill,inner sep=2pt] (a1) at (0,0) {};
+ 		\node[circle,fill,inner sep=2pt] (b1) at (1,0.5) {};
+ 		\node[circle,fill,inner sep=2pt] (c1) at (2,0) {};
+ 		\node[circle,fill,inner sep=2pt] (d1) at (2,1) {};
+ 		\node[circle,fill,inner sep=2pt] (e1) at (3,0.5) {};
+ 		\node[circle,fill,inner sep=2pt] (f1) at (4,0) {};
+
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (a1) -- (b1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (b1) -- (c1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (b1) -- (d1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (c1) -- (e1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (d1) -- (e1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (e1) -- (f1);
+
+ 		\node[circle,fill,inner sep=2pt] (c2) at (1,-2) {};
+ 		\node[circle,fill,inner sep=2pt] (e2) at (2,-1.5) {};
+ 		\node[circle,fill,inner sep=2pt] (f2) at (3,-2) {};
+
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (c2) -- (e2);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (e2) -- (f2);
+
+ 		\draw[red,->,shorten <=3pt, shorten >=3pt] (c1) -- (c2);
+ 		\draw[red,->,shorten <=3pt, shorten >=3pt] (e1) -- (e2);
+ 		\draw[red,->,shorten <=3pt, shorten >=3pt] (f1) -- (f2);
+
+ 		\node[circle,fill,inner sep=2pt] (f3) at (2,-4) {};
+ 		\draw[red,->,shorten <=3pt, shorten >=3pt] (f2) -- (f3);
+ 	 \end{tikzpicture}
+ 	 \caption*{The AR quiver of $\Lambda^{(1)}$.}
+  \end{subfigure}
+ \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+ \frametitle{Higher Auslander algebras of type $A$}
+ \begin{figure}[h]
+  \centering
+ 	 \begin{tikzpicture}[scale=0.75]
+ 		\node[circle,fill,inner sep=2pt] (a1) at (0,0) {};
+ 		\node[circle,fill,inner sep=2pt] (b1) at (1,0.5) {};
+ 		\node[circle,fill,inner sep=2pt] (c1) at (2,0) {};
+ 		\node[circle,fill,inner sep=2pt] (d1) at (2,1) {};
+ 		\node[circle,fill,inner sep=2pt] (e1) at (3,0.5) {};
+ 		\node[circle,fill,inner sep=2pt] (f1) at (4,0) {};
+
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (a1) -- (b1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (b1) -- (c1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (b1) -- (d1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (c1) -- (e1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (d1) -- (e1);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (e1) -- (f1);
+
+ 		\node[circle,fill,inner sep=2pt] (c2) at (1,-2) {};
+ 		\node[circle,fill,inner sep=2pt] (e2) at (2,-1.5) {};
+ 		\node[circle,fill,inner sep=2pt] (f2) at (3,-2) {};
+
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (c2) -- (e2);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (e2) -- (f2);
+
+ 		\draw[red,->,shorten <=3pt, shorten >=3pt] (c1) -- (c2);
+ 		\draw[red,->,shorten <=3pt, shorten >=3pt] (e1) -- (e2);
+ 		\draw[red,->,shorten <=3pt, shorten >=3pt] (f1) -- (f2);
+
+ 		\node[circle,fill,inner sep=2pt] (f3) at (2,-4) {};
+ 		\draw[red,->,shorten <=3pt, shorten >=3pt] (f2) -- (f3);
+
+ 		\node[circle,fill,inner sep=2pt] (c4) at (5,-1) {};
+ 		\node[circle,fill,inner sep=2pt] (e4) at (6,-0.5) {};
+ 		\node[circle,fill,inner sep=2pt] (f4) at (7,-1) {};
+
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (c4) -- (e4);
+ 		\draw[->,shorten <=3pt, shorten >=3pt] (e4) -- (f4);
+
+ 		\node[circle,fill,inner sep=2pt] (f5) at (6,-3) {};
+ 		\draw[red,->,shorten <=3pt, shorten >=3pt] (f4) -- (f5);
+
+ 		\draw[blue,->,shorten <=3pt, shorten >=3pt] (c2) -- (c4);
+ 		\draw[blue,->,shorten <=3pt, shorten >=3pt] (e2) -- (e4);
+ 		\draw[blue,->,shorten <=3pt, shorten >=3pt] (f2) -- (f4);
+ 		\draw[blue,->,shorten <=3pt, shorten >=3pt] (f3) -- (f5);
+ 	 \end{tikzpicture}
+  \caption*{The AR quiver of $\Lambda^{(2)}$.}
+ \end{figure}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Cyclic polytopes}
+ \begin{alertblock}{Cyclic polytope}
+  The \alert{moment curve} is the map $p(t) = (t,t^2,t^3,\ldots,t^{n}) \subseteq
+  \R^{n}$ for $t \in \R$. A \alert{cyclic polytope} $C(m,n)$ in $\R^{n}$ is the
+  convex hull of the set $\{p(t_1),\ldots,p(t_m)\}$ where $t_1<t_2<\ldots<t_m$.
+ \end{alertblock}
+ \pause
+ \textbf{Example.} The moment curve in $\R^2$ is just a parabola and $C(4,2)$ is
+ the following shape (for $t_i = i - 1$).
+ \begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[yscale=0.25,xscale=0.75]
+   \node[circle,fill,inner sep=2pt] (a) at (0,0) {};
+   \node[circle,fill,inner sep=2pt] (b) at (1,1) {};
+   \node[circle,fill,inner sep=2pt] (c) at (2,4) {};
+   \node[circle,fill,inner sep=2pt] (d) at (3,9) {};
+
+   \draw[thick] (a) -- (b);
+   \draw[thick] (b) -- (c);
+   \draw[thick] (c) -- (d);
+   \draw[thick] (d) -- (a);
+  \end{tikzpicture}
+ \end{figure}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Triangulations and tilting modules}
+ \begin{alertblock}{A triangulation of a cyclic polytope}
+  By a \alert{triangulation} of $C(m,n)$ we mean its division into
+  $n$-dimensional simplices that share vertices with $C(m,n)$.
+ \end{alertblock}
+ \pause
+ \textbf{Example}. One possible triangulation of $C(5,2)$.
+ \begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[yscale=0.2,xscale=1]
+   \node[circle,fill,inner sep=2pt] (a) at (0,0.5) {};
+   \node[circle,fill,inner sep=2pt] (b) at (1,1) {};
+   \node[circle,fill,inner sep=2pt] (c) at (2,4) {};
+   \node[circle,fill,inner sep=2pt] (d) at (2.75,9) {};
+   \node[circle,fill,inner sep=2pt] (e) at (3,16) {};
+
+   \draw[thick] (a) -- (b);
+   \draw[thick] (b) -- (c);
+   \draw[thick] (c) -- (d);
+   \draw[thick] (d) -- (e);
+   \draw[thick] (e) -- (a);
+   \draw[thick,blue,dashed] (a) -- (c);
+   \draw[thick,blue,dashed] (c) -- (e);
+  \end{tikzpicture}
+ \end{figure}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Triangulations and tilting modules}
+ \begin{theorem}[Thomas H., Oppermann S.]
+  There is a bijection
+  \begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+    \node[align=center] (a) at (0,0) {Triangulations \\ of $C(n + 2d,2d)$};
+    \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (a.south west) --
+     (a.north west);
+    \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (a.south
+     east) -- (a.north east);
+
+    \node[align=center] (b) at (6,0) {Tilting modules of $\Lambda^{(d)}$ \\
+     contained in $\add M^{(d)}$};
+    \draw[decoration={brace,raise=-2pt,amplitude=5pt},decorate] (b.south west) --
+     (b.north west);
+    \draw[decoration={brace,mirror,raise=-2pt,amplitude=5pt},decorate] (b.south
+     east) -- (b.north east);
+    
+    \draw[<->,shorten <=10pt, shorten >=10pt] (a.east) -- (b.west);
+   \end{tikzpicture}
+  \end{figure}
+ \end{theorem}
 \end{frame}
