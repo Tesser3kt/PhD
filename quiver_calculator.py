@@ -40,10 +40,17 @@ class Quiver:
         if len(self.graph[n]) > 0:
             print(f"Vertex {n} is not a sink.")
 
+    def linear(n: int) -> "Quiver":
+        """ Returns A_n linearly oriented (1 is the sink). """
+        return Quiver.from_string(
+            " ".join([f"{i+1}->{i}" for i in range(1, n)])
+        )
+
     def __getitem__(self, n: int) -> set[int]:
         return self.graph[n]
 
     def __repr__(self):
+        # TODO draw any quiver
         """ So far only works for A_n. """
         for n in self.graph:
             edges_out = len(self.graph[n])
@@ -77,4 +84,5 @@ class Quiver:
         return result
 
 
-q = Quiver.from_string("2->1 3->2 4->3 5->4")
+q = Quiver.linear(60)
+print(q)
