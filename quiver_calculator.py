@@ -1,35 +1,28 @@
+import networkx as nx
+import matplotlib.pyplot as plt
 from sage.all import *
 from copy import deepcopy
 
 
 class Quiver:
     def __init__(self):
-        self.graph = dict()
+        self.graph = nx.DiGraph()
 
     def add_vertex(self, n: int) -> None:
-        if n in self.graph:
-            return
+        self.graph.add_node(n)
 
-        self.graph[n] = set()
-
-    def add_edge(self, n: int, m: int) -> bool:
-        if n not in self.graph or m not in self.graph:
-            return False
-        self.graph[n].add(m)
-        return True
+    def add_edge(self, n: int, m: int) -> None:
+        self.graph.add_edge(n, m)
 
     def from_string(edges: str) -> "Quiver":
         quiver = Quiver()
         edges = edges.split(" ")
         for edge in edges:
             v_from, v_to = tuple(edge.split('->'))
-            quiver.add_vertex(int(v_from))
+            quiver.add_edge(int(v_from), int(v_to))
 
             for v in v_to.split(","):
-                quiver.add_vertex(int(v))
-                if not quiver.add_edge(int(v_from), int(v)):
-                    print(f"Error adding edge {v_from}->{v_to}.")
-                    return None
+                quiver.add_edge(int(v_from), int(v))
 
         return quiver
 
@@ -37,8 +30,17 @@ class Quiver:
         if n not in self.graph:
             print(f"Vertex {n} not in quiver.")
             return None
-        if len(self.graph[n]) > 0:
-            print(f"Vertex {n} is not a sink.")
+        if self.graph.out_degree[n] > 0:
+            print(f"Vertex {n} not a sink.")
+            return None
+
+        q = deepcopy(self)
+        preds = list(q.graph.predecessors(n))
+        for ngh in preds:
+            q.graph.remove_edge(ngh, n)
+            q.graph.add_edge(n, ngh, color="r")
+
+        return q
 
     def linear(n: int) -> "Quiver":
         """ Returns A_n linearly oriented (1 is the sink). """
@@ -49,40 +51,8 @@ class Quiver:
     def __getitem__(self, n: int) -> set[int]:
         return self.graph[n]
 
-    def __repr__(self):
-        # TODO draw any quiver
-        """ So far only works for A_n. """
-        for n in self.graph:
-            edges_out = len(self.graph[n])
-            edges_in = len([m for m in self.graph if n in self.graph[m]])
-            if edges_in + edges_out == 1:
-                start = n
-                break
 
-        drawn = set()
-        next_ = start
-
-        result = ""
-        while next_:
-            result += str(next_)
-            drawn.add(next_)
-            v = next_
-            next_ = None
-            for w in self.graph[v]:
-                if w not in drawn:
-                    next_ = w
-                    result += " -> "
-                    break
-
-            if not next_:
-                for n in self.graph:
-                    if v in self.graph[n] and n not in drawn:
-                        next_ = n
-                        result += " <- "
-                        break
-
-        return result
-
-
-q = Quiver.linear(60)
-print(q)
+q = Quiver.linear(10)
+q2 = q.reflect(1)
+nx.draw_spring(q2.graph, with_labels=True)
+plt.savefig('quiver.png', dpi=300)
